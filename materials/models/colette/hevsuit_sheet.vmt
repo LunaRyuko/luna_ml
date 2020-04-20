@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "Models/colette/v_colette_suit_sheet"
+	"$bumpmap" "Models/colette/v_colette_suit_sheet_normal"
+}

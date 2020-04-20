@@ -11,8 +11,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$cdmaterials "models\hevsuit\"
-$cdmaterials "models\Weapons\V_hand\"
+$cdmaterials "models\colette"
 
 $attachment camera tag.camera 0 0 0 rotate 0 90 90
 
