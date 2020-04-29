@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Cinematic_WakeUp.ma
-//Last modified: Wed, Apr 29, 2020 02:03:29 AM
+//Last modified: Wed, Apr 29, 2020 02:57:53 AM
 //Codeset: 1250
 file -rdi 1 -ns "FirstPersonView_Rig" -rfn "FirstPersonView_RigRN" -op "v=0;"
 		 -typ "mayaAscii" "D:/Program Files (x86)/Steam/steamapps/sourcemods/luna_ml/maya/FirstPersonView_Rig.ma";
@@ -248,7 +248,7 @@ createNode camera -n "leftShape" -p "left";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode fosterParent -n "FirstPersonView_RigRNfosterParent1";
-	rename -uid "B2B52410-4E4E-FFFC-9CC1-E2AB5F49DE76";
+	rename -uid "B532E22A-4601-B105-0B0E-3AAD1EC664F9";
 createNode parentConstraint -n "j_cg_pic_parentConstraint1" -p "FirstPersonView_RigRNfosterParent1";
 	rename -uid "8437C367-461C-CCCB-9BED-38A0A2EC99A5";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "IK_Global_Hand_LE_CTRW0" -dv 1 -min 
@@ -267,7 +267,7 @@ createNode parentConstraint -n "j_cg_pic_parentConstraint1" -p "FirstPersonView_
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 12.99 5.5040000000000004 8.7150000000000016 ;
 	setAttr ".tg[0].tor" -type "double3" -89.382 -79.322129994463907 14.582363570443968 ;
-	setAttr ".lr" -type "double3" 155.62472497445771 100.87225261453374 -13.259306531018634 ;
+	setAttr ".lr" -type "double3" 85.705356827602643 8.6977695351680175 -28.140208023848842 ;
 	setAttr ".rst" -type "double3" 173.11029574450492 46.891003668012907 8.0998086139196595 ;
 	setAttr ".rsrr" -type "double3" 184.74407972224429 5.7438240881671492 97.309326533887287 ;
 	setAttr -k on ".w0";
@@ -726,7 +726,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		1 |FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic 
 		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_View|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_CAMERA" 
-		"translate" " -type \"double3\" 21.41818227906351169 11.31275074137374759 -9.91634305443874453"
+		"translate" " -type \"double3\" 69.35447679530096821 13.93670889265437296 -12.21186819709998517"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_View|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_CAMERA" 
 		"translateX" " -av"
@@ -735,7 +735,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_View|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_CAMERA" 
 		"translateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_View|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_CAMERA" 
-		"rotate" " -type \"double3\" 22.67324376407166042 17.05640146742958052 49.36055713660169175"
+		"rotate" " -type \"double3\" 60.742999999999995 -1.24000000000000021 0.66999999999999993"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_View|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_CAMERA" 
 		"rotateX" " -av"
@@ -767,7 +767,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_View|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_CAMERA|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Cinematic_View|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Cinematic_ViewShape" 
 		"displayResolution" " 1"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4" 
-		"rotate" " -type \"double3\" 26.90986902456823415 -3.97779205702487637 -60.0132073189254811"
+		"rotate" " -type \"double3\" 18.39427427448875463 -21.62314061403871079 -19.78612960507036078"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4" 
 		"rotateX" " -av"
@@ -776,15 +776,15 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger41" 
-		"rotate" " -type \"double3\" 0 0 -78.76679818552635481"
+		"rotate" " -type \"double3\" 0 0 -3.2938014661341608"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger41" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger41|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger42" 
-		"rotate" " -type \"double3\" 0 0 -25.75937881516633965"
+		"rotate" " -type \"double3\" 0 0 8.06753456187697182"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger41|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger42" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3" 
-		"rotate" " -type \"double3\" 8.89493522981106643 -2.84630629132969881 -56.583257674956279"
+		"rotate" " -type \"double3\" 3.75060986233348492 -8.96773766392411353 -6.84672431384766966"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3" 
 		"rotateX" " -av"
@@ -793,15 +793,15 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger31" 
-		"rotate" " -type \"double3\" 0 0 -62.06965366355584024"
+		"rotate" " -type \"double3\" 0 0 -36.55934400672244777"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger31" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger31|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger32" 
-		"rotate" " -type \"double3\" 0 0 -34.56209750347468201"
+		"rotate" " -type \"double3\" 0 0 19.8530654383963352"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger31|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger32" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2" 
-		"rotate" " -type \"double3\" -4.32452227301922676 -2.43321770942890714 -46.04928397400988871"
+		"rotate" " -type \"double3\" -5.14342807684770964 -0.23316020639087401 -19.21700112605580912"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2" 
 		"rotateX" " -av"
@@ -810,7 +810,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21" 
-		"rotate" " -type \"double3\" 0.34782953188404031 -0.26212930677341362 -74.1197709032001768"
+		"rotate" " -type \"double3\" -0.07172173388745734 -0.45121201326272853 -11.96333532303417435"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21" 
 		"rotateX" " -av"
@@ -819,7 +819,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger22" 
-		"rotate" " -type \"double3\" 0.050378593498814288 -0.24289287360045964 -24.31567866928569188"
+		"rotate" " -type \"double3\" -0.088338247010317936 -0.23984569521900617 7.82203695032863333"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger22" 
 		"rotateX" " -av"
@@ -828,7 +828,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger22" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1" 
-		"rotate" " -type \"double3\" -19.90473850073545137 -1.64453235985834323 -41.16490708900531814"
+		"rotate" " -type \"double3\" -17.27256114618696614 11.06520440529595284 -4.74525595142962686"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1" 
 		"rotateX" " -av"
@@ -837,7 +837,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11" 
-		"rotate" " -type \"double3\" 0.23997138264575318 -0.27258860808643509 -62.25058316283416815"
+		"rotate" " -type \"double3\" 0.17695716244451781 -0.33503649200837909 -48.63865506468629718"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11" 
 		"rotateX" " -av"
@@ -846,7 +846,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger12" 
-		"rotate" " -type \"double3\" 0.045966857164553981 -0.23015501879915867 -25.53153407637526584"
+		"rotate" " -type \"double3\" -0.10124924607746799 -0.21900016808748057 10.81430869664047378"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger12" 
 		"rotateX" " -av"
@@ -855,7 +855,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger12" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger0" 
-		"rotate" " -type \"double3\" 62.05890113602165314 16.16170318864303823 -29.72369604530134524"
+		"rotate" " -type \"double3\" 81.82254167985603033 33.02935364642992511 -22.34558040493210029"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger0" 
 		"rotateX" " -av"
@@ -864,7 +864,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger0" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger4" 
-		"rotate" " -type \"double3\" -17.54052182583190245 22.30082995166325688 -16.84704985430629876"
+		"rotate" " -type \"double3\" -12.80847837045196158 -10.21137567466544915 -40.33667377465431514"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger4" 
 		"rotateX" " -av"
@@ -873,7 +873,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger4" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger41" 
-		"rotate" " -type \"double3\" 0 0 25.5634017818949637"
+		"rotate" " -type \"double3\" 0 0 -88.37061412054771381"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger41" 
 		"rotateX" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger41" 
@@ -881,7 +881,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger41" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger41|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger42" 
-		"rotate" " -type \"double3\" 0 0 6.82242939790509961"
+		"rotate" " -type \"double3\" 0 0 -79.36067969910273234"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger41|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger42" 
 		"rotateX" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger41|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger42" 
@@ -889,7 +889,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger41|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger42" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger3" 
-		"rotate" " -type \"double3\" -2.72869342327622855 9.25760816485734139 1.47525275882439777"
+		"rotate" " -type \"double3\" -5.49842877446109934 -10.62519954803003408 -42.4108799374994021"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger3" 
 		"rotateX" " -av"
@@ -898,7 +898,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger3" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger31" 
-		"rotate" " -type \"double3\" 0 0 -11.4810801830380349"
+		"rotate" " -type \"double3\" 0 0 -74.95462233575288735"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger31" 
 		"rotateX" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger31" 
@@ -906,7 +906,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger31" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger31|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger32" 
-		"rotate" " -type \"double3\" 0 0 5.96585541579243106"
+		"rotate" " -type \"double3\" 0 0 -103.70869822680636219"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger31|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger32" 
 		"rotateX" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger31|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger32" 
@@ -914,7 +914,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger31|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger32" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger2" 
-		"rotate" " -type \"double3\" 4.5999089458988669 -2.15306829842321479 5.5718183614011183"
+		"rotate" " -type \"double3\" 0.12750247848628407 -9.31303429817744188 -35.13702056249565686"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger2" 
 		"rotateX" " -av"
@@ -923,7 +923,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger2" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger21" 
-		"rotate" " -type \"double3\" 0.014979536110609386 0.31568833343998909 -18.28095938198305959"
+		"rotate" " -type \"double3\" -0.16381486606807757 0.27027466918275689 -52.21807511385679135"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger21" 
 		"rotateX" " -av"
@@ -932,7 +932,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger21" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger21|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger22" 
-		"rotate" " -type \"double3\" 0.1136513154397909 0.13530099065118772 27.63113914215027833"
+		"rotate" " -type \"double3\" -0.13533741989237053 0.11360793257452763 -62.38736387767539071"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger21|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger22" 
 		"rotateX" " -av"
@@ -941,7 +941,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger21|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger22" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger1" 
-		"rotate" " -type \"double3\" 17.57729001723054196 -10.62007886331809559 10.53238254781824246"
+		"rotate" " -type \"double3\" 14.45384377746312232 -4.56273665396598371 -35.49902680205295269"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger1" 
 		"rotateX" " -av"
@@ -950,7 +950,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger1" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger11" 
-		"rotate" " -type \"double3\" -0.024534083250667815 0.23213009840484122 -26.83215546393245532"
+		"rotate" " -type \"double3\" -1.80286887519342298 -12.73792690748921785 -69.3188797527933076"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger11" 
 		"rotateX" " -av"
@@ -959,7 +959,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger11" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger11|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger12" 
-		"rotate" " -type \"double3\" 0.072112497120546779 0.1300897311470694 15.0017682626534139"
+		"rotate" " -type \"double3\" -0.14363102616861717 0.038648064706188832 -88.93879708557824415"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger11|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger12" 
 		"rotateX" " -av"
@@ -968,7 +968,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger11|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger12" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger0" 
-		"rotate" " -type \"double3\" -82.43468808450013796 -31.63163601298785466 -14.57372373956419409"
+		"rotate" " -type \"double3\" -76.86511649221445452 -23.41088961647285061 -22.87030216015316597"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger0" 
 		"rotateX" " -av"
@@ -981,11 +981,11 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger0|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger01" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger0|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger01|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger02" 
-		"rotate" " -type \"double3\" 0 0 18.58800224912193144"
+		"rotate" " -type \"double3\" 0 0 8.33354847213601424"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger0|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger01|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger02" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1" 
-		"translate" " -type \"double3\" 10.37851235625084456 -14.66257482864029527 32.26931997745379732"
+		"translate" " -type \"double3\" 4.73903993536303147 -6.39831721962831068 44.85955156055677406"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1" 
 		"translateX" " -av"
@@ -994,7 +994,8 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1" 
 		"translateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1" 
-		"rotate" " -type \"double3\" 71.86252137514286176 0 0"
+		"rotate" " -type \"double3\" 85.75844920598899535 67.56610111907819771 19.02590909722913892"
+		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1" 
 		"rotateX" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1" 
@@ -1004,7 +1005,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2" 
 		"rotate" " -type \"double3\" 0 -16.56413069031756535 0"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_LE" 
-		"rotate" " -type \"double3\" -7.40552003580195084 -46.10030946480594594 12.04531487712431392"
+		"rotate" " -type \"double3\" 4.39021265710512054 -42.15989768980176677 -1.92499495873273196"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_LE" 
 		"rotateX" " -av"
@@ -1013,15 +1014,15 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_LE" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_LE|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Knee_LE" 
-		"rotate" " -type \"double3\" 0 30.51459371819684563 0"
+		"rotate" " -type \"double3\" 0 45.74109504582447983 0"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_LE|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Knee_LE" 
 		"rotateY" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_LE|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Knee_LE|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Ankle_LE" 
-		"rotate" " -type \"double3\" 0 25.53013750109374058 0"
+		"rotate" " -type \"double3\" 0 35.94767169374142668 0"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_LE|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Knee_LE|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Ankle_LE" 
 		"rotateY" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_RI" 
-		"rotate" " -type \"double3\" -57.66242536863910573 -69.00463459023686141 56.00039664724685196"
+		"rotate" " -type \"double3\" -17.20180897357769467 -44.93662758915751709 11.92432556751012207"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_RI" 
 		"rotateX" " -av"
@@ -1030,7 +1031,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_RI" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_RI|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Knee_RI" 
-		"rotate" " -type \"double3\" 0 95.31550585530291642 0"
+		"rotate" " -type \"double3\" 0 120.02663299374383143 0"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_RI|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Knee_RI" 
 		"rotateY" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_RI|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Knee_RI|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Ankle_RI" 
@@ -1038,7 +1039,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4" 
 		"rotate" " -type \"double3\" 90 0 90"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic" 
-		"translate" " -type \"double3\" 0.30032597938160421 -67.83653952037252566 39.73529095864635963"
+		"translate" " -type \"double3\" 46.2854364446320119 -3.76889930050037325 173.41037594195356064"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic" 
 		"translateX" " -av"
@@ -1047,7 +1048,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic" 
 		"translateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic" 
-		"rotate" " -type \"double3\" -89.99999096176745184 73.72214921775227481 -89.99999406809126867"
+		"rotate" " -type \"double3\" 85.70535682760264251 8.69776953516801754 -28.14020802384884234"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic" 
 		"rotateX" " -av"
@@ -1056,7 +1057,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic" 
-		"blendParent1" " -av -k 1 0"
+		"blendParent1" " -av -k 1 1"
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_View|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_CAMERA.translateX" 
 		"FirstPersonView_RigRN.placeHolderList[1]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_View|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_CAMERA.translateY" 
@@ -1835,7 +1836,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		"FirstPersonView_RigRN.placeHolderList[388]" ""
 		"FirstPersonView_RigRN" 73
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_LE_GRP|FirstPersonView_Rig:Shoulder_LE_CTR" 
-		"translate" " -type \"double3\" 26.9526300968696475 -4.62977649462096608 50.67913182657076732"
+		"translate" " -type \"double3\" 20.20049243165965436 -51.25150989090644771 160.83817801256725488"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_LE_GRP|FirstPersonView_Rig:Shoulder_LE_CTR" 
 		"translateX" " -av"
@@ -1852,7 +1853,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_LE_GRP|FirstPersonView_Rig:Shoulder_LE_CTR" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_RI_GRP|FirstPersonView_Rig:Shoulder_RI_CTR" 
-		"translate" " -type \"double3\" 14.45718118130407959 2.62798868924240026 36.17531652160505473"
+		"translate" " -type \"double3\" 21.92474810860888823 -27.19592949053127029 80.47571116047126338"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_RI_GRP|FirstPersonView_Rig:Shoulder_RI_CTR" 
 		"translateX" " -av"
@@ -1861,7 +1862,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_RI_GRP|FirstPersonView_Rig:Shoulder_RI_CTR" 
 		"translateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:PoleV_RI_GRP|FirstPersonView_Rig:PoleV_RI" 
-		"translate" " -type \"double3\" 56.48748613167470722 -14.49620049714258485 26.73538521894852238"
+		"translate" " -type \"double3\" 55.37478402668124033 -34.31180501875245881 42.39049309174061619"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:PoleV_RI_GRP|FirstPersonView_Rig:PoleV_RI" 
 		"translateX" " -av"
@@ -1870,7 +1871,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:PoleV_RI_GRP|FirstPersonView_Rig:PoleV_RI" 
 		"translateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:PoleV_LE_GRP|FirstPersonView_Rig:PoleV_LE" 
-		"translate" " -type \"double3\" 116.74854576818448493 150.377282790036503 65.31722466292673346"
+		"translate" " -type \"double3\" 77.42415544526497229 37.10771998483110679 90.84846396769300725"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:PoleV_LE_GRP|FirstPersonView_Rig:PoleV_LE" 
 		"translateX" " -av"
@@ -1879,7 +1880,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:PoleV_LE_GRP|FirstPersonView_Rig:PoleV_LE" 
 		"translateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_RI_GRP|FirstPersonView_Rig:IK_Global_Hand_RI_CTR" 
-		"translate" " -type \"double3\" -10.8086605107835716 -41.25460068529776692 22.96712345317166282"
+		"translate" " -type \"double3\" -18.08929104250098874 -51.0944360565382496 24.34631689485176764"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_RI_GRP|FirstPersonView_Rig:IK_Global_Hand_RI_CTR" 
 		"translateX" " -av"
@@ -1888,7 +1889,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_RI_GRP|FirstPersonView_Rig:IK_Global_Hand_RI_CTR" 
 		"translateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_RI_GRP|FirstPersonView_Rig:IK_Global_Hand_RI_CTR" 
-		"rotate" " -type \"double3\" -0.67333702437673604 58.22714855511797083 -2.12744893627717335"
+		"rotate" " -type \"double3\" 63.62850271701071847 15.69388687658285164 -42.44954456991640512"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_RI_GRP|FirstPersonView_Rig:IK_Global_Hand_RI_CTR" 
 		"rotateX" " -av"
@@ -1897,7 +1898,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_RI_GRP|FirstPersonView_Rig:IK_Global_Hand_RI_CTR" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR" 
-		"translate" " -type \"double3\" 7.34581776237856676 40.56204188755447149 17.22312383901805433"
+		"translate" " -type \"double3\" 1.62145131639359485 197.83592222219087375 18.83378711248980153"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR" 
 		"translateX" " -av"
@@ -1906,7 +1907,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR" 
 		"translateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR" 
-		"rotate" " -type \"double3\" 117.47482973568243381 -60.00168212839149362 -37.49259738211597437"
+		"rotate" " -type \"double3\" 62.72673885211872147 7.89917804850719918 63.53969371870926608"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR" 
 		"rotateX" " -av"
@@ -5873,8 +5874,8 @@ select -ne :time1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 238;
-	setAttr ".unw" 238;
+	setAttr ".o" 500;
+	setAttr ".unw" 500;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
