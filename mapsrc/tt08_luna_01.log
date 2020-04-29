@@ -13969,3 +13969,3655 @@ Level flags = 2
 Total triangle count: 798
 Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
 5 seconds elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+9 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 315745, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(17834, 14411, 10076)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(901, 721, 442)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(49, 39, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 2, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0024 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights          9/8192          792/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      756420/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        5782/393216   ( 1.5%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1594/65536       44632/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1342     ( 0.1%) 
+pakfile               [variable]      659505/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+4 seconds elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+9 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 315745, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(17834, 14411, 10076)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(901, 721, 442)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(49, 39, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 2, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0021 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights          9/8192          792/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      756420/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        5782/393216   ( 1.5%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1594/65536       44632/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1342     ( 0.1%) 
+pakfile               [variable]      659505/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+4 seconds elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+9 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 315745, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(17834, 14411, 10076)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(901, 721, 442)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(49, 39, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 2, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0027 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights          9/8192          792/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      756420/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        5782/393216   ( 1.5%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1594/65536       44632/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1342     ( 0.1%) 
+pakfile               [variable]      659505/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+5 seconds elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+9 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 315745, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(17834, 14411, 10076)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(901, 721, 442)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(49, 39, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 2, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0024 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights          9/8192          792/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      756420/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        5782/393216   ( 1.5%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1594/65536       44632/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1342     ( 0.1%) 
+pakfile               [variable]      659505/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+4 seconds elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+9 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 315745, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(17834, 14411, 10076)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(901, 721, 442)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(49, 39, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 2, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0028 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights          9/8192          792/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      756420/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        5782/393216   ( 1.5%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1594/65536       44632/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1342     ( 0.1%) 
+pakfile               [variable]      659505/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+4 seconds elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+9 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 315745, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(17834, 14411, 10076)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(901, 721, 442)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(49, 39, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 2, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0039 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights          9/8192          792/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      756420/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        5782/393216   ( 1.5%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1594/65536       44632/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1342     ( 0.1%) 
+pakfile               [variable]      659505/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+6 seconds elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+9 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 315745, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(17834, 14411, 10076)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(901, 721, 442)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(49, 39, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 2, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0026 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights          9/8192          792/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      756420/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        5782/393216   ( 1.5%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1594/65536       44632/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1342     ( 0.1%) 
+pakfile               [variable]      659505/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+5 seconds elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+9 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 315745, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(17834, 14411, 10076)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(901, 721, 442)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(49, 39, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 2, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0026 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights          9/8192          792/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      756420/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        5782/393216   ( 1.5%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1594/65536       44632/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1342     ( 0.1%) 
+pakfile               [variable]      659505/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+3 seconds elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+9 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 315745, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(17834, 14411, 10076)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(901, 721, 442)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(49, 39, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 2, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0027 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights          9/8192          792/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      756420/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        5782/393216   ( 1.5%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1594/65536       44632/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1342     ( 0.1%) 
+pakfile               [variable]      659505/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+4 seconds elapsed
+
+
+
+materialPath: D:\Program Files (x86)\Steam\steamapps\sourcemods\maplabstemplate\materials
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.vmf
+Could not locate 'GameData' key in d:\program files (x86)\steam\steamapps\sourcemods\maplabstemplate\gameinfo.txt
+Patching WVT material: maps/tt08_luna_01/nature/blendrockdirt_tunnel03a_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (12444 bytes)
+Error! prop_static using model "models/props_junk/flare.mdl", which must be used on a dynamic entity (i.e. prop_physics). Deleted.
+Error loading studio model "models/props_junk/flare.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 175 texinfos to 73
+Reduced 5 texdatas to 5 (147 bytes to 147)
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+11 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 317440, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(17930, 14469, 10131)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(911, 727, 447)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(50, 40, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 3, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0024 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights         11/8192          968/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      815756/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        6534/393216   ( 1.7%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1593/65536       44604/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1144     ( 0.1%) 
+pakfile               [variable]      657355/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+5 seconds elapsed
+
+
+
+materialPath: D:\Program Files (x86)\Steam\steamapps\sourcemods\maplabstemplate\materials
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.vmf
+Could not locate 'GameData' key in d:\program files (x86)\steam\steamapps\sourcemods\maplabstemplate\gameinfo.txt
+Patching WVT material: maps/tt08_luna_01/nature/blendrockdirt_tunnel03a_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (12444 bytes)
+Error! prop_static using model "models/props_junk/flare.mdl", which must be used on a dynamic entity (i.e. prop_physics). Deleted.
+Error loading studio model "models/props_junk/flare.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 175 texinfos to 73
+Reduced 5 texdatas to 5 (147 bytes to 147)
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+11 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 317440, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(18318, 14658, 10132)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(947, 744, 447)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(53, 41, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 3, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0026 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights         11/8192          968/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      756420/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        6534/393216   ( 1.7%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1593/65536       44604/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1144     ( 0.1%) 
+pakfile               [variable]      657355/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+5 seconds elapsed
+
+
+
+materialPath: D:\Program Files (x86)\Steam\steamapps\sourcemods\maplabstemplate\materials
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.vmf
+Could not locate 'GameData' key in d:\program files (x86)\steam\steamapps\sourcemods\maplabstemplate\gameinfo.txt
+Patching WVT material: maps/tt08_luna_01/nature/blendrockdirt_tunnel03a_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (12444 bytes)
+Error! prop_static using model "models/props_junk/flare.mdl", which must be used on a dynamic entity (i.e. prop_physics). Deleted.
+Error loading studio model "models/props_junk/flare.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 175 texinfos to 73
+Reduced 5 texdatas to 5 (147 bytes to 147)
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+11 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 317440, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(18318, 14658, 10132)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(947, 744, 447)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(53, 41, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 3, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0046 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights         11/8192          968/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      756420/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        6603/393216   ( 1.7%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1593/65536       44604/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1144     ( 0.1%) 
+pakfile               [variable]      657355/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+5 seconds elapsed
+
+
+
+materialPath: D:\Program Files (x86)\Steam\steamapps\sourcemods\maplabstemplate\materials
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.vmf
+Could not locate 'GameData' key in d:\program files (x86)\steam\steamapps\sourcemods\maplabstemplate\gameinfo.txt
+Patching WVT material: maps/tt08_luna_01/nature/blendrockdirt_tunnel03a_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (12444 bytes)
+Error! prop_static using model "models/props_junk/flare.mdl", which must be used on a dynamic entity (i.e. prop_physics). Deleted.
+Error loading studio model "models/props_junk/flare.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 175 texinfos to 73
+Reduced 5 texdatas to 5 (147 bytes to 147)
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+11 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 317440, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(18318, 14658, 10132)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(947, 744, 447)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(53, 41, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 3, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0039 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights         11/8192          968/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      756420/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        6665/393216   ( 1.7%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1593/65536       44604/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1144     ( 0.1%) 
+pakfile               [variable]      657355/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+5 seconds elapsed
+
+
+
+materialPath: D:\Program Files (x86)\Steam\steamapps\sourcemods\maplabstemplate\materials
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.vmf
+Could not locate 'GameData' key in d:\program files (x86)\steam\steamapps\sourcemods\maplabstemplate\gameinfo.txt
+Patching WVT material: maps/tt08_luna_01/nature/blendrockdirt_tunnel03a_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (12444 bytes)
+Error! prop_static using model "models/props_junk/flare.mdl", which must be used on a dynamic entity (i.e. prop_physics). Deleted.
+Error loading studio model "models/props_junk/flare.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 175 texinfos to 73
+Reduced 5 texdatas to 5 (147 bytes to 147)
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+1 second elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+11 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 317440, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(18318, 14658, 10132)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(947, 744, 447)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(53, 41, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 3, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0033 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights         11/8192          968/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      756420/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        6856/393216   ( 1.7%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1593/65536       44604/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1144     ( 0.1%) 
+pakfile               [variable]      657355/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+6 seconds elapsed
+
+
+
+materialPath: D:\Program Files (x86)\Steam\steamapps\sourcemods\maplabstemplate\materials
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.vmf
+Could not locate 'GameData' key in d:\program files (x86)\steam\steamapps\sourcemods\maplabstemplate\gameinfo.txt
+Patching WVT material: maps/tt08_luna_01/nature/blendrockdirt_tunnel03a_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (12444 bytes)
+Error! prop_static using model "models/props_junk/flare.mdl", which must be used on a dynamic entity (i.e. prop_physics). Deleted.
+Error loading studio model "models/props_junk/flare.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 175 texinfos to 73
+Reduced 5 texdatas to 5 (147 bytes to 147)
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+11 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 317440, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(18318, 14658, 10132)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(947, 744, 447)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(53, 41, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 3, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0024 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights         11/8192          968/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      756420/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        6856/393216   ( 1.7%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1593/65536       44604/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1144     ( 0.1%) 
+pakfile               [variable]      657355/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+4 seconds elapsed
+
+
+
+materialPath: D:\Program Files (x86)\Steam\steamapps\sourcemods\maplabstemplate\materials
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.vmf
+Could not locate 'GameData' key in d:\program files (x86)\steam\steamapps\sourcemods\maplabstemplate\gameinfo.txt
+Patching WVT material: maps/tt08_luna_01/nature/blendrockdirt_tunnel03a_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (12444 bytes)
+Error! prop_static using model "models/props_junk/flare.mdl", which must be used on a dynamic entity (i.e. prop_physics). Deleted.
+Error loading studio model "models/props_junk/flare.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 175 texinfos to 73
+Reduced 5 texdatas to 5 (147 bytes to 147)
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+1 second elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+11 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 317440, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(18318, 14658, 10132)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(947, 744, 447)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(53, 41, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 3, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0027 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights         11/8192          968/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      756420/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        6929/393216   ( 1.8%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1593/65536       44604/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1144     ( 0.1%) 
+pakfile               [variable]      657355/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+6 seconds elapsed
+
+
+
+materialPath: D:\Program Files (x86)\Steam\steamapps\sourcemods\maplabstemplate\materials
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.vmf
+Could not locate 'GameData' key in d:\program files (x86)\steam\steamapps\sourcemods\maplabstemplate\gameinfo.txt
+Patching WVT material: maps/tt08_luna_01/nature/blendrockdirt_tunnel03a_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (12444 bytes)
+Error! prop_static using model "models/props_junk/flare.mdl", which must be used on a dynamic entity (i.e. prop_physics). Deleted.
+Error loading studio model "models/props_junk/flare.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 175 texinfos to 73
+Reduced 5 texdatas to 5 (147 bytes to 147)
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+1 second elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+11 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 317440, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(18318, 14658, 10132)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(947, 744, 447)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(53, 41, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 3, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0053 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights         11/8192          968/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      756420/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        6929/393216   ( 1.8%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1593/65536       44604/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1144     ( 0.1%) 
+pakfile               [variable]      657355/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+6 seconds elapsed
+
+
+
+materialPath: D:\Program Files (x86)\Steam\steamapps\sourcemods\maplabstemplate\materials
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.vmf
+Could not locate 'GameData' key in d:\program files (x86)\steam\steamapps\sourcemods\maplabstemplate\gameinfo.txt
+Patching WVT material: maps/tt08_luna_01/nature/blendrockdirt_tunnel03a_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (12444 bytes)
+Error! prop_static using model "models/props_junk/flare.mdl", which must be used on a dynamic entity (i.e. prop_physics). Deleted.
+Error loading studio model "models/props_junk/flare.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 175 texinfos to 73
+Reduced 5 texdatas to 5 (147 bytes to 147)
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+1 second elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+11 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 317440, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(18318, 14658, 10132)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(947, 744, 447)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(53, 41, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 3, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0030 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights         11/8192          968/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      756420/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        7128/393216   ( 1.8%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1593/65536       44604/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1144     ( 0.1%) 
+pakfile               [variable]      657355/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+6 seconds elapsed
+
+
+
+materialPath: D:\Program Files (x86)\Steam\steamapps\sourcemods\maplabstemplate\materials
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.vmf
+Could not locate 'GameData' key in d:\program files (x86)\steam\steamapps\sourcemods\maplabstemplate\gameinfo.txt
+Patching WVT material: maps/tt08_luna_01/nature/blendrockdirt_tunnel03a_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (12444 bytes)
+Error! prop_static using model "models/props_junk/flare.mdl", which must be used on a dynamic entity (i.e. prop_physics). Deleted.
+Error loading studio model "models/props_junk/flare.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 175 texinfos to 73
+Reduced 5 texdatas to 5 (147 bytes to 147)
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+11 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 317440, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(18318, 14658, 10132)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(947, 744, 447)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(53, 41, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 3, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0027 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights         11/8192          968/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      756420/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        7465/393216   ( 1.9%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1593/65536       44604/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1144     ( 0.1%) 
+pakfile               [variable]      657355/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+4 seconds elapsed
+
+
+
+materialPath: D:\Program Files (x86)\Steam\steamapps\sourcemods\maplabstemplate\materials
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.vmf
+Could not locate 'GameData' key in d:\program files (x86)\steam\steamapps\sourcemods\maplabstemplate\gameinfo.txt
+Patching WVT material: maps/tt08_luna_01/nature/blendrockdirt_tunnel03a_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (12444 bytes)
+Error! prop_static using model "models/props_junk/flare.mdl", which must be used on a dynamic entity (i.e. prop_physics). Deleted.
+Error loading studio model "models/props_junk/flare.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 175 texinfos to 73
+Reduced 5 texdatas to 5 (147 bytes to 147)
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+11 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 317440, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(18318, 14658, 10132)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(947, 744, 447)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(53, 41, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 3, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0027 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights         11/8192          968/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      756420/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        7463/393216   ( 1.9%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1593/65536       44604/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1144     ( 0.1%) 
+pakfile               [variable]      657355/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+4 seconds elapsed
+
+
+
+materialPath: D:\Program Files (x86)\Steam\steamapps\sourcemods\maplabstemplate\materials
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.vmf
+Could not locate 'GameData' key in d:\program files (x86)\steam\steamapps\sourcemods\maplabstemplate\gameinfo.txt
+Patching WVT material: maps/tt08_luna_01/nature/blendrockdirt_tunnel03a_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (12444 bytes)
+Error! prop_static using model "models/props_junk/flare.mdl", which must be used on a dynamic entity (i.e. prop_physics). Deleted.
+Error loading studio model "models/props_junk/flare.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 175 texinfos to 73
+Reduced 5 texdatas to 5 (147 bytes to 147)
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+1 second elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+11 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 317440, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(18318, 14658, 10132)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(947, 744, 447)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(53, 41, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 3, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0068 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights         11/8192          968/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      756420/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        7463/393216   ( 1.9%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1593/65536       44604/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1144     ( 0.1%) 
+pakfile               [variable]      657355/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+5 seconds elapsed
+
+
+
+materialPath: D:\Program Files (x86)\Steam\steamapps\sourcemods\maplabstemplate\materials
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.vmf
+Could not locate 'GameData' key in d:\program files (x86)\steam\steamapps\sourcemods\maplabstemplate\gameinfo.txt
+Patching WVT material: maps/tt08_luna_01/nature/blendrockdirt_tunnel03a_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (12444 bytes)
+Error! prop_static using model "models/props_junk/flare.mdl", which must be used on a dynamic entity (i.e. prop_physics). Deleted.
+Error loading studio model "models/props_junk/flare.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 175 texinfos to 73
+Reduced 5 texdatas to 5 (147 bytes to 147)
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+11 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 317440, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(18318, 14658, 10132)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(947, 744, 447)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(53, 41, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 3, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0023 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights         11/8192          968/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      756420/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        7463/393216   ( 1.9%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1593/65536       44604/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1144     ( 0.1%) 
+pakfile               [variable]      657355/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+5 seconds elapsed
+
+
+
+materialPath: D:\Program Files (x86)\Steam\steamapps\sourcemods\maplabstemplate\materials
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.vmf
+Could not locate 'GameData' key in d:\program files (x86)\steam\steamapps\sourcemods\maplabstemplate\gameinfo.txt
+Patching WVT material: maps/tt08_luna_01/nature/blendrockdirt_tunnel03a_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (12444 bytes)
+Error! prop_static using model "models/props_junk/flare.mdl", which must be used on a dynamic entity (i.e. prop_physics). Deleted.
+Error loading studio model "models/props_junk/flare.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 175 texinfos to 73
+Reduced 5 texdatas to 5 (147 bytes to 147)
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+1 second elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+11 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 317440, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(18318, 14658, 10132)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(947, 744, 447)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(53, 41, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 3, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0027 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights         11/8192          968/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      756420/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        7461/393216   ( 1.9%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1593/65536       44604/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1144     ( 0.1%) 
+pakfile               [variable]      657355/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+6 seconds elapsed
+
+
+
+materialPath: D:\Program Files (x86)\Steam\steamapps\sourcemods\maplabstemplate\materials
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.vmf
+Could not locate 'GameData' key in d:\program files (x86)\steam\steamapps\sourcemods\maplabstemplate\gameinfo.txt
+Patching WVT material: maps/tt08_luna_01/nature/blendrockdirt_tunnel03a_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (12444 bytes)
+Error! prop_static using model "models/props_junk/flare.mdl", which must be used on a dynamic entity (i.e. prop_physics). Deleted.
+Error loading studio model "models/props_junk/flare.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 175 texinfos to 73
+Reduced 5 texdatas to 5 (147 bytes to 147)
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+11 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 317440, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(18318, 14658, 10132)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(947, 744, 447)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(53, 41, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 3, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0031 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights         11/8192          968/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      756420/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        7461/393216   ( 1.9%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1593/65536       44604/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1144     ( 0.1%) 
+pakfile               [variable]      657355/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+5 seconds elapsed
+
+
+
+materialPath: D:\Program Files (x86)\Steam\steamapps\sourcemods\maplabstemplate\materials
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.vmf
+Could not locate 'GameData' key in d:\program files (x86)\steam\steamapps\sourcemods\maplabstemplate\gameinfo.txt
+Patching WVT material: maps/tt08_luna_01/nature/blendrockdirt_tunnel03a_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (12444 bytes)
+Error! prop_static using model "models/props_junk/flare.mdl", which must be used on a dynamic entity (i.e. prop_physics). Deleted.
+Error loading studio model "models/props_junk/flare.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 175 texinfos to 73
+Reduced 5 texdatas to 5 (147 bytes to 147)
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+1 second elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+11 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 317440, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(18318, 14658, 10132)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(947, 744, 447)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(53, 41, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 3, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0059 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights         11/8192          968/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      756420/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        7457/393216   ( 1.9%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1593/65536       44604/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1144     ( 0.1%) 
+pakfile               [variable]      657355/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+9 seconds elapsed
+
+
+
+materialPath: D:\Program Files (x86)\Steam\steamapps\sourcemods\maplabstemplate\materials
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.vmf
+Could not locate 'GameData' key in d:\program files (x86)\steam\steamapps\sourcemods\maplabstemplate\gameinfo.txt
+Patching WVT material: maps/tt08_luna_01/nature/blendrockdirt_tunnel03a_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (12444 bytes)
+Error! prop_static using model "models/props_junk/flare.mdl", which must be used on a dynamic entity (i.e. prop_physics). Deleted.
+Error loading studio model "models/props_junk/flare.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 175 texinfos to 73
+Reduced 5 texdatas to 5 (147 bytes to 147)
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+1 second elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+11 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 317440, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(18318, 14658, 10132)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(947, 744, 447)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(53, 41, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 3, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0044 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights         11/8192          968/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      756420/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        7461/393216   ( 1.9%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1593/65536       44604/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1144     ( 0.1%) 
+pakfile               [variable]      657355/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+6 seconds elapsed
+
+
+
+materialPath: D:\Program Files (x86)\Steam\steamapps\sourcemods\maplabstemplate\materials
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.vmf
+Could not locate 'GameData' key in d:\program files (x86)\steam\steamapps\sourcemods\maplabstemplate\gameinfo.txt
+Patching WVT material: maps/tt08_luna_01/nature/blendrockdirt_tunnel03a_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (12444 bytes)
+Error! prop_static using model "models/props_junk/flare.mdl", which must be used on a dynamic entity (i.e. prop_physics). Deleted.
+Error loading studio model "models/props_junk/flare.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 175 texinfos to 73
+Reduced 5 texdatas to 5 (147 bytes to 147)
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+1 second elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+11 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 317440, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(18318, 14658, 10132)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(947, 744, 447)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(53, 41, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 3, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0040 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights         11/8192          968/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      756420/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        7458/393216   ( 1.9%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1593/65536       44604/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1144     ( 0.1%) 
+pakfile               [variable]      657355/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+6 seconds elapsed
+
+
+
+materialPath: D:\Program Files (x86)\Steam\steamapps\sourcemods\maplabstemplate\materials
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.vmf
+Could not locate 'GameData' key in d:\program files (x86)\steam\steamapps\sourcemods\maplabstemplate\gameinfo.txt
+Patching WVT material: maps/tt08_luna_01/nature/blendrockdirt_tunnel03a_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (12444 bytes)
+Error! prop_static using model "models/props_junk/flare.mdl", which must be used on a dynamic entity (i.e. prop_physics). Deleted.
+Error loading studio model "models/props_junk/flare.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 175 texinfos to 73
+Reduced 5 texdatas to 5 (147 bytes to 147)
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+1 second elapsed
+
+
+
+4 threads
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+reading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.prt
+ 115 portalclusters
+ 367 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 13 visible clusters (0.13%)
+Total clusters visible: 9726
+Average clusters visible: 84
+Building PAS...
+Average clusters audible: 115
+visdatasize:4403  compressed from 3680
+writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[48 texlights parsed from 'lights.rad']
+
+Loading d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+Loaded alpha texture materials\models\Cliffs\ferns01.vtf
+Loaded alpha texture materials\models\props_foliage\rocks_vegetation.vtf
+Loaded alpha texture materials\models\props_foliage\arbre01.vtf
+344 faces
+316775 square feet [45615608.00 square inches]
+40 Displacements
+7804 Square Feet [1123897.25 Square Inches]
+344 patches before subdivision
+10864 patches after subdivision
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 64.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 58.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 473.000000 but _zero_percent_distance of 0.000000
+light has _fifty_percent_distance of 580.000000 but _zero_percent_distance of 0.000000
+11 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 317440, max 193
+transfer lists:   2.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(18318, 14658, 10132)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(947, 744, 447)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(53, 41, 25)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(3, 3, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0066 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 34/8192          408/98304    ( 0.4%) 
+brushsides             214/65536        1712/524288   ( 0.3%) 
+planes                 340/65536        6800/1310720  ( 0.5%) 
+vertexes               391/65536        4692/786432   ( 0.6%) 
+nodes                  239/65536        7648/2097152  ( 0.4%) 
+texinfos                73/12288        5256/884736   ( 0.6%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1056/0           21120/0        ( 0.0%) 
+disp_tris             1376/0            2752/0        ( 0.0%) 
+disp_lmsamples       37840/0           37840/0        ( 0.0%) 
+faces                  344/65536       19264/3670016  ( 0.5%) 
+hdr faces              344/65536       19264/3670016  ( 0.5%) 
+origfaces              194/65536       10864/3670016  ( 0.3%) 
+leaves                 241/65536        7712/2097152  ( 0.4%) 
+leaffaces              373/65536         746/131072   ( 0.6%) 
+leafbrushes            222/65536         444/131072   ( 0.3%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2262/512000       9048/2048000  ( 0.4%) 
+edges                 1182/256000       4728/1024000  ( 0.5%) 
+LDR worldlights          0/8192            0/720896   ( 0.0%) 
+HDR worldlights         11/8192          968/720896   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips             15/32768         150/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           204/65536         408/131072   ( 0.3%) 
+cubemapsamples           4/1024           64/16384    ( 0.4%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      756420/0        ( 0.0%) 
+visdata               [variable]        4403/16777216 ( 0.0%) 
+entdata               [variable]        7456/393216   ( 1.9%) 
+LDR ambient table      241/65536         964/262144   ( 0.4%) 
+HDR ambient table      241/65536         964/262144   ( 0.4%) 
+LDR leaf ambient       241/65536        6748/1835008  ( 0.4%) 
+HDR leaf ambient      1593/65536       44604/1835008  ( 2.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1144     ( 0.1%) 
+pakfile               [variable]      657355/0        ( 0.0%) 
+physics               [variable]       12444/4194304  ( 0.3%) 
+physics terrain       [variable]        8030/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 798
+Writing d:\program files (x86)\steam\steamapps\sourcemods\luna_ml\mapsrc\tt08_luna_01.bsp
+6 seconds elapsed

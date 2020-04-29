@@ -18,6 +18,7 @@ $attachment camera tag.camera 0 0 0 rotate 0 90 90
 $sequence "idle" {
 	"viewbody_colette.smd"
 	fps 24
+	loop
 }
 
 

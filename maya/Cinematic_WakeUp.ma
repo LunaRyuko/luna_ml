@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Cinematic_WakeUp.ma
-//Last modified: Tue, Apr 21, 2020 01:06:29 AM
+//Last modified: Wed, Apr 29, 2020 02:03:29 AM
 //Codeset: 1250
 file -rdi 1 -ns "FirstPersonView_Rig" -rfn "FirstPersonView_RigRN" -op "v=0;"
 		 -typ "mayaAscii" "D:/Program Files (x86)/Steam/steamapps/sourcemods/luna_ml/maya/FirstPersonView_Rig.ma";
@@ -12,7 +12,6 @@ file -r -ns "FirstPersonView_Rig" -dr 1 -rfn "FirstPersonView_RigRN" -op "v=0;"
 requires maya "2019";
 requires "stereoCamera" "10.0";
 requires "mtoa" "3.1.2";
-requires "stereoCamera" "10.0";
 requires "Mayatomr" "2012.0m - 3.9.1.36 ";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
@@ -23,16 +22,20 @@ fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18362)\n";
 createNode transform -s -n "persp";
 	rename -uid "256FE140-411D-5AE5-8936-70AC6AA20B13";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 152.63931450495897 -45.808268815988193 15.2248425418266 ;
-	setAttr ".r" -type "double3" 80.48292491548618 9.5416640443905503e-15 69.594919160832021 ;
+	setAttr ".t" -type "double3" 194.81928864507918 -61.685224764045827 88.033243309035058 ;
+	setAttr ".r" -type "double3" 64.882924915486356 0 67.594919160832035 ;
+	setAttr ".rp" -type "double3" -10.284635665776808 11.279408045206829 -159.36108332418237 ;
+	setAttr ".rpt" -type "double3" -142.35467883918213 34.528860770781328 144.1362407823558 ;
+	setAttr ".sp" -type "double3" -10.284635665776779 11.279408045206807 -159.36108332418243 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "89735392-4DB6-1054-ED7A-D692E967785D";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 125.20290283496382;
+	setAttr ".coi" 191.40142861427159;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
+	setAttr ".tp" -type "double3" 36.051628112792969 -32.538280487060547 68.65771484375 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "top";
@@ -105,8 +108,8 @@ createNode mesh -n "pPlaneShape1" -p "pPlane1";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "persp1";
 	rename -uid "59ED35DA-4451-160B-6B06-90BEBF7E531E";
-	setAttr ".t" -type "double3" -175.53471904931942 -208.92112205953677 -74.846432203699166 ;
-	setAttr ".r" -type "double3" 17.482924915436939 -9.9392333795734879e-16 -1801.9999999994259 ;
+	setAttr ".t" -type "double3" -338.65122143348867 -351.45009685012707 -84.561398901569518 ;
+	setAttr ".r" -type "double3" 74.48292491547214 0 -2061.599999998944 ;
 	setAttr ".rp" -type "double3" -28.751842267002615 -11.836934155488716 -205.64999685328149 ;
 	setAttr ".rpt" -type "double3" 211.30771921019095 240.68525097233618 275.54036385230592 ;
 	setAttr ".sp" -type "double3" -1.3966245127505772e-05 -2.973926363836199e-06 -3.756887818440191e-05 ;
@@ -114,11 +117,11 @@ createNode camera -n "persp1Shape" -p "persp1";
 	rename -uid "600B7EE6-4165-74BD-37CF-A198ADE33A3E";
 	setAttr -k off ".v";
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 150.34268805022387;
+	setAttr ".coi" 74.50257186524729;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 29.92654425368999 15.152148562633865 13.134408474429719 ;
+	setAttr ".tp" -type "double3" 42 0 3.1424287068424102e-16 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -n "pSphere1";
@@ -227,26 +230,67 @@ createNode mesh -n "pCubeShape3" -p "pCube3";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "left";
+	rename -uid "0C6CC61A-44B4-3F8A-B874-A4A33956079C";
+	setAttr ".v" no;
+	setAttr ".t" -type "double3" -1000.1 0 0 ;
+	setAttr ".r" -type "double3" 90 0 -90 ;
+createNode camera -n "leftShape" -p "left";
+	rename -uid "4F34981F-4AD5-29A6-EC17-74A8E49C6B9A";
+	setAttr -k off ".v";
+	setAttr ".rnd" no;
+	setAttr ".coi" 1000.1;
+	setAttr ".ow" 30;
+	setAttr ".imn" -type "string" "left1";
+	setAttr ".den" -type "string" "left1_depth";
+	setAttr ".man" -type "string" "left1_mask";
+	setAttr ".hc" -type "string" "viewSet -ls %camera";
+	setAttr ".o" yes;
+	setAttr ".ai_translator" -type "string" "orthographic";
+createNode fosterParent -n "FirstPersonView_RigRNfosterParent1";
+	rename -uid "B2B52410-4E4E-FFFC-9CC1-E2AB5F49DE76";
+createNode parentConstraint -n "j_cg_pic_parentConstraint1" -p "FirstPersonView_RigRNfosterParent1";
+	rename -uid "8437C367-461C-CCCB-9BED-38A0A2EC99A5";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "IK_Global_Hand_LE_CTRW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 12.99 5.5040000000000004 8.7150000000000016 ;
+	setAttr ".tg[0].tor" -type "double3" -89.382 -79.322129994463907 14.582363570443968 ;
+	setAttr ".lr" -type "double3" 155.62472497445771 100.87225261453374 -13.259306531018634 ;
+	setAttr ".rst" -type "double3" 173.11029574450492 46.891003668012907 8.0998086139196595 ;
+	setAttr ".rsrr" -type "double3" 184.74407972224429 5.7438240881671492 97.309326533887287 ;
+	setAttr -k on ".w0";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "2D8B20B6-4699-2FCD-9B9F-05BC112CEF82";
-	setAttr -s 4 ".lnk";
-	setAttr -s 4 ".slnk";
+	rename -uid "27A426CF-4FFF-2274-EFEF-4983FD6E2710";
+	setAttr -s 5 ".lnk";
+	setAttr -s 5 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "F40FB1C3-4B04-0278-2DFB-26BB8197C321";
+	rename -uid "DB42BA7A-4847-513E-7994-2B88A35B70B7";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "0F09E76F-422F-1629-F432-6CBC5170CA06";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "2ED17B3F-487D-BA1E-3124-85AFD7B216B7";
+	rename -uid "6BE1132F-45CE-5CDE-669B-08A45FA74748";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "E8116C45-4DA8-993F-AF54-99BC51EEEF7E";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "0BA9E723-4FC6-F97A-82FE-E59716C9034D";
+	rename -uid "3A7E3155-4FA1-9215-F07C-319C68F1D062";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "5DBBFE84-4100-12A3-FC1D-4084E8696C94";
+	rename -uid "1E09F279-493F-7FEF-02F1-3897271D7F13";
 createNode reference -n "FirstPersonView_RigRN";
 	rename -uid "466D17A6-405A-B572-ED8F-3DB6ED046665";
-	setAttr -s 400 ".phl";
+	setAttr -s 425 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -647,13 +691,42 @@ createNode reference -n "FirstPersonView_RigRN";
 	setAttr ".phl[398]" 0;
 	setAttr ".phl[399]" 0;
 	setAttr ".phl[400]" 0;
+	setAttr ".phl[401]" 0;
+	setAttr ".phl[402]" 0;
+	setAttr ".phl[403]" 0;
+	setAttr ".phl[404]" 0;
+	setAttr ".phl[405]" 0;
+	setAttr ".phl[406]" 0;
+	setAttr ".phl[407]" 0;
+	setAttr ".phl[408]" 0;
+	setAttr ".phl[409]" 0;
+	setAttr ".phl[410]" 0;
+	setAttr ".phl[411]" 0;
+	setAttr ".phl[412]" 0;
+	setAttr ".phl[413]" 0;
+	setAttr ".phl[414]" 0;
+	setAttr ".phl[415]" 0;
+	setAttr ".phl[416]" 0;
+	setAttr ".phl[417]" 0;
+	setAttr ".phl[418]" 0;
+	setAttr ".phl[419]" 0;
+	setAttr ".phl[420]" 0;
+	setAttr ".phl[421]" 0;
+	setAttr ".phl[422]" 0;
+	setAttr ".phl[423]" 0;
+	setAttr ".phl[424]" 0;
+	setAttr ".phl[425]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"FirstPersonView_RigRN"
 		"FirstPersonView_Rig:ViewModel_HL2_DefMeshRN" 0
 		"FirstPersonView_RigRN" 0
-		"FirstPersonView_Rig:ViewModel_HL2_DefMeshRN" 511
+		"FirstPersonView_Rig:ViewModel_HL2_DefMeshRN" 542
+		0 "|FirstPersonView_RigRNfosterParent1|j_cg_pic_parentConstraint1" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic" 
+		"-s -r "
+		1 |FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic 
+		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_View|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_CAMERA" 
-		"translate" " -type \"double3\" 69.00147490298533626 13.50249312153131775 -11.13338635335598248"
+		"translate" " -type \"double3\" 21.41818227906351169 11.31275074137374759 -9.91634305443874453"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_View|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_CAMERA" 
 		"translateX" " -av"
@@ -662,7 +735,8 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_View|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_CAMERA" 
 		"translateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_View|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_CAMERA" 
-		"rotate" " -type \"double3\" 57.83095966248666997 0 0"
+		"rotate" " -type \"double3\" 22.67324376407166042 17.05640146742958052 49.36055713660169175"
+		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_View|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_CAMERA" 
 		"rotateX" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_View|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_CAMERA" 
@@ -686,11 +760,14 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_View|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_CAMERA|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Cinematic_View|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Cinematic_ViewShape" 
 		"nearClipPlane" " 8"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_View|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_CAMERA|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Cinematic_View|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Cinematic_ViewShape" 
+		"tumblePivot" " -type \"double3\" 39.91386032104492188 7.35103130340576172 136.574554443359375"
+		
+		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_View|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_CAMERA|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Cinematic_View|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Cinematic_ViewShape" 
 		"displayFilmGate" " 0"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_View|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_CAMERA|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Cinematic_View|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Cinematic_ViewShape" 
 		"displayResolution" " 1"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4" 
-		"rotate" " -type \"double3\" 18.39427427448875463 -21.62314061403871079 -19.78612960507036078"
+		"rotate" " -type \"double3\" 26.90986902456823415 -3.97779205702487637 -60.0132073189254811"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4" 
 		"rotateX" " -av"
@@ -699,15 +776,15 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger41" 
-		"rotate" " -type \"double3\" 0 0 -3.2938014661341608"
+		"rotate" " -type \"double3\" 0 0 -78.76679818552635481"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger41" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger41|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger42" 
-		"rotate" " -type \"double3\" 0 0 8.06753456187697182"
+		"rotate" " -type \"double3\" 0 0 -25.75937881516633965"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger41|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger42" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3" 
-		"rotate" " -type \"double3\" 3.75060986233348492 -8.96773766392411353 -6.84672431384766966"
+		"rotate" " -type \"double3\" 8.89493522981106643 -2.84630629132969881 -56.583257674956279"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3" 
 		"rotateX" " -av"
@@ -716,15 +793,15 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger31" 
-		"rotate" " -type \"double3\" 0 0 -36.55934400672244777"
+		"rotate" " -type \"double3\" 0 0 -62.06965366355584024"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger31" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger31|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger32" 
-		"rotate" " -type \"double3\" 0 0 19.8530654383963352"
+		"rotate" " -type \"double3\" 0 0 -34.56209750347468201"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger31|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger32" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2" 
-		"rotate" " -type \"double3\" -5.14342807684770964 -0.23316020639087401 -19.21700112605580912"
+		"rotate" " -type \"double3\" -4.32452227301922676 -2.43321770942890714 -46.04928397400988871"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2" 
 		"rotateX" " -av"
@@ -733,7 +810,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21" 
-		"rotate" " -type \"double3\" -0.07172173388745734 -0.45121201326272853 -11.96333532303417435"
+		"rotate" " -type \"double3\" 0.34782953188404031 -0.26212930677341362 -74.1197709032001768"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21" 
 		"rotateX" " -av"
@@ -742,7 +819,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger22" 
-		"rotate" " -type \"double3\" -0.088338247010317936 -0.23984569521900617 7.82203695032863333"
+		"rotate" " -type \"double3\" 0.050378593498814288 -0.24289287360045964 -24.31567866928569188"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger22" 
 		"rotateX" " -av"
@@ -751,7 +828,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger22" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1" 
-		"rotate" " -type \"double3\" -17.27256114618696614 11.06520440529595284 -4.74525595142962686"
+		"rotate" " -type \"double3\" -19.90473850073545137 -1.64453235985834323 -41.16490708900531814"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1" 
 		"rotateX" " -av"
@@ -760,7 +837,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11" 
-		"rotate" " -type \"double3\" 0.17695716244451781 -0.33503649200837909 -48.63865506468629718"
+		"rotate" " -type \"double3\" 0.23997138264575318 -0.27258860808643509 -62.25058316283416815"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11" 
 		"rotateX" " -av"
@@ -769,7 +846,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger12" 
-		"rotate" " -type \"double3\" -0.10124924607746798 -0.21900016808748057 10.81430869664047378"
+		"rotate" " -type \"double3\" 0.045966857164553981 -0.23015501879915867 -25.53153407637526584"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger12" 
 		"rotateX" " -av"
@@ -778,7 +855,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger12" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger0" 
-		"rotate" " -type \"double3\" 81.82254167985603033 33.02935364642992511 -22.34558040493210029"
+		"rotate" " -type \"double3\" 62.05890113602165314 16.16170318864303823 -29.72369604530134524"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger0" 
 		"rotateX" " -av"
@@ -796,7 +873,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger4" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger41" 
-		"rotate" " -type \"double3\" 0 0 25.56340178189496015"
+		"rotate" " -type \"double3\" 0 0 25.5634017818949637"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger41" 
 		"rotateX" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger41" 
@@ -882,7 +959,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger11" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger11|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger12" 
-		"rotate" " -type \"double3\" 0.072112497120546779 0.13008973114706937 15.0017682626534139"
+		"rotate" " -type \"double3\" 0.072112497120546779 0.1300897311470694 15.0017682626534139"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger11|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger12" 
 		"rotateX" " -av"
@@ -908,7 +985,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger0|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger01|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger02" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1" 
-		"translate" " -type \"double3\" 4.73903993536303147 -6.39831721962831068 44.85955156055677406"
+		"translate" " -type \"double3\" 10.37851235625084456 -14.66257482864029527 32.26931997745379732"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1" 
 		"translateX" " -av"
@@ -917,8 +994,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1" 
 		"translateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1" 
-		"rotate" " -type \"double3\" 85.75844920598899535 67.56610111907819771 19.02590909722913892"
-		
+		"rotate" " -type \"double3\" 71.86252137514286176 0 0"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1" 
 		"rotateX" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1" 
@@ -928,7 +1004,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2" 
 		"rotate" " -type \"double3\" 0 -16.56413069031756535 0"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_LE" 
-		"rotate" " -type \"double3\" 4.39021265710512054 -42.15989768980176677 -1.92499495873273196"
+		"rotate" " -type \"double3\" -7.40552003580195084 -46.10030946480594594 12.04531487712431392"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_LE" 
 		"rotateX" " -av"
@@ -937,15 +1013,15 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_LE" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_LE|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Knee_LE" 
-		"rotate" " -type \"double3\" 0 45.74109504582447983 0"
+		"rotate" " -type \"double3\" 0 30.51459371819684563 0"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_LE|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Knee_LE" 
 		"rotateY" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_LE|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Knee_LE|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Ankle_LE" 
-		"rotate" " -type \"double3\" 0 35.94767169374142668 0"
+		"rotate" " -type \"double3\" 0 25.53013750109374058 0"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_LE|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Knee_LE|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Ankle_LE" 
 		"rotateY" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_RI" 
-		"rotate" " -type \"double3\" -17.20180897357769467 -44.93662758915750999 11.92432556751012207"
+		"rotate" " -type \"double3\" -57.66242536863910573 -69.00463459023686141 56.00039664724685196"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_RI" 
 		"rotateX" " -av"
@@ -954,11 +1030,33 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_RI" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_RI|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Knee_RI" 
-		"rotate" " -type \"double3\" 0 120.02663299374383143 0"
+		"rotate" " -type \"double3\" 0 95.31550585530291642 0"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_RI|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Knee_RI" 
 		"rotateY" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_RI|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Knee_RI|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Ankle_RI" 
 		"rotate" " -type \"double3\" 0 11.3630921805102254 0"
+		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4" 
+		"rotate" " -type \"double3\" 90 0 90"
+		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic" 
+		"translate" " -type \"double3\" 0.30032597938160421 -67.83653952037252566 39.73529095864635963"
+		
+		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic" 
+		"translateX" " -av"
+		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic" 
+		"translateY" " -av"
+		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic" 
+		"translateZ" " -av"
+		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic" 
+		"rotate" " -type \"double3\" -89.99999096176745184 73.72214921775227481 -89.99999406809126867"
+		
+		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic" 
+		"rotateX" " -av"
+		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic" 
+		"rotateY" " -av"
+		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic" 
+		"rotateZ" " -av"
+		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic" 
+		"blendParent1" " -av -k 1 0"
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_View|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_CAMERA.translateX" 
 		"FirstPersonView_RigRN.placeHolderList[1]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_View|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_CAMERA.translateY" 
@@ -985,19 +1083,19 @@ createNode reference -n "FirstPersonView_RigRN";
 		"FirstPersonView_RigRN.placeHolderList[12]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4.scaleZ" 
 		"FirstPersonView_RigRN.placeHolderList[13]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4.translateX" 
-		"FirstPersonView_RigRN.placeHolderList[14]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4.translateY" 
-		"FirstPersonView_RigRN.placeHolderList[15]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4.translateZ" 
-		"FirstPersonView_RigRN.placeHolderList[16]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4.visibility" 
-		"FirstPersonView_RigRN.placeHolderList[17]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4.rotateX" 
-		"FirstPersonView_RigRN.placeHolderList[18]" ""
+		"FirstPersonView_RigRN.placeHolderList[14]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4.rotateY" 
-		"FirstPersonView_RigRN.placeHolderList[19]" ""
+		"FirstPersonView_RigRN.placeHolderList[15]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4.rotateZ" 
+		"FirstPersonView_RigRN.placeHolderList[16]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4.translateX" 
+		"FirstPersonView_RigRN.placeHolderList[17]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4.translateY" 
+		"FirstPersonView_RigRN.placeHolderList[18]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4.translateZ" 
+		"FirstPersonView_RigRN.placeHolderList[19]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4.visibility" 
 		"FirstPersonView_RigRN.placeHolderList[20]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger41.scaleX" 
 		"FirstPersonView_RigRN.placeHolderList[21]" ""
@@ -1019,19 +1117,19 @@ createNode reference -n "FirstPersonView_RigRN";
 		"FirstPersonView_RigRN.placeHolderList[29]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger41.visibility" 
 		"FirstPersonView_RigRN.placeHolderList[30]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger41|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger42.translateX" 
-		"FirstPersonView_RigRN.placeHolderList[31]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger41|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger42.translateY" 
-		"FirstPersonView_RigRN.placeHolderList[32]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger41|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger42.translateZ" 
-		"FirstPersonView_RigRN.placeHolderList[33]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger41|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger42.visibility" 
-		"FirstPersonView_RigRN.placeHolderList[34]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger41|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger42.rotateX" 
-		"FirstPersonView_RigRN.placeHolderList[35]" ""
+		"FirstPersonView_RigRN.placeHolderList[31]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger41|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger42.rotateY" 
-		"FirstPersonView_RigRN.placeHolderList[36]" ""
+		"FirstPersonView_RigRN.placeHolderList[32]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger41|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger42.rotateZ" 
+		"FirstPersonView_RigRN.placeHolderList[33]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger41|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger42.translateX" 
+		"FirstPersonView_RigRN.placeHolderList[34]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger41|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger42.translateY" 
+		"FirstPersonView_RigRN.placeHolderList[35]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger41|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger42.translateZ" 
+		"FirstPersonView_RigRN.placeHolderList[36]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger41|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger42.visibility" 
 		"FirstPersonView_RigRN.placeHolderList[37]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger41|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger42.scaleX" 
 		"FirstPersonView_RigRN.placeHolderList[38]" ""
@@ -1045,19 +1143,19 @@ createNode reference -n "FirstPersonView_RigRN";
 		"FirstPersonView_RigRN.placeHolderList[42]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3.scaleZ" 
 		"FirstPersonView_RigRN.placeHolderList[43]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3.translateX" 
-		"FirstPersonView_RigRN.placeHolderList[44]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3.translateY" 
-		"FirstPersonView_RigRN.placeHolderList[45]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3.translateZ" 
-		"FirstPersonView_RigRN.placeHolderList[46]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3.visibility" 
-		"FirstPersonView_RigRN.placeHolderList[47]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3.rotateX" 
-		"FirstPersonView_RigRN.placeHolderList[48]" ""
+		"FirstPersonView_RigRN.placeHolderList[44]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3.rotateY" 
-		"FirstPersonView_RigRN.placeHolderList[49]" ""
+		"FirstPersonView_RigRN.placeHolderList[45]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3.rotateZ" 
+		"FirstPersonView_RigRN.placeHolderList[46]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3.translateX" 
+		"FirstPersonView_RigRN.placeHolderList[47]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3.translateY" 
+		"FirstPersonView_RigRN.placeHolderList[48]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3.translateZ" 
+		"FirstPersonView_RigRN.placeHolderList[49]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3.visibility" 
 		"FirstPersonView_RigRN.placeHolderList[50]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger31.scaleX" 
 		"FirstPersonView_RigRN.placeHolderList[51]" ""
@@ -1079,19 +1177,19 @@ createNode reference -n "FirstPersonView_RigRN";
 		"FirstPersonView_RigRN.placeHolderList[59]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger31.visibility" 
 		"FirstPersonView_RigRN.placeHolderList[60]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger31|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger32.translateX" 
-		"FirstPersonView_RigRN.placeHolderList[61]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger31|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger32.translateY" 
-		"FirstPersonView_RigRN.placeHolderList[62]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger31|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger32.translateZ" 
-		"FirstPersonView_RigRN.placeHolderList[63]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger31|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger32.visibility" 
-		"FirstPersonView_RigRN.placeHolderList[64]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger31|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger32.rotateX" 
-		"FirstPersonView_RigRN.placeHolderList[65]" ""
+		"FirstPersonView_RigRN.placeHolderList[61]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger31|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger32.rotateY" 
-		"FirstPersonView_RigRN.placeHolderList[66]" ""
+		"FirstPersonView_RigRN.placeHolderList[62]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger31|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger32.rotateZ" 
+		"FirstPersonView_RigRN.placeHolderList[63]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger31|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger32.translateX" 
+		"FirstPersonView_RigRN.placeHolderList[64]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger31|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger32.translateY" 
+		"FirstPersonView_RigRN.placeHolderList[65]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger31|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger32.translateZ" 
+		"FirstPersonView_RigRN.placeHolderList[66]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger31|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger32.visibility" 
 		"FirstPersonView_RigRN.placeHolderList[67]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger31|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger32.scaleX" 
 		"FirstPersonView_RigRN.placeHolderList[68]" ""
@@ -1105,19 +1203,19 @@ createNode reference -n "FirstPersonView_RigRN";
 		"FirstPersonView_RigRN.placeHolderList[72]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2.scaleZ" 
 		"FirstPersonView_RigRN.placeHolderList[73]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2.translateX" 
-		"FirstPersonView_RigRN.placeHolderList[74]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2.translateY" 
-		"FirstPersonView_RigRN.placeHolderList[75]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2.translateZ" 
-		"FirstPersonView_RigRN.placeHolderList[76]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2.visibility" 
-		"FirstPersonView_RigRN.placeHolderList[77]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2.rotateX" 
-		"FirstPersonView_RigRN.placeHolderList[78]" ""
+		"FirstPersonView_RigRN.placeHolderList[74]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2.rotateY" 
-		"FirstPersonView_RigRN.placeHolderList[79]" ""
+		"FirstPersonView_RigRN.placeHolderList[75]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2.rotateZ" 
+		"FirstPersonView_RigRN.placeHolderList[76]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2.translateX" 
+		"FirstPersonView_RigRN.placeHolderList[77]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2.translateY" 
+		"FirstPersonView_RigRN.placeHolderList[78]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2.translateZ" 
+		"FirstPersonView_RigRN.placeHolderList[79]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2.visibility" 
 		"FirstPersonView_RigRN.placeHolderList[80]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21.scaleX" 
 		"FirstPersonView_RigRN.placeHolderList[81]" ""
@@ -1139,19 +1237,19 @@ createNode reference -n "FirstPersonView_RigRN";
 		"FirstPersonView_RigRN.placeHolderList[89]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21.visibility" 
 		"FirstPersonView_RigRN.placeHolderList[90]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger22.translateX" 
-		"FirstPersonView_RigRN.placeHolderList[91]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger22.translateY" 
-		"FirstPersonView_RigRN.placeHolderList[92]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger22.translateZ" 
-		"FirstPersonView_RigRN.placeHolderList[93]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger22.visibility" 
-		"FirstPersonView_RigRN.placeHolderList[94]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger22.rotateX" 
-		"FirstPersonView_RigRN.placeHolderList[95]" ""
+		"FirstPersonView_RigRN.placeHolderList[91]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger22.rotateY" 
-		"FirstPersonView_RigRN.placeHolderList[96]" ""
+		"FirstPersonView_RigRN.placeHolderList[92]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger22.rotateZ" 
+		"FirstPersonView_RigRN.placeHolderList[93]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger22.translateX" 
+		"FirstPersonView_RigRN.placeHolderList[94]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger22.translateY" 
+		"FirstPersonView_RigRN.placeHolderList[95]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger22.translateZ" 
+		"FirstPersonView_RigRN.placeHolderList[96]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger22.visibility" 
 		"FirstPersonView_RigRN.placeHolderList[97]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger22.scaleX" 
 		"FirstPersonView_RigRN.placeHolderList[98]" ""
@@ -1165,19 +1263,19 @@ createNode reference -n "FirstPersonView_RigRN";
 		"FirstPersonView_RigRN.placeHolderList[102]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1.scaleZ" 
 		"FirstPersonView_RigRN.placeHolderList[103]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1.translateX" 
-		"FirstPersonView_RigRN.placeHolderList[104]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1.translateY" 
-		"FirstPersonView_RigRN.placeHolderList[105]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1.translateZ" 
-		"FirstPersonView_RigRN.placeHolderList[106]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1.visibility" 
-		"FirstPersonView_RigRN.placeHolderList[107]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1.rotateX" 
-		"FirstPersonView_RigRN.placeHolderList[108]" ""
+		"FirstPersonView_RigRN.placeHolderList[104]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1.rotateY" 
-		"FirstPersonView_RigRN.placeHolderList[109]" ""
+		"FirstPersonView_RigRN.placeHolderList[105]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1.rotateZ" 
+		"FirstPersonView_RigRN.placeHolderList[106]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1.translateX" 
+		"FirstPersonView_RigRN.placeHolderList[107]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1.translateY" 
+		"FirstPersonView_RigRN.placeHolderList[108]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1.translateZ" 
+		"FirstPersonView_RigRN.placeHolderList[109]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1.visibility" 
 		"FirstPersonView_RigRN.placeHolderList[110]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11.scaleX" 
 		"FirstPersonView_RigRN.placeHolderList[111]" ""
@@ -1199,19 +1297,19 @@ createNode reference -n "FirstPersonView_RigRN";
 		"FirstPersonView_RigRN.placeHolderList[119]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11.visibility" 
 		"FirstPersonView_RigRN.placeHolderList[120]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger12.translateX" 
-		"FirstPersonView_RigRN.placeHolderList[121]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger12.translateY" 
-		"FirstPersonView_RigRN.placeHolderList[122]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger12.translateZ" 
-		"FirstPersonView_RigRN.placeHolderList[123]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger12.visibility" 
-		"FirstPersonView_RigRN.placeHolderList[124]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger12.rotateX" 
-		"FirstPersonView_RigRN.placeHolderList[125]" ""
+		"FirstPersonView_RigRN.placeHolderList[121]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger12.rotateY" 
-		"FirstPersonView_RigRN.placeHolderList[126]" ""
+		"FirstPersonView_RigRN.placeHolderList[122]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger12.rotateZ" 
+		"FirstPersonView_RigRN.placeHolderList[123]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger12.translateX" 
+		"FirstPersonView_RigRN.placeHolderList[124]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger12.translateY" 
+		"FirstPersonView_RigRN.placeHolderList[125]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger12.translateZ" 
+		"FirstPersonView_RigRN.placeHolderList[126]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger12.visibility" 
 		"FirstPersonView_RigRN.placeHolderList[127]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11|FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger12.scaleX" 
 		"FirstPersonView_RigRN.placeHolderList[128]" ""
@@ -1699,9 +1797,45 @@ createNode reference -n "FirstPersonView_RigRN";
 		"FirstPersonView_RigRN.placeHolderList[369]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_RI|FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Knee_RI.translateZ" 
 		"FirstPersonView_RigRN.placeHolderList[370]" ""
-		"FirstPersonView_RigRN" 62
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic.translateX" 
+		"FirstPersonView_RigRN.placeHolderList[371]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic.translateY" 
+		"FirstPersonView_RigRN.placeHolderList[372]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic.translateZ" 
+		"FirstPersonView_RigRN.placeHolderList[373]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic.rotateX" 
+		"FirstPersonView_RigRN.placeHolderList[374]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic.rotateY" 
+		"FirstPersonView_RigRN.placeHolderList[375]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic.rotateZ" 
+		"FirstPersonView_RigRN.placeHolderList[376]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic.visibility" 
+		"FirstPersonView_RigRN.placeHolderList[377]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic.scaleX" 
+		"FirstPersonView_RigRN.placeHolderList[378]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic.scaleY" 
+		"FirstPersonView_RigRN.placeHolderList[379]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic.scaleZ" 
+		"FirstPersonView_RigRN.placeHolderList[380]" ""
+		5 3 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic.blendParent1" 
+		"FirstPersonView_RigRN.placeHolderList[381]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic.blendParent1" 
+		"FirstPersonView_RigRN.placeHolderList[382]" ""
+		5 3 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic.rotateOrder" 
+		"FirstPersonView_RigRN.placeHolderList[383]" ""
+		5 3 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic.rotateOrder" 
+		"FirstPersonView_RigRN.placeHolderList[384]" ""
+		5 3 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic.parentInverseMatrix" 
+		"FirstPersonView_RigRN.placeHolderList[385]" ""
+		5 3 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic.rotatePivot" 
+		"FirstPersonView_RigRN.placeHolderList[386]" ""
+		5 3 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic.rotatePivotTranslate" 
+		"FirstPersonView_RigRN.placeHolderList[387]" ""
+		5 3 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Joints|FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root|FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4|FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic.jointOrient" 
+		"FirstPersonView_RigRN.placeHolderList[388]" ""
+		"FirstPersonView_RigRN" 73
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_LE_GRP|FirstPersonView_Rig:Shoulder_LE_CTR" 
-		"translate" " -type \"double3\" 48.43112369530307149 -7.80549187354598217 89.3546562128772166"
+		"translate" " -type \"double3\" 26.9526300968696475 -4.62977649462096608 50.67913182657076732"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_LE_GRP|FirstPersonView_Rig:Shoulder_LE_CTR" 
 		"translateX" " -av"
@@ -1709,8 +1843,16 @@ createNode reference -n "FirstPersonView_RigRN";
 		"translateY" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_LE_GRP|FirstPersonView_Rig:Shoulder_LE_CTR" 
 		"translateZ" " -av"
+		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_LE_GRP|FirstPersonView_Rig:Shoulder_LE_CTR" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_LE_GRP|FirstPersonView_Rig:Shoulder_LE_CTR" 
+		"rotateX" " -av"
+		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_LE_GRP|FirstPersonView_Rig:Shoulder_LE_CTR" 
+		"rotateY" " -av"
+		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_LE_GRP|FirstPersonView_Rig:Shoulder_LE_CTR" 
+		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_RI_GRP|FirstPersonView_Rig:Shoulder_RI_CTR" 
-		"translate" " -type \"double3\" 21.92474810860888823 -27.19592949053127029 80.47571116047126338"
+		"translate" " -type \"double3\" 14.45718118130407959 2.62798868924240026 36.17531652160505473"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_RI_GRP|FirstPersonView_Rig:Shoulder_RI_CTR" 
 		"translateX" " -av"
@@ -1719,7 +1861,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_RI_GRP|FirstPersonView_Rig:Shoulder_RI_CTR" 
 		"translateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:PoleV_RI_GRP|FirstPersonView_Rig:PoleV_RI" 
-		"translate" " -type \"double3\" 55.37478402668124033 -34.31180501875245881 42.39049309174061619"
+		"translate" " -type \"double3\" 56.48748613167470722 -14.49620049714258485 26.73538521894852238"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:PoleV_RI_GRP|FirstPersonView_Rig:PoleV_RI" 
 		"translateX" " -av"
@@ -1737,7 +1879,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:PoleV_LE_GRP|FirstPersonView_Rig:PoleV_LE" 
 		"translateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_RI_GRP|FirstPersonView_Rig:IK_Global_Hand_RI_CTR" 
-		"translate" " -type \"double3\" -18.08929104250098874 -51.0944360565382496 24.34631689485176764"
+		"translate" " -type \"double3\" -10.8086605107835716 -41.25460068529776692 22.96712345317166282"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_RI_GRP|FirstPersonView_Rig:IK_Global_Hand_RI_CTR" 
 		"translateX" " -av"
@@ -1746,7 +1888,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_RI_GRP|FirstPersonView_Rig:IK_Global_Hand_RI_CTR" 
 		"translateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_RI_GRP|FirstPersonView_Rig:IK_Global_Hand_RI_CTR" 
-		"rotate" " -type \"double3\" 63.62850271701071847 15.69388687658285164 -42.44954456991640512"
+		"rotate" " -type \"double3\" -0.67333702437673604 58.22714855511797083 -2.12744893627717335"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_RI_GRP|FirstPersonView_Rig:IK_Global_Hand_RI_CTR" 
 		"rotateX" " -av"
@@ -1755,7 +1897,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_RI_GRP|FirstPersonView_Rig:IK_Global_Hand_RI_CTR" 
 		"rotateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR" 
-		"translate" " -type \"double3\" 22.97529160254531888 63.31507084326477042 24.06255353731877378"
+		"translate" " -type \"double3\" 7.34581776237856676 40.56204188755447149 17.22312383901805433"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR" 
 		"translateX" " -av"
@@ -1764,7 +1906,7 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR" 
 		"translateZ" " -av"
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR" 
-		"rotate" " -type \"double3\" 153.26513729470315184 -9.58349477430569507 -91.71651597433879033"
+		"rotate" " -type \"double3\" 117.47482973568243381 -60.00168212839149362 -37.49259738211597437"
 		
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR" 
 		"rotateX" " -av"
@@ -1773,124 +1915,133 @@ createNode reference -n "FirstPersonView_RigRN";
 		2 "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR" 
 		"rotateZ" " -av"
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_LE_GRP|FirstPersonView_Rig:Shoulder_LE_CTR.translateX" 
-		"FirstPersonView_RigRN.placeHolderList[371]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_LE_GRP|FirstPersonView_Rig:Shoulder_LE_CTR.translateY" 
-		"FirstPersonView_RigRN.placeHolderList[372]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_LE_GRP|FirstPersonView_Rig:Shoulder_LE_CTR.translateZ" 
-		"FirstPersonView_RigRN.placeHolderList[373]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_LE_GRP|FirstPersonView_Rig:Shoulder_LE_CTR.rotateX" 
-		"FirstPersonView_RigRN.placeHolderList[374]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_LE_GRP|FirstPersonView_Rig:Shoulder_LE_CTR.rotateY" 
-		"FirstPersonView_RigRN.placeHolderList[375]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_LE_GRP|FirstPersonView_Rig:Shoulder_LE_CTR.rotateZ" 
-		"FirstPersonView_RigRN.placeHolderList[376]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_RI_GRP|FirstPersonView_Rig:Shoulder_RI_CTR.translateX" 
-		"FirstPersonView_RigRN.placeHolderList[377]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_RI_GRP|FirstPersonView_Rig:Shoulder_RI_CTR.translateY" 
-		"FirstPersonView_RigRN.placeHolderList[378]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_RI_GRP|FirstPersonView_Rig:Shoulder_RI_CTR.translateZ" 
-		"FirstPersonView_RigRN.placeHolderList[379]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_RI_GRP|FirstPersonView_Rig:Shoulder_RI_CTR.rotateX" 
-		"FirstPersonView_RigRN.placeHolderList[380]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_RI_GRP|FirstPersonView_Rig:Shoulder_RI_CTR.rotateY" 
-		"FirstPersonView_RigRN.placeHolderList[381]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_RI_GRP|FirstPersonView_Rig:Shoulder_RI_CTR.rotateZ" 
-		"FirstPersonView_RigRN.placeHolderList[382]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:PoleV_RI_GRP|FirstPersonView_Rig:PoleV_RI.translateX" 
-		"FirstPersonView_RigRN.placeHolderList[383]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:PoleV_RI_GRP|FirstPersonView_Rig:PoleV_RI.translateY" 
-		"FirstPersonView_RigRN.placeHolderList[384]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:PoleV_RI_GRP|FirstPersonView_Rig:PoleV_RI.translateZ" 
-		"FirstPersonView_RigRN.placeHolderList[385]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:PoleV_LE_GRP|FirstPersonView_Rig:PoleV_LE.translateX" 
-		"FirstPersonView_RigRN.placeHolderList[386]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:PoleV_LE_GRP|FirstPersonView_Rig:PoleV_LE.translateY" 
-		"FirstPersonView_RigRN.placeHolderList[387]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:PoleV_LE_GRP|FirstPersonView_Rig:PoleV_LE.translateZ" 
-		"FirstPersonView_RigRN.placeHolderList[388]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_RI_GRP|FirstPersonView_Rig:IK_Global_Hand_RI_CTR.translateX" 
 		"FirstPersonView_RigRN.placeHolderList[389]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_RI_GRP|FirstPersonView_Rig:IK_Global_Hand_RI_CTR.translateY" 
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_LE_GRP|FirstPersonView_Rig:Shoulder_LE_CTR.translateY" 
 		"FirstPersonView_RigRN.placeHolderList[390]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_RI_GRP|FirstPersonView_Rig:IK_Global_Hand_RI_CTR.translateZ" 
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_LE_GRP|FirstPersonView_Rig:Shoulder_LE_CTR.translateZ" 
 		"FirstPersonView_RigRN.placeHolderList[391]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_RI_GRP|FirstPersonView_Rig:IK_Global_Hand_RI_CTR.rotateX" 
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_LE_GRP|FirstPersonView_Rig:Shoulder_LE_CTR.rotateX" 
 		"FirstPersonView_RigRN.placeHolderList[392]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_RI_GRP|FirstPersonView_Rig:IK_Global_Hand_RI_CTR.rotateY" 
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_LE_GRP|FirstPersonView_Rig:Shoulder_LE_CTR.rotateY" 
 		"FirstPersonView_RigRN.placeHolderList[393]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_RI_GRP|FirstPersonView_Rig:IK_Global_Hand_RI_CTR.rotateZ" 
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_LE_GRP|FirstPersonView_Rig:Shoulder_LE_CTR.rotateZ" 
 		"FirstPersonView_RigRN.placeHolderList[394]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR.translateX" 
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_RI_GRP|FirstPersonView_Rig:Shoulder_RI_CTR.translateX" 
 		"FirstPersonView_RigRN.placeHolderList[395]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR.translateY" 
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_RI_GRP|FirstPersonView_Rig:Shoulder_RI_CTR.translateY" 
 		"FirstPersonView_RigRN.placeHolderList[396]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR.translateZ" 
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_RI_GRP|FirstPersonView_Rig:Shoulder_RI_CTR.translateZ" 
 		"FirstPersonView_RigRN.placeHolderList[397]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR.rotateX" 
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_RI_GRP|FirstPersonView_Rig:Shoulder_RI_CTR.rotateX" 
 		"FirstPersonView_RigRN.placeHolderList[398]" ""
-		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR.rotateY" 
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_RI_GRP|FirstPersonView_Rig:Shoulder_RI_CTR.rotateY" 
 		"FirstPersonView_RigRN.placeHolderList[399]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:Shoulder_RI_GRP|FirstPersonView_Rig:Shoulder_RI_CTR.rotateZ" 
+		"FirstPersonView_RigRN.placeHolderList[400]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:PoleV_RI_GRP|FirstPersonView_Rig:PoleV_RI.translateX" 
+		"FirstPersonView_RigRN.placeHolderList[401]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:PoleV_RI_GRP|FirstPersonView_Rig:PoleV_RI.translateY" 
+		"FirstPersonView_RigRN.placeHolderList[402]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:PoleV_RI_GRP|FirstPersonView_Rig:PoleV_RI.translateZ" 
+		"FirstPersonView_RigRN.placeHolderList[403]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:PoleV_LE_GRP|FirstPersonView_Rig:PoleV_LE.translateX" 
+		"FirstPersonView_RigRN.placeHolderList[404]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:PoleV_LE_GRP|FirstPersonView_Rig:PoleV_LE.translateY" 
+		"FirstPersonView_RigRN.placeHolderList[405]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:PoleV_LE_GRP|FirstPersonView_Rig:PoleV_LE.translateZ" 
+		"FirstPersonView_RigRN.placeHolderList[406]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_RI_GRP|FirstPersonView_Rig:IK_Global_Hand_RI_CTR.translateX" 
+		"FirstPersonView_RigRN.placeHolderList[407]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_RI_GRP|FirstPersonView_Rig:IK_Global_Hand_RI_CTR.translateY" 
+		"FirstPersonView_RigRN.placeHolderList[408]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_RI_GRP|FirstPersonView_Rig:IK_Global_Hand_RI_CTR.translateZ" 
+		"FirstPersonView_RigRN.placeHolderList[409]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_RI_GRP|FirstPersonView_Rig:IK_Global_Hand_RI_CTR.rotateX" 
+		"FirstPersonView_RigRN.placeHolderList[410]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_RI_GRP|FirstPersonView_Rig:IK_Global_Hand_RI_CTR.rotateY" 
+		"FirstPersonView_RigRN.placeHolderList[411]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_RI_GRP|FirstPersonView_Rig:IK_Global_Hand_RI_CTR.rotateZ" 
+		"FirstPersonView_RigRN.placeHolderList[412]" ""
+		5 3 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR.scale" 
+		"FirstPersonView_RigRN.placeHolderList[413]" ""
+		5 3 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR.translate" 
+		"FirstPersonView_RigRN.placeHolderList[414]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR.translateX" 
+		"FirstPersonView_RigRN.placeHolderList[415]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR.translateY" 
+		"FirstPersonView_RigRN.placeHolderList[416]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR.translateZ" 
+		"FirstPersonView_RigRN.placeHolderList[417]" ""
+		5 3 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR.rotatePivot" 
+		"FirstPersonView_RigRN.placeHolderList[418]" ""
+		5 3 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR.rotatePivotTranslate" 
+		"FirstPersonView_RigRN.placeHolderList[419]" ""
+		5 3 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR.rotate" 
+		"FirstPersonView_RigRN.placeHolderList[420]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR.rotateX" 
+		"FirstPersonView_RigRN.placeHolderList[421]" ""
+		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR.rotateY" 
+		"FirstPersonView_RigRN.placeHolderList[422]" ""
 		5 4 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR.rotateZ" 
-		"FirstPersonView_RigRN.placeHolderList[400]" "";
+		"FirstPersonView_RigRN.placeHolderList[423]" ""
+		5 3 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR.rotateOrder" 
+		"FirstPersonView_RigRN.placeHolderList[424]" ""
+		5 3 "FirstPersonView_RigRN" "|FirstPersonView_Rig:Global|FirstPersonView_Rig:Torso_GRP|FirstPersonView_Rig:Torso_CTR|FirstPersonView_Rig:IK_Global_Hand_LE_GRP|FirstPersonView_Rig:IK_Global_Hand_LE_CTR.parentMatrix" 
+		"FirstPersonView_RigRN.placeHolderList[425]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "AD46031F-482E-53E7-1A06-838C7CB34111";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp1\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 1\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 877\n            -height 647\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 622\n            -height 647\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"FirstPersonView_Rig:ViewModel_HL2_DefMesh:Cinematic_View\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 0\n            -nurbsCurves 0\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 0\n            -planes 0\n            -lights 0\n            -cameras 0\n            -controlVertices 0\n            -hulls 0\n            -grid 1\n            -imagePlane 0\n            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 0\n            -particleInstancers 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 0\n            -manipulators 1\n            -pluginShapes 0\n            -dimensions 0\n            -handles 0\n            -pivots 0\n            -textures 0\n            -strokes 0\n            -motionTrails 0\n            -clipGhosts 0\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n"
-		+ "            -width 1441\n            -height 952\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 0 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n"
+		+ "            -width 1319\n            -height 952\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 0 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n"
 		+ "            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n"
 		+ "            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n"
-		+ "            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp1\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n"
+		+ "            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 100\n            -height 30\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp1\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n"
 		+ "            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n"
 		+ "            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n"
-		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 877\n            -height 647\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 622\n            -height 647\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
 		+ "\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n"
 		+ "            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n"
 		+ "            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n"
-		+ "            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 0\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n"
-		+ "            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n"
-		+ "                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n"
-		+ "                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n"
-		+ "                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -autoFitTime 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n                -showActiveCurveNames 0\n                -clipTime \"on\" \n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n"
-		+ "                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n"
-		+ "                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n"
-		+ "                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -autoFitTime 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n"
-		+ "                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n"
-		+ "                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -autoFitTime 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n"
-		+ "                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -autoFitTime 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 1\n                -zoom 1.5875\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n"
-		+ "                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 5\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"largeIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n"
-		+ "                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -editorMode \"default\" \n                -hasWatchpoint 0\n"
-		+ "                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n"
-		+ "                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n"
-		+ "                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n"
-		+ "                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n"
-		+ "                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 0\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 877\\n    -height 647\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 0\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 877\\n    -height 647\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 0\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n"
+		+ "            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n"
+		+ "                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n"
+		+ "                -isSet 0\n                -isSetMember 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n"
+		+ "                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -autoFitTime 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n                -showActiveCurveNames 0\n                -clipTime \"on\" \n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n"
+		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n"
+		+ "                -showPublishedAsConnected 0\n                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n"
+		+ "                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -autoFitTime 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n"
+		+ "                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n"
+		+ "                -displayValues 0\n                -autoFit 0\n                -autoFitTime 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -autoFitTime 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n"
+		+ "                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 1\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n"
+		+ "                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n"
+		+ "                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n"
+		+ "            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n"
+		+ "                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n"
+		+ "                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n"
+		+ "                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
+		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n"
+		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 1\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 0\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 622\\n    -height 647\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 1\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 0\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 622\\n    -height 647\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels yes -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition axis;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "625D7A11-4B86-49D4-BF83-51AAD4D9072A";
-	setAttr ".b" -type "string" "playbackOptions -min 0 -max 350 -ast 0 -aet 350 ";
+	setAttr ".b" -type "string" "playbackOptions -min 0 -max 500 -ast 0 -aet 500 ";
 	setAttr ".st" 6;
-createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "2B59A9FB-4173-1611-CCE1-6DB79A7BCF62";
-	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -327.38093937200267 -153.57142246904854 ;
-	setAttr ".tgi[0].vh" -type "double2" 172.61904075978319 261.90475149760215 ;
 createNode polyPlane -n "polyPlane1";
 	rename -uid "A7A27BB6-408A-FD53-8DDF-C8B6BC0968F8";
 	setAttr ".ax" -type "double3" 0 0 1 ;
@@ -1907,7 +2058,7 @@ createNode renderLayer -n "SMDModelExporterInfo";
 	addAttr -ci true -m -sn "useinmultiexport" -ln "useinmultiexport" -min 0 -max 1 
 		-at "bool";
 	setAttr ".paths[1]" -type "string" "D:/Program Files (x86)/Steam/steamapps/sourcemods/luna_ml/modelsrc/cin/viewbody_colette.smd";
-	setAttr ".selections[1]" -type "stringArray" 67 "FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_View" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_CAMERA" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:Cinematic_View" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:Cinematic_ViewShape" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger4" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger41" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger42" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger3" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger31" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger32" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger2" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger21" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger22" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger1" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger11" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger12" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger0" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger01" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger02" "FirstPersonView_Rig:ValveBiped_Bip01_L_Hand_parentConstraint1" "FirstPersonView_Rig:ValveBiped_Bip01_L_Forearm_parentConstraint1" "FirstPersonView_Rig:ValveBiped_Bip01_L_UpperArm_parentConstraint1" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger41" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger42" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger31" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger32" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger22" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger12" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger0" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger01" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger02" "FirstPersonView_Rig:ValveBiped_Bip01_R_Hand_parentConstraint1" "FirstPersonView_Rig:ValveBiped_Bip01_R_Forearm_parentConstraint1" "FirstPersonView_Rig:ValveBiped_Bip01_R_UpperArm_parentConstraint1" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_WeaponRoot" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform1" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_GestureParent" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_LE" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Knee_LE" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Ankle_LE" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_RI" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Knee_RI" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Ankle_RI" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:polySurface3" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:polySurfaceShape3" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Mesh" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_MeshShape"  ;
+	setAttr ".selections[1]" -type "stringArray" 72 "FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic" "j_cg_pic_parentConstraint1" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_View" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_CAMERA" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:Cinematic_View" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:Cinematic_ViewShape" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger4" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger41" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger42" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger3" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger31" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger32" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger2" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger21" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger22" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger1" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger11" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger12" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger0" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger01" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger02" "FirstPersonView_Rig:ValveBiped_Bip01_L_Hand_parentConstraint1" "FirstPersonView_Rig:ValveBiped_Bip01_L_Forearm_parentConstraint1" "FirstPersonView_Rig:ValveBiped_Bip01_L_UpperArm_parentConstraint1" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger41" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger42" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger31" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger32" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger22" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger12" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger0" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger01" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger02" "FirstPersonView_Rig:ValveBiped_Bip01_R_Hand_parentConstraint1" "FirstPersonView_Rig:ValveBiped_Bip01_R_Forearm_parentConstraint1" "FirstPersonView_Rig:ValveBiped_Bip01_R_UpperArm_parentConstraint1" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_WeaponRoot" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform1" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_GestureParent" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_LE" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Knee_LE" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Ankle_LE" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_RI" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Knee_RI" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Ankle_RI" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:polySurface3" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:polySurfaceShape3" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Mesh" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_MeshShape" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:cg_pic1"  ;
 	setAttr -s 100 ".useinmultiexport[1:100]" yes no no no no no no no no 
 		no no no no no no no no no no no no no no no no no no no no no no no no no no no 
 		no no no no no no no no no no no no no no no no no no no no no no no no no no no 
@@ -1925,8 +2076,8 @@ createNode renderLayer -n "SMDAnimExporterInfo";
 	addAttr -ci true -m -sn "substract" -ln "substract" -min 0 -max 1 -at "bool";
 	addAttr -ci true -m -sn "substractFrames" -ln "substractFrames" -at "long";
 	setAttr ".paths[1]" -type "string" "D:/Program Files (x86)/Steam/steamapps/sourcemods/luna_ml/modelsrc/cin/vb_anim_wakeup.smd";
-	setAttr ".selections[1]" -type "stringArray" 67 "FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_View" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_CAMERA" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:Cinematic_View" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:Cinematic_ViewShape" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger4" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger41" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger42" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger3" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger31" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger32" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger2" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger21" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger22" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger1" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger11" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger12" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger0" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger01" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger02" "FirstPersonView_Rig:ValveBiped_Bip01_L_Hand_parentConstraint1" "FirstPersonView_Rig:ValveBiped_Bip01_L_Forearm_parentConstraint1" "FirstPersonView_Rig:ValveBiped_Bip01_L_UpperArm_parentConstraint1" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger41" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger42" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger31" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger32" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger22" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger12" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger0" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger01" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger02" "FirstPersonView_Rig:ValveBiped_Bip01_R_Hand_parentConstraint1" "FirstPersonView_Rig:ValveBiped_Bip01_R_Forearm_parentConstraint1" "FirstPersonView_Rig:ValveBiped_Bip01_R_UpperArm_parentConstraint1" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_WeaponRoot" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform1" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_GestureParent" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_LE" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Knee_LE" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Ankle_LE" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_RI" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Knee_RI" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Ankle_RI" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:polySurface3" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:polySurfaceShape3" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Mesh" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_MeshShape"  ;
-	setAttr ".frameRanges[1]" -type "long2" 0 350 ;
+	setAttr ".selections[1]" -type "stringArray" 71 "FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_Root" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:va_transform" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform4" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:j_cg_pic" "j_cg_pic_parentConstraint1" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_View" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_CAMERA" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:Cinematic_View" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:Cinematic_ViewShape" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Clavicle" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_UpperArm" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Forearm" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Hand" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger4" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger41" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger42" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger3" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger31" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger32" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger2" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger21" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger22" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger1" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger11" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger12" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger0" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger01" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_L_Finger02" "FirstPersonView_Rig:ValveBiped_Bip01_L_Hand_parentConstraint1" "FirstPersonView_Rig:ValveBiped_Bip01_L_Forearm_parentConstraint1" "FirstPersonView_Rig:ValveBiped_Bip01_L_UpperArm_parentConstraint1" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Clavicle" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_UpperArm" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Forearm" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Hand" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger4" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger41" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger42" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger3" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger31" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger32" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger2" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger21" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger22" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger1" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger11" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger12" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger0" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger01" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:ValveBiped_Bip01_R_Finger02" "FirstPersonView_Rig:ValveBiped_Bip01_R_Hand_parentConstraint1" "FirstPersonView_Rig:ValveBiped_Bip01_R_Forearm_parentConstraint1" "FirstPersonView_Rig:ValveBiped_Bip01_R_UpperArm_parentConstraint1" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_WeaponRoot" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform1" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:TAG_GestureParent" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:transform3" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine1" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine2" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Spine3" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Pelvis" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_LE" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Knee_LE" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Ankle_LE" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Hip_RI" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Knee_RI" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:VB_Ankle_RI" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:polySurface3" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:polySurfaceShape3" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_Mesh" "FirstPersonView_Rig:ViewModel_HL2_DefMesh:Gordon_HEVSuit_MeshShape"  ;
+	setAttr ".frameRanges[1]" -type "long2" 0 500 ;
 	setAttr -s 100 ".useinmultiexport[1:100]" yes no no no no no no no no 
 		no no no no no no no no no no no no no no no no no no no no no no no no no no no 
 		no no no no no no no no no no no no no no no no no no no no no no no no no no no 
@@ -1941,327 +2092,455 @@ createNode animCurveTL -n "TAG_CAMERA_translateX";
 	rename -uid "98A02E95-477E-EE1A-DA03-69B8BADBE313";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  0 13.902249333787129 26 13.902249333787129
-		 50 13.902249333787129 86 29.003607631386192 140 28.658318541667377 202 27.765219457800015
-		 225 21.67014612966133 235 20.990457004112358 249 24.61292044382213 266 23.457152298146543
-		 272 19.128711208359679 276 15.965914542536551 283 18.052622653684541 300 72 318 69.001474902985336
-		 350 69.001474902985336;
-	setAttr -s 16 ".kyts[5:15]" yes no no no no no no no no no no;
-	setAttr -s 16 ".kit[2:15]"  1 18 18 9 18 18 18 18 
-		1 18 1 18 18 18;
-	setAttr -s 16 ".kot[2:15]"  1 18 18 9 18 18 18 18 
-		1 18 1 18 18 18;
-	setAttr -s 16 ".kix[2:15]"  1 1 0.96870860173228923 0.45206561155940733 
-		0.20020469937514807 1 1 0.20015537486584919 0.03255123563070126 1 0.036842001453537963 
-		1 1 1;
-	setAttr -s 16 ".kiy[2:15]"  0 0 -0.24820081573168329 -0.89198468756219085 
-		-0.97975409075344333 0 0 -0.9797641685182773 -0.99947006811555617 0 0.99932110301388999 
-		0 0 0;
-	setAttr -s 16 ".kox[2:15]"  1 1 0.96870860173228923 0.45206561155940733 
-		0.20020469937514804 1 1 0.20015537486584919 0.032551236101419245 1 0.0368419897939899 
-		1 1 1;
-	setAttr -s 16 ".koy[2:15]"  0 0 -0.24820081573168329 -0.89198468756219085 
-		-0.97975409075344333 0 0 -0.9797641685182773 -0.99947006810022565 0 0.99932110344374281 
-		0 0 0;
+	setAttr -s 21 ".ktv[0:20]"  0 13.902249333787129 26 13.902249333787129
+		 50 13.902249333787129 86 29.003607631386192 140 28.658318541667377 195 28.546681156183958
+		 202 27.765219457800015 225 21.67014612966133 235 20.990457004112358 249 24.61292044382213
+		 266 23.457152298146543 272 19.128711208359679 276 15.965914542536551 283 18.052622653684541
+		 300 72 318 69.001474902985336 350 69.001474902985336 380 69.001474902985336 397 69.001474902985336
+		 417 69.354476795300968 500 69.354476795300968;
+	setAttr -s 21 ".kyts[5:20]" yes yes no no no no no no no no no no no 
+		no no no;
+	setAttr -s 21 ".kit[2:20]"  1 18 18 18 9 18 18 18 
+		18 1 18 1 18 18 18 9 9 18 18;
+	setAttr -s 21 ".kot[2:20]"  1 18 18 18 9 18 18 18 
+		18 1 18 1 18 18 18 9 9 18 18;
+	setAttr -s 21 ".kix[2:20]"  1 1 0.99497714756001676 0.98948911219106761 
+		0.17884678359639478 0.20020469937514807 1 1 0.20015537486584919 0.03255123563070126 
+		1 0.036842001453537963 1 1 1 1 0.97477315112498941 1 1;
+	setAttr -s 21 ".kiy[2:20]"  0 0 -0.1001023268127791 -0.14460738866092882 
+		-0.98387693742521698 -0.97975409075344333 0 0 -0.9797641685182773 -0.99947006811555617 
+		0 0.99932110301388999 0 0 0 0 0.22319790287065483 0 0;
+	setAttr -s 21 ".kox[2:20]"  1 1 0.99497714756001687 0.98948911219106761 
+		0.17884678359639478 0.20020469937514804 1 1 0.20015537486584919 0.032551236101419245 
+		1 0.0368419897939899 1 1 1 1 0.97477315112498941 1 1;
+	setAttr -s 21 ".koy[2:20]"  0 0 -0.10010232681277911 -0.14460738866092882 
+		-0.98387693742521698 -0.97975409075344333 0 0 -0.9797641685182773 -0.99947006810022565 
+		0 0.99932110344374281 0 0 0 0 0.22319790287065483 0 0;
 createNode animCurveTL -n "TAG_CAMERA_translateY";
 	rename -uid "92A91358-4E9D-2D07-3E27-3A9AF7DAB74F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  0 17.629096322908694 26 17.629096322908694
-		 50 17.629096322908694 86 15.082887076775538 140 15.152320206151574 202 14.65633967703066
-		 225 11.138214865137812 235 11.312750741373748 249 11.312750741373748 266 14.234432544011673
-		 272 14.256156625762719 276 15.027151658975175 283 15.776422610436585 300 14.450355738217581
-		 318 13.502493121531318 350 13.502493121531318;
-	setAttr -s 16 ".kyts[5:15]" yes no no no no no no no no no no;
-	setAttr -s 16 ".kit[2:15]"  1 18 18 9 18 18 18 18 
-		18 18 18 18 18 18;
-	setAttr -s 16 ".kot[2:15]"  1 18 18 9 18 18 18 18 
-		18 18 18 18 18 18;
-	setAttr -s 16 ".kix[2:15]"  1 1 1 0.66160157699632505 1 1 1 0.96765993942481332 
-		0.96765993942481343 0.28864967107636957 1 0.53984614663671171 1 1;
-	setAttr -s 16 ".kiy[2:15]"  0 0 0 -0.74985555496773904 0 0 0 0.25225828357531993 
-		0.25225828357531993 0.9574347849266307 0 -0.84176370672623679 0 0;
-	setAttr -s 16 ".kox[2:15]"  1 1 1 0.66160157699632505 1 1 1 0.96765993942481343 
-		0.96765993942481332 0.28864967107636963 1 0.53984614663671171 1 1;
-	setAttr -s 16 ".koy[2:15]"  0 0 0 -0.74985555496773904 0 0 0 0.25225828357531993 
-		0.25225828357531993 0.95743478492663081 0 -0.84176370672623679 0 0;
+	setAttr -s 21 ".ktv[0:20]"  0 17.629096322908694 26 17.629096322908694
+		 50 17.629096322908694 86 15.082887076775538 140 15.152320206151574 195 15.090322640011459
+		 202 14.65633967703066 225 11.138214865137812 235 11.312750741373748 249 11.312750741373748
+		 266 14.234432544011673 272 14.256156625762719 276 15.027151658975175 283 15.776422610436585
+		 300 14.450355738217581 318 13.502493121531318 350 13.502493121531318 380 13.502493121531318
+		 397 13.502493121531318 417 13.936708892654373 500 13.936708892654373;
+	setAttr -s 21 ".kyts[5:20]" yes yes no no no no no no no no no no no 
+		no no no;
+	setAttr -s 21 ".kit[2:20]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 9 9 18 18;
+	setAttr -s 21 ".kot[2:20]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 18 18 18 9 9 18 18;
+	setAttr -s 21 ".kix[2:20]"  1 1 1 0.99672267266403902 0.30156261796608685 
+		1 1 1 0.96765993942481332 0.96765993942481343 0.28864967107636957 1 0.53984614663671171 
+		1 1 1 0.9625496524901539 1 1;
+	setAttr -s 21 ".kiy[2:20]"  0 0 0 -0.080894460857681649 -0.95344637366001872 
+		0 0 0 0.25225828357531993 0.25225828357531993 0.9574347849266307 0 -0.84176370672623679 
+		0 0 0 0.27110545271366993 0 0;
+	setAttr -s 21 ".kox[2:20]"  1 1 1 0.99672267266403902 0.30156261796608685 
+		1 1 1 0.96765993942481343 0.96765993942481332 0.28864967107636963 1 0.53984614663671171 
+		1 1 1 0.9625496524901539 1 1;
+	setAttr -s 21 ".koy[2:20]"  0 0 0 -0.080894460857681635 -0.95344637366001872 
+		0 0 0 0.25225828357531993 0.25225828357531993 0.95743478492663081 0 -0.84176370672623679 
+		0 0 0 0.27110545271366993 0 0;
 createNode animCurveTL -n "TAG_CAMERA_translateZ";
 	rename -uid "06E16A25-47E8-2AA6-01AB-4390B5D7CF84";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  0 -14.438662196136065 26 -14.438662196136065
-		 50 -14.438662196136065 86 -13.791602371617621 140 -13.806167895043941 202 -13.288586767752662
-		 225 -9.6558143270407477 235 -9.9163430544387445 249 -9.9163430544387445 272 -10.231872798602474
-		 276 -10.309954082731615 318 -11.133386353355982 350 -11.133386353355982;
-	setAttr -s 13 ".kyts[5:12]" yes no no no no no no no;
-	setAttr -s 13 ".kit[2:12]"  1 18 18 9 18 18 18 18 
-		18 18 18;
-	setAttr -s 13 ".kot[2:12]"  1 18 18 9 18 18 18 18 
-		18 18 18;
-	setAttr -s 13 ".kix[2:12]"  1 1 1 0.64912262435455681 1 1 1 0.94389470690297173 
-		0.90490003403248509 1 1;
-	setAttr -s 13 ".kiy[2:12]"  0 0 0 0.76068378354678545 0 0 0 -0.33024654771935652 
-		-0.42562416332723307 0 0;
-	setAttr -s 13 ".kox[2:12]"  1 1 1 0.64912262435455681 1 1 1 0.94389470690297161 
-		0.90490003403248509 1 1;
-	setAttr -s 13 ".koy[2:12]"  0 0 0 0.76068378354678545 0 0 0 -0.33024654771935646 
-		-0.42562416332723307 0 0;
+	setAttr -s 18 ".ktv[0:17]"  0 -14.438662196136065 26 -14.438662196136065
+		 50 -14.438662196136065 86 -13.791602371617621 140 -13.806167895043941 195 -13.741470254132532
+		 202 -13.288586767752662 225 -9.6558143270407477 235 -9.9163430544387445 249 -9.9163430544387445
+		 272 -10.231872798602474 276 -10.309954082731615 318 -11.133386353355982 350 -11.133386353355982
+		 380 -11.133386353355982 397 -11.133386353355982 417 -12.211868197099985 500 -12.211868197099985;
+	setAttr -s 18 ".kyts[5:17]" yes yes no no no no no no no no no no no;
+	setAttr -s 18 ".kit[2:17]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 9 9 18 18;
+	setAttr -s 18 ".kot[2:17]"  1 18 18 18 9 18 18 18 
+		18 18 18 18 9 9 18 18;
+	setAttr -s 18 ".kix[2:17]"  1 1 1 0.99643255180390655 0.29256211769016738 
+		1 1 1 0.94389470690297173 0.90490003403248509 1 1 1 0.81940288447370413 1 1;
+	setAttr -s 18 ".kiy[2:17]"  0 0 0 0.084392948198027826 0.95624652014668499 
+		0 0 0 -0.33024654771935652 -0.42562416332723307 0 0 0 -0.5732180326160139 0 0;
+	setAttr -s 18 ".kox[2:17]"  1 1 1 0.99643255180390666 0.29256211769016738 
+		1 1 1 0.94389470690297161 0.90490003403248509 1 1 1 0.81940288447370413 1 1;
+	setAttr -s 18 ".koy[2:17]"  0 0 0 0.08439294819802784 0.95624652014668499 
+		0 0 0 -0.33024654771935646 -0.42562416332723307 0 0 0 -0.5732180326160139 0 0;
 createNode animCurveTU -n "TAG_CAMERA_visibility";
 	rename -uid "7983480A-4CD3-6670-1597-44B77754DC34";
-	setAttr ".tan" 5;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  0 1 26 1 50 1 140 1 202 1 225 1 249 1 272 1
-		 276 1 350 1;
-	setAttr -s 10 ".kyts[4:9]" yes no no no no no;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 14 ".ktv[0:13]"  0 1 26 1 50 1 140 1 195 1 202 1 225 1 249 1
+		 272 1 276 1 350 1 380 1 397 1 500 1;
+	setAttr -s 14 ".kyts[4:13]" yes yes no no no no no no no no;
+	setAttr -s 14 ".kit[2:13]"  1 9 18 9 9 9 9 9 
+		9 9 9 9;
+	setAttr -s 14 ".kot[0:13]"  5 5 5 5 5 5 5 5 
+		5 5 5 9 9 5;
+	setAttr -s 14 ".kix[2:13]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 14 ".kiy[2:13]"  0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "TAG_CAMERA_rotateX";
 	rename -uid "D282F075-4C9D-04CA-975F-298B0FE877A6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 67.564656203719366 26 66.881521772324632
-		 35 66.49288271856517 50 66.595 86 175.66254819900706 140 176.39314388244182 202 158.2037092488525
-		 225 32.524363860457271 235 23.403725805963077 249 21.607630176079525 266 -14.600422961113763
-		 272 -15.487835470302526 276 -14.934240877786705 283 -13.855791704083385 300 -10.029551499987823
-		 318 -10.637159662804937 330 -4.1091478824559031 350 57.83095966248667;
-	setAttr -s 18 ".kyts[6:17]" yes no no no no no no no no no no no;
-	setAttr -s 18 ".kit[2:17]"  1 1 18 1 1 18 18 18 
-		1 18 18 1 18 18 18 18;
-	setAttr -s 18 ".kot[2:17]"  1 1 18 1 1 18 18 18 
-		1 18 18 1 18 18 18 18;
-	setAttr -s 18 ".kix[2:17]"  0.99632740924120677 0.98134614653543306 
-		0.99985550185343008 0.99999987125589518 0.91171856531996098 0.6574365821659599 0.98725247176164421 
-		0.9872524717616441 0.99255474704132696 1 0.99807438430459872 0.99401242484420838 
-		1 1 0.82553754344570474 1;
-	setAttr -s 18 ".kiy[2:17]"  -0.08562530931158599 0.19224916301522973 
-		0.016999276850070414 0.00050743294437662772 -0.41081535712642497 -0.75350988077791059 
-		-0.15916204635692535 -0.1591620463569253 -0.12179931906922715 0 0.062028407967608758 
-		0.1092671005167473 0 0 0.56434720196137322 0;
-	setAttr -s 18 ".kox[2:17]"  0.9963274089454518 0.98134614544996257 
-		0.9998555018534302 0.99999987125589329 0.91171856492774961 0.65743658216596002 0.9872524717616441 
-		0.9872524717616441 0.99255474495981166 1 0.99807438430459883 0.99401242494308717 
-		1 1 0.82553754344570485 1;
-	setAttr -s 18 ".koy[2:17]"  -0.085625312752961688 0.1922491685560718 
-		0.016999276850070414 0.00050743294830291042 -0.41081535799685603 -0.75350988077791059 
-		-0.1591620463569253 -0.15916204635692532 -0.12179933603170147 0 0.062028407967608758 
-		0.10926709961723917 0 0 0.56434720196137333 0;
+	setAttr -s 25 ".ktv[0:24]"  0 67.564656203719366 26 66.881521772324632
+		 35 66.49288271856517 50 66.595 86 175.66254819900706 140 176.39314388244182 195 174.11946455324318
+		 202 158.2037092488525 225 32.524363860457271 235 23.403725805963077 249 21.607630176079525
+		 266 -14.600422961113763 272 -15.487835470302526 276 -14.934240877786705 283 -13.855791704083385
+		 300 -10.029551499987823 318 -10.637159662804937 330 -4.1091478824559031 350 57.83095966248667
+		 380 57.83095966248667 397 57.83095966248667 417 60.382728803410451 441 60.623 465 60.583000000000006
+		 500 60.742999999999995;
+	setAttr -s 25 ".kyts[6:24]" yes yes no no no no no no no no no no no 
+		no no no no no no;
+	setAttr -s 25 ".kit[2:24]"  1 1 18 1 18 1 18 18 
+		18 1 18 18 1 18 18 18 1 9 9 18 18 18 18;
+	setAttr -s 25 ".kot[2:24]"  1 1 18 1 18 1 18 18 
+		18 1 18 18 1 18 18 18 1 9 9 18 18 18 18;
+	setAttr -s 25 ".kix[2:24]"  0.99632740924120677 0.98134614653543306 
+		0.99985550185343008 0.99999987125589518 0.99865338066277043 0.436635516067643 0.6574365821659599 
+		0.98725247176164421 0.9872524717616441 0.99255474704132696 1 0.99807438430459872 
+		0.99401242484420838 1 1 0.82553754344570474 0.99603924243540165 1 0.99958298199336337 
+		0.99992087401614316 1 1 1;
+	setAttr -s 25 ".kiy[2:24]"  -0.08562530931158599 0.19224916301522973 
+		0.016999276850070414 0.00050743294437662772 -0.051878948435944927 -0.89963849745791957 
+		-0.75350988077791059 -0.15916204635692535 -0.1591620463569253 -0.12179931906922715 
+		0 0.062028407967608758 0.1092671005167473 0 0 0.56434720196137322 0.088914720540028483 
+		0 0.028876670674702874 0.012579574984569597 0 0 0;
+	setAttr -s 25 ".kox[2:24]"  0.9963274089454518 0.98134614544996257 
+		0.9998555018534302 0.99999987125589329 0.99865338066277054 0.43663555151371597 0.65743658216596002 
+		0.9872524717616441 0.9872524717616441 0.99255474495981166 1 0.99807438430459883 0.99401242494308717 
+		1 1 0.82553754344570485 0.99603924198788207 1 0.99958298199336337 0.99992087401614316 
+		1 1 1;
+	setAttr -s 25 ".koy[2:24]"  -0.085625312752961688 0.1922491685560718 
+		0.016999276850070414 0.00050743294830291042 -0.051878948435944927 -0.89963848025432591 
+		-0.75350988077791059 -0.1591620463569253 -0.15916204635692532 -0.12179933603170147 
+		0 0.062028407967608758 0.10926709961723917 0 0 0.56434720196137333 0.088914725553224758 
+		0 0.028876670674702874 0.012579574984569601 0 0 0;
 createNode animCurveTA -n "TAG_CAMERA_rotateY";
 	rename -uid "C062EC46-46A6-062A-8839-9DB71ACCB57D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 20.624062080748743 26 20.821281704116284
+	setAttr -s 24 ".ktv[0:23]"  0 20.624062080748743 26 20.821281704116284
 		 35 23.45087030684552 50 22.50796282680394 86 19.070889411499184 140 15.109574795185777
-		 202 14.240208697693848 225 15.458461604360382 235 18.149253524557814 249 6.423466998689932
-		 266 0.24778709002628754 272 -0.019375821515083332 276 1.8836091471038434 283 4.0591933768107431
-		 300 3.496072797185906 318 2.0614016540075277 330 -1.8819867875049983 350 0;
-	setAttr -s 18 ".kyts[6:17]" yes no no no no no no no no no no no;
-	setAttr -s 18 ".kit[3:17]"  1 18 18 9 18 18 18 1 
-		18 18 1 18 18 18 18;
-	setAttr -s 18 ".kot[3:17]"  1 18 18 9 18 18 18 1 
-		18 18 1 18 18 18 18;
-	setAttr -s 18 ".kix[3:17]"  0.99667223397553428 0.99940768814498782 
-		0.99984789313549061 0.99999852198953754 0.99877126106891012 1 0.97196917315037623 
-		0.99924795942240552 1 0.98815306125177116 0.99837416511486343 0.99971429002795131 
-		0.99719247268132027 1 1;
-	setAttr -s 18 ".kiy[3:17]"  -0.081513545023006728 -0.034413265998604246 
-		-0.017441060533139315 0.0017193076339589439 0.049557724552473675 0 -0.23510832917056343 
-		-0.038775192973840772 0 0.15347158544419043 0.057000231852154609 -0.023902684240676708 
-		-0.074881055198990701 0 0;
-	setAttr -s 18 ".kox[3:17]"  0.99667223200743327 0.99940768814498782 
-		0.9998478931354905 0.99999852198953754 0.99877126106891023 1 0.97196917315037623 
-		0.99924795947853862 1 0.98815306125177105 0.99837416543320634 0.9997142900279512 
-		0.99719247268132027 1 1;
-	setAttr -s 18 ".koy[3:17]"  -0.08151356908712315 -0.034413265998604246 
-		-0.017441060533139308 0.0017193076339589439 0.049557724552473682 0 -0.23510832917056346 
-		-0.038775191527275932 0 0.1534715854441904 0.057000226276295474 -0.023902684240676705 
-		-0.074881055198990701 0 0;
+		 195 15.000904032999287 202 14.240208697693848 225 15.458461604360382 235 18.149253524557814
+		 249 6.423466998689932 266 0.24778709002628754 272 -0.019375821515083332 276 1.8836091471038434
+		 283 4.0591933768107431 300 3.496072797185906 318 2.0614016540075277 330 -1.8819867875049983
+		 350 0 380 0 397 0 441 -0.82000000000000006 465 -1.3599999999999999 500 -1.2400000000000002;
+	setAttr -s 24 ".kyts[6:23]" yes yes no no no no no no no no no no no 
+		no no no no no;
+	setAttr -s 24 ".kit[3:23]"  1 18 18 18 1 1 18 18 
+		1 18 18 1 18 18 18 1 9 9 18 18 18;
+	setAttr -s 24 ".kot[3:23]"  1 18 18 18 1 1 18 18 
+		1 18 18 1 18 18 18 1 9 9 18 18 18;
+	setAttr -s 24 ".kix[3:23]"  0.99667223397553428 0.99940768814498782 
+		0.99999691760869036 0.99999691760869036 0.99765486492012911 0.99250575186209711 1 
+		0.97196917315037623 0.99924795942240552 1 0.98815306125177116 0.99837416511486343 
+		0.99971429002795131 0.99719247268132027 1 0.99882904821829055 1 0.99998414723833218 
+		0.99996490992029752 1 1;
+	setAttr -s 24 ".kiy[3:23]"  -0.081513545023006728 -0.034413265998604246 
+		-0.0024828961150468679 -0.0024828961150468684 -0.068445383344671012 0.12219792355295253 
+		0 -0.23510832917056343 -0.038775192973840772 0 0.15347158544419043 0.057000231852154609 
+		-0.023902684240676708 -0.074881055198990701 0 0.0483790495498179 0 -0.005630743470053691 
+		-0.0083772864396084983 0 0;
+	setAttr -s 24 ".kox[3:23]"  0.99667223200743327 0.99940768814498782 
+		0.99999691760869036 0.99999691760869036 0.99765486495475486 0.99250575154391329 1 
+		0.97196917315037623 0.99924795947853862 1 0.98815306125177105 0.99837416543320634 
+		0.9997142900279512 0.99719247268132027 1 0.99882904810270834 1 0.99998414723833218 
+		0.99996490992029752 1 1;
+	setAttr -s 24 ".koy[3:23]"  -0.08151356908712315 -0.034413265998604246 
+		-0.0024828961150468684 -0.0024828961150468684 -0.068445382839968774 0.12219792613727867 
+		0 -0.23510832917056346 -0.038775191527275932 0 0.1534715854441904 0.057000226276295474 
+		-0.023902684240676705 -0.074881055198990701 0 0.048379051936118994 0 -0.005630743470053691 
+		-0.0083772864396084983 0 0;
 createNode animCurveTA -n "TAG_CAMERA_rotateZ";
 	rename -uid "F76BDF92-4FA8-CD51-87CA-CC8692C207EC";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 21 ".ktv[0:20]"  0 108.9511832306496 26 109.1764979824582
+	setAttr -s 28 ".ktv[0:27]"  0 108.9511832306496 26 109.1764979824582
 		 35 106.95764636064563 50 106.95764636064563 86 85.813713493582867 138 87.884058626683043
-		 152 87.223269764781449 164 88.113377464385408 202 85.234535758128331 225 55.245153683911454
-		 235 53.79520722839618 249 23.060356963564434 266 33.42113552324841 272 45.890940750280897
-		 276 56.023191559463349 283 62.267500008167339 292 34.884463305470376 300 10.549107563127006
-		 318 3.5669350391653252 330 5.5077081452093637 350 0;
-	setAttr -s 21 ".kyts[8:20]" yes no no no no no no no no no no no no;
-	setAttr -s 21 ".kit[0:20]"  18 18 1 1 1 1 1 1 
-		1 18 18 18 1 18 18 1 1 1 1 1 18;
-	setAttr -s 21 ".kot[0:20]"  18 18 1 1 1 1 1 1 
-		1 18 18 18 1 18 18 1 1 1 1 1 18;
-	setAttr -s 21 ".kix[2:20]"  0.98630571532566425 0.99219390335706148 
-		0.99975197407613448 0.99987109686016018 0.99998949326163733 0.99928906815755059 0.99403042620836468 
-		0.98380275188086008 0.98380275188085997 1 0.86711491342358893 0.72617587680486528 
-		0.84852495472587564 0.99881176896176704 0.49999999999999822 0.70076591456283088 0.9754167197625192 
-		0.99773788393394947 1;
-	setAttr -s 21 ".kiy[2:20]"  -0.16492736557627338 0.1247046837174856 
+		 152 87.223269764781449 164 88.113377464385408 195 87.753522251103277 202 85.234535758128331
+		 225 55.245153683911454 235 53.79520722839618 249 23.060356963564434 266 33.42113552324841
+		 272 45.890940750280897 276 56.023191559463349 283 62.267500008167339 292 34.884463305470376
+		 300 10.549107563127006 318 3.5669350391653252 330 5.5077081452093637 350 0 380 0
+		 397 0 417 0.89043513898086635 441 1.19 465 1.14 500 0.66999999999999993;
+	setAttr -s 28 ".kyts[8:27]" yes yes no no no no no no no no no no no 
+		no no no no no no no;
+	setAttr -s 28 ".kit[0:27]"  18 18 1 1 1 1 1 1 
+		18 1 18 18 18 1 18 18 1 1 1 1 1 1 9 9 18 
+		18 18 18;
+	setAttr -s 28 ".kot[0:27]"  18 18 1 1 1 1 1 1 
+		18 1 18 18 18 1 18 18 1 1 1 1 1 1 9 9 18 
+		18 18 18;
+	setAttr -s 28 ".kix[2:27]"  0.98630571532566425 0.99219390335706148 
+		0.99975197407613448 0.99987109686016018 0.99998949326163733 0.99928906815755059 0.99989362179968411 
+		0.95912689872632739 0.98380275188086019 0.98380275188085997 1 0.86711491342358893 
+		0.72617587680486528 0.84852495472587564 0.99881176896176704 0.49999999999999822 0.70076591456283088 
+		0.9754167197625192 0.99773788393394947 0.99697451182819896 1 0.99994919397040483 
+		0.99993583562152721 1 0.99999657307164325 1;
+	setAttr -s 28 ".kiy[2:27]"  -0.16492736557627338 0.1247046837174856 
 		-0.022270840371934664 -0.016055829584928183 -0.0045840338495488648 0.037700905304968495 
-		-0.10910321613965838 -0.17925441526402339 -0.17925441526402416 0 0.4981081478137071 
-		0.68750897881168438 0.5291553658496253 0.04873448659281876 -0.67571449284911234 -0.71339129023763626 
-		0.22036837978196155 -0.067224362867971107 0;
-	setAttr -s 21 ".kox[2:20]"  0.98630571607274509 0.99219390311434374 
-		0.99975197411660466 0.99987109684410236 0.99998949318878849 0.99928906740937107 0.99403042865929503 
-		0.98380275188086008 0.98380275188085997 1 0.86711489207191184 0.72617587680486528 
-		0.84852495472587564 0.99881176882894929 0.33333333333333748 0.70076603832366058 0.97541670949460313 
-		0.9977378844407796 1;
-	setAttr -s 21 ".koy[2:20]"  -0.16492736110854836 0.12470468564863295 
+		-0.014585783637164933 -0.28297631020920744 -0.17925441526402264 -0.17925441526402416 
+		0 0.4981081478137071 0.68750897881168438 0.5291553658496253 0.04873448659281876 -0.67571449284911234 
+		-0.71339129023763626 0.22036837978196155 -0.067224362867971107 -0.077729162898649215 
+		0 0.010080152674310817 0.011328046604688538 0 -0.0026179849063140397 0;
+	setAttr -s 28 ".kox[2:27]"  0.98630571607274509 0.99219390311434374 
+		0.99975197411660466 0.99987109684410236 0.99998949318878849 0.99928906740937107 0.99989362179968422 
+		0.95912690067050532 0.98380275188086019 0.98380275188085997 1 0.86711489207191184 
+		0.72617587680486528 0.84852495472587564 0.99881176882894929 0.33333333333333748 0.70076603832366058 
+		0.97541670949460313 0.9977378844407796 0.99697451175098306 1 0.99994919397040483 
+		0.99993583562152744 1 0.99999657307164325 1;
+	setAttr -s 28 ".koy[2:27]"  -0.16492736110854836 0.12470468564863295 
 		-0.022270838555204283 -0.016055830584925556 -0.0045840497412260811 0.037700925135991638 
-		-0.10910319380942948 -0.17925441526402339 -0.17925441526402416 0 0.49810818498305848 
-		0.68750897881168438 0.5291553658496253 0.048734489314916668 -0.45047632856607567 
-		-0.71339116866706587 0.22036842523084177 -0.067224355345647066 0;
+		-0.014585783637164935 -0.282976303619562 -0.17925441526402264 -0.17925441526402416 
+		0 0.49810818498305848 0.68750897881168438 0.5291553658496253 0.048734489314916668 
+		-0.45047632856607567 -0.71339116866706587 0.22036842523084177 -0.067224355345647066 
+		-0.077729163889038222 0 0.010080152674310817 0.01132804660468854 0 -0.0026179849063140397 
+		0;
 createNode animCurveTU -n "TAG_CAMERA_scaleX";
 	rename -uid "0F037F21-46B3-5AF0-3D3E-6E9AC35DA321";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  0 2.54 26 2.54 50 2.54 140 2.54 202 2.54
-		 225 2.54 249 2.54 272 2.54 276 2.54 350 2.54;
-	setAttr -s 10 ".kyts[4:9]" yes no no no no no;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 14 ".ktv[0:13]"  0 2.54 26 2.54 50 2.54 140 2.54 195 2.54
+		 202 2.54 225 2.54 249 2.54 272 2.54 276 2.54 350 2.54 380 2.54 397 2.54 500 2.54;
+	setAttr -s 14 ".kyts[4:13]" yes yes no no no no no no no no;
+	setAttr -s 14 ".kit[2:13]"  1 18 18 18 18 18 18 18 
+		18 9 9 18;
+	setAttr -s 14 ".kot[2:13]"  1 18 18 18 18 18 18 18 
+		18 9 9 18;
+	setAttr -s 14 ".kix[2:13]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 14 ".kiy[2:13]"  0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 14 ".kox[2:13]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 14 ".koy[2:13]"  0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "TAG_CAMERA_scaleY";
 	rename -uid "ED114898-434F-9875-6C45-1298F01DDD16";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  0 2.54 26 2.54 50 2.54 140 2.54 202 2.54
-		 225 2.54 249 2.54 272 2.54 276 2.54 350 2.54;
-	setAttr -s 10 ".kyts[4:9]" yes no no no no no;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 14 ".ktv[0:13]"  0 2.54 26 2.54 50 2.54 140 2.54 195 2.54
+		 202 2.54 225 2.54 249 2.54 272 2.54 276 2.54 350 2.54 380 2.54 397 2.54 500 2.54;
+	setAttr -s 14 ".kyts[4:13]" yes yes no no no no no no no no;
+	setAttr -s 14 ".kit[2:13]"  1 18 18 18 18 18 18 18 
+		18 9 9 18;
+	setAttr -s 14 ".kot[2:13]"  1 18 18 18 18 18 18 18 
+		18 9 9 18;
+	setAttr -s 14 ".kix[2:13]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 14 ".kiy[2:13]"  0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 14 ".kox[2:13]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 14 ".koy[2:13]"  0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "TAG_CAMERA_scaleZ";
 	rename -uid "1F200349-409F-EC64-5682-D695C44ADEF2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  0 2.54 26 2.54 50 2.54 140 2.54 202 2.54
-		 225 2.54 249 2.54 272 2.54 276 2.54 350 2.54;
-	setAttr -s 10 ".kyts[4:9]" yes no no no no no;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 14 ".ktv[0:13]"  0 2.54 26 2.54 50 2.54 140 2.54 195 2.54
+		 202 2.54 225 2.54 249 2.54 272 2.54 276 2.54 350 2.54 380 2.54 397 2.54 500 2.54;
+	setAttr -s 14 ".kyts[4:13]" yes yes no no no no no no no no;
+	setAttr -s 14 ".kit[2:13]"  1 18 18 18 18 18 18 18 
+		18 9 9 18;
+	setAttr -s 14 ".kot[2:13]"  1 18 18 18 18 18 18 18 
+		18 9 9 18;
+	setAttr -s 14 ".kix[2:13]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 14 ".kiy[2:13]"  0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 14 ".kox[2:13]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 14 ".koy[2:13]"  0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "IK_Global_Hand_LE_CTR_rotateX";
 	rename -uid "203A4D4A-446A-2FE0-5BE0-6FA2C8DAC225";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 26 ".ktv[0:25]"  25 99.638182456145429 38 103.75642264301722
+	setAttr -s 41 ".ktv[0:40]"  25 99.638182456145429 38 103.75642264301722
 		 47 101.84193769627707 56 99.638182456145429 72 98.539384540935956 80 135.68786936910081
 		 94 223.54842952961917 106 230.14505222860871 125 228.62599866557906 133 234.38617460615288
 		 141 217.32107512767033 161 211.59287045232895 167 218.04809849922572 176 211.59287045232895
-		 200 211.59287045232895 209 192.04473889095996 213 154.97896781210113 218 119.00412319053655
+		 200 211.59287045232895 206 192.04473889095996 213 154.97896781210113 218 119.00412319053655
 		 223 107.77749534007701 231 117.47482973568243 245 117.47482973568243 258 140.02569369388448
-		 274 117.47482973568243 286 117.47482973568243 288 136.16049945794529 292 153.26513729470315;
+		 274 117.47482973568243 286 117.47482973568243 288 136.16049945794529 292 153.26513729470315
+		 315 153.26513729470315 350 83.139833959879567 359 83.139833959879567 366 65.434356064478067
+		 375 82.27744272812798 380 85.259068952859863 390 85.649646613163483 400 85.761022088643315
+		 405 77.434789815024899 414 61.220502029228314 432 60.010160271033875 443 59.88496319621634
+		 462 60.115907439349826 479 62.323344390180608 500 62.726738852118721;
+	setAttr -s 41 ".kit[30:40]"  1 1 1 1 1 1 18 18 
+		18 18 18;
+	setAttr -s 41 ".kot[30:40]"  1 1 1 1 1 1 18 18 
+		18 18 18;
+	setAttr -s 41 ".kix[30:40]"  0.99696635663027422 0.9975191990664104 
+		0.99995088750195971 1 0.44146650293012335 1 0.99989773521673309 1 0.99988336716626003 
+		0.99970877995739471 1;
+	setAttr -s 41 ".kiy[30:40]"  0.077833692880120126 0.070394939405520593 
+		-0.0099107307522255973 0 -0.89727773113492981 0 -0.014301017741677744 0 0.015272591930060074 
+		0.024132038374278374 0;
+	setAttr -s 41 ".kox[30:40]"  0.99696635681763213 0.99751919873277195 
+		0.99995088749002237 1 0.44146649187910164 1 0.99989773521673309 1 0.99988336716626003 
+		0.99970877995739449 1;
+	setAttr -s 41 ".koy[30:40]"  0.077833690480265352 0.070394944133287285 
+		-0.0099107319566524143 0 -0.89727773657210463 0 -0.014301017741677744 0 0.015272591930060074 
+		0.024132038374278367 0;
 createNode animCurveTA -n "IK_Global_Hand_LE_CTR_rotateY";
 	rename -uid "3BBADC2A-4F7A-59FE-C065-55BB089ECF11";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 26 ".ktv[0:25]"  25 -1.8129825483013378 38 -3.403532975042316
+	setAttr -s 39 ".ktv[0:38]"  25 -1.8129825483013378 38 -3.403532975042316
 		 47 -3.4147526856860009 56 -1.8129825483013378 72 -4.8376581977541582 80 17.531597345264959
 		 94 4.242365462213094 106 -0.49068487259870525 125 3.5911301370317141 133 9.997347276211336
 		 141 10.295636700425957 161 12.126787650350041 167 16.329191431876296 176 12.126787650350041
-		 200 12.126787650350041 209 30.158623296693204 213 -7.9497722016542314 218 -42.224599950209246
+		 200 12.126787650350041 206 30.158623296693204 213 -7.9497722016542314 218 -42.224599950209246
 		 223 -47.142669314151362 231 -60.001682128391494 245 -60.001682128391494 258 -46.333178422847595
-		 274 -60.001682128391494 286 -60.001682128391494 288 -50.176494643042417 292 -9.5834947743056951;
+		 274 -60.001682128391494 286 -60.001682128391494 288 -50.176494643042425 292 -9.5834947743056951
+		 315 -9.5834947743056951 350 32.648806113466399 359 32.648806113466399 366 13.539321087070823
+		 375 14.548378567691024 380 13.000780400016962 390 12.828483757554903 400 12.757460558524155
+		 414 8.1127010704767617 432 8.4971374017260075 443 8.7245343724573985 462 7.9282386813477954
+		 479 7.8991780485071992;
 createNode animCurveTA -n "IK_Global_Hand_LE_CTR_rotateZ";
 	rename -uid "F1538223-470F-07F9-EF06-BAB671740819";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 26 ".ktv[0:25]"  25 -68.811755624354959 38 -70.390626154555378
+	setAttr -s 41 ".ktv[0:40]"  25 -68.811755624354959 38 -70.390626154555378
 		 47 -66.37628063728036 56 -68.811755624354959 72 -50.044303652605386 80 -18.348750800927974
 		 94 -15.485106968423501 106 -9.7065179831876058 125 -10.582511067753376 133 -3.8631634028038917
 		 141 14.307151392576367 161 19.065652928900647 167 20.526175373925003 176 19.065652928900647
-		 200 19.065652928900647 209 -6.816338767152951 213 -27.317053059414253 218 -52.959938990271915
+		 200 19.065652928900647 206 -6.816338767152951 213 -27.317053059414253 218 -52.959938990271915
 		 223 -37.862728880678695 231 -37.492597382115974 245 -37.492597382115974 258 -65.276478260524755
-		 274 -37.492597382115974 286 -37.492597382115974 288 -60.10051339113862 292 -91.71651597433879;
+		 274 -37.492597382115974 286 -37.492597382115974 288 -60.10051339113862 292 -91.716515974338805
+		 315 -91.716515974338805 350 30.533234424472646 359 30.533234424472646 366 -8.4038207847788211
+		 375 57.360310904082667 380 70.349337558839736 390 69.616683301096842 400 69.453045072836844
+		 414 65.694768040326437 420 64.375643999620678 432 63.316578127108599 443 62.334167483698032
+		 462 62.039078578942288 479 63.330180263323484 500 63.539693718709266;
+	setAttr -s 41 ".kit[31:40]"  1 1 1 18 18 18 18 18 
+		18 18;
+	setAttr -s 41 ".kot[31:40]"  1 1 1 18 18 18 18 18 
+		18 18;
+	setAttr -s 41 ".kix[31:40]"  0.98767934476515817 0.99016208510327486 
+		0.99982807399064499 0.99439332020219118 0.99847208553323963 0.99930955297852764 0.99984095405345486 
+		1 0.99992141787153876 1;
+	setAttr -s 41 ".kiy[31:40]"  0.15649125190970892 -0.13992514150050056 
+		0.018542450219892988 -0.10574462037031784 -0.055258432939260332 -0.037153967834613409 
+		-0.01783442170290845 0 0.012536270648477498 0;
+	setAttr -s 41 ".kox[31:40]"  0.98767934522430445 0.99016209035055314 
+		0.99982807400669393 0.99439332020219096 0.99847208553323963 0.99930955297852753 0.99984095405345486 
+		1 0.99992141787153854 1;
+	setAttr -s 41 ".koy[31:40]"  0.15649124901185135 -0.13992510436881303 
+		0.018542449354521783 -0.10574462037031782 -0.055258432939260332 -0.037153967834613409 
+		-0.017834421702908453 0 0.012536270648477496 0;
 createNode animCurveTL -n "IK_Global_Hand_LE_CTR_translateX";
 	rename -uid "6C8898EC-41B6-DD01-12AD-009348E5C5F7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 24 ".ktv[0:23]"  25 -4.3221020185958681 38 -4.6033447301253005
+	setAttr -s 39 ".ktv[0:38]"  25 -4.3221020185958681 38 -4.6033447301253005
 		 47 -4.475222369704829 56 -4.3221020185958681 72 -7.8591624160904034 80 -2.4928209841947719
 		 87 -1.4281668254671178 94 -2.0897505701733343 106 -4.5769540320878601 125 -4.969697630211968
 		 133 -6.3498440945073673 141 -12.947358816837532 161 -15.131594826386427 167 -18.703414809595632
-		 176 -48.132153697166451 200 -48.132153697166451 209 -12.845005745368148 213 11.980730156824935
+		 176 -48.132153697166451 200 -48.132153697166451 206 -12.845005745368148 213 11.980730156824935
 		 218 14.638247245770877 223 10.074975780985856 231 7.3458177623785668 245 7.3458177623785668
-		 274 22.975291602545319 286 22.975291602545319;
-	setAttr -s 24 ".kit[9:23]"  1 18 1 1 18 18 18 18 
-		18 18 18 18 18 18 18;
-	setAttr -s 24 ".kot[9:23]"  1 18 1 1 18 18 18 18 
-		18 18 18 18 18 18 18;
-	setAttr -s 24 ".kix[9:23]"  0.94977043478939793 0.083276410945649124 
+		 274 22.975291602545319 286 22.975291602545319 315 22.975291602545319 350 -10.551595694168851
+		 359 -10.551595694168851 366 -7.3731268515748463 375 -0.046877341975616993 380 0.99972973082427441
+		 390 0.65596583325269098 400 0.73495664296782026 414 1.3157299098976585 420 1.4830120033449075
+		 432 1.540690961578314 443 1.5747255112190779 462 1.6193832920692757 479 1.6432012798123603
+		 500 1.6214513163935949;
+	setAttr -s 39 ".kyts[28:38]" yes no no no no no no no no no no;
+	setAttr -s 39 ".kit[9:38]"  1 18 1 1 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
+		18 18 18 18 18;
+	setAttr -s 39 ".kot[9:38]"  1 18 1 1 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
+		18 18 18 18 18;
+	setAttr -s 39 ".kix[9:38]"  0.94977043478939793 0.083276410945649124 
 		0.074808480951831846 0.99954927861596587 0.023324429217095353 1 1 0.0090104590393384892 
-		0.026122408368391203 1 0.074073884086371486 1 1 1 1;
-	setAttr -s 24 ".kiy[9:23]"  -0.31294747354781133 -0.99652648704387747 
+		0.026122408368391206 1 0.074073884086371486 1 1 1 1 1 1 1 0.063336126273201593 0.069501102107390272 
+		1 1 0.86925038251419495 0.74415700029912757 0.95783997450366498 0.99545187179346251 
+		0.99802427616859413 0.99895964113385882 1 1;
+	setAttr -s 39 ".kiy[9:38]"  -0.31294747354781133 -0.99652648704387747 
 		-0.99719791976200978 -0.030020653195800044 -0.99972794849483759 0 0 0.99995940498997282 
-		0.99965875166530449 0 -0.99725275617385933 0 0 0 0;
-	setAttr -s 24 ".kox[9:23]"  0.94977041198795342 0.083276410945649124 
-		0.074808480157885549 0.99954927045011444 0.023324429217095353 1 1 0.0090104590393384892 
-		0.026122408368391203 1 0.074073884086371472 1 1 1 1;
-	setAttr -s 24 ".koy[9:23]"  -0.31294754274835468 -0.99652648704387747 
-		-0.99719791982157047 -0.030020925079750429 -0.99972794849483759 0 0 0.99995940498997293 
-		0.99965875166530449 0 -0.99725275617385922 0 0 0 0;
+		0.9996587516653046 0 -0.99725275617385933 0 0 0 0 0 0 0 0.99799225202839392 0.99758187473803783 
+		0 0 0.49437209923186981 0.66800475964307626 0.28730225067482229 0.095265791042178291 
+		0.062829484942609468 0.045603019480207042 0 0;
+	setAttr -s 39 ".kox[9:38]"  0.94977041198795342 0.083276410945649124 
+		0.074808480157885549 0.99954927045011444 0.023324429217095353 1 1 0.0090104590393384875 
+		0.026122408368391203 1 0.074073884086371472 1 1 1 1 1 1 1 0.063336126273201579 0.069501102107390259 
+		1 1 0.86925038251419506 0.74415700029912768 0.95783997450366498 0.99545187179346251 
+		0.99802427616859435 0.99895964113385871 1 1;
+	setAttr -s 39 ".koy[9:38]"  -0.31294754274835468 -0.99652648704387747 
+		-0.99719791982157047 -0.030020925079750429 -0.99972794849483759 0 0 0.99995940498997271 
+		0.99965875166530449 0 -0.99725275617385922 0 0 0 0 0 0 0 0.99799225202839392 0.99758187473803772 
+		0 0 0.49437209923186981 0.66800475964307626 0.28730225067482229 0.095265791042178291 
+		0.062829484942609481 0.045603019480207042 0 0;
 createNode animCurveTL -n "IK_Global_Hand_LE_CTR_translateY";
 	rename -uid "9A35F0C4-44C7-1CDB-9E3B-1E9FB2764FE3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 27 ".ktv[0:26]"  25 61.591888113667025 38 61.846196704853931
+	setAttr -s 42 ".ktv[0:41]"  25 61.591888113667025 38 61.846196704853931
 		 47 61.998286841849442 56 61.591888113667025 72 70.9036506223202 80 117.35761358272725
 		 87 149.63598539075338 94 143.15091821215412 106 144.1663256449032 125 144.22993364741112
 		 133 144.20679634831626 141 144.32044122980039 161 144.28179572289881 167 143.05206668183195
-		 176 138.87819665834994 200 138.87819665834994 209 143.96807948620048 213 115.77215135527652
+		 176 138.87819665834994 200 138.87819665834994 206 143.96807948620048 213 115.77215135527652
 		 218 76.991241483876237 223 50.283169738993685 231 40.562041887554471 245 40.562041887554471
 		 258 47.299253356994235 274 40.562041887554471 286 40.562041887554471 288 45.696384195450904
-		 292 63.31507084326477;
-	setAttr -s 27 ".kit[13:26]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18 18;
-	setAttr -s 27 ".kot[13:26]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18 18;
-	setAttr -s 27 ".kix[13:26]"  0.15805111548124468 1 1 1 0.0055988627341431096 
-		0.0063622646633934446 0.014867381238784208 1 1 1 1 1 0.01098688491436503 1;
-	setAttr -s 27 ".kiy[13:26]"  -0.98743093170871166 0 0 0 -0.99998432624520872 
-		-0.99997976058935945 -0.99988947437959397 0 0 0 0 0 0.99993964235841681 0;
-	setAttr -s 27 ".kox[13:26]"  0.15805111644425474 1 1 1 0.0055988627341431105 
-		0.0063622646633934455 0.01486738123878421 1 1 1 1 1 0.01098688491436503 1;
-	setAttr -s 27 ".koy[13:26]"  -0.9874309315545694 0 0 0 -0.99998432624520883 
-		-0.99997976058935967 -0.99988947437959397 0 0 0 0 0 0.99993964235841681 0;
+		 292 63.31507084326477 315 63.31507084326477 350 170.96101852149962 359 170.96101852149962
+		 366 166.01334546238408 375 193.08838191082734 380 198.19147139032091 390 197.16117842519273
+		 400 196.34327345339648 414 198.15319693998424 420 198.002620818238 432 198.01206347067142
+		 443 198.04196136300138 462 197.97974785937748 479 197.90301092361557 500 197.83592222219087;
+	setAttr -s 42 ".kyts[31:41]" yes no no no no no no no no no no;
+	setAttr -s 42 ".kit[13:41]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 1 1 1 1 1 18 18 18 
+		18 18 18 18;
+	setAttr -s 42 ".kot[13:41]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 1 1 1 1 1 18 18 18 
+		18 18 18 18;
+	setAttr -s 42 ".kix[13:41]"  0.15805111548124468 1 1 1 0.0074650593091738241 
+		0.0063622646633934446 0.014867381238784208 1 1 1 1 1 0.01098688491436503 1 1 1 1 
+		0.041581819546450766 0.015148284125162859 0.43708505678198223 0.16873048141525795 
+		0.51031761211572346 1 1 0.99915847101654276 1 0.99573692217492493 0.99589965532886049 
+		1;
+	setAttr -s 42 ".kiy[13:41]"  -0.98743093170871166 0 0 0 -0.99997213605655555 
+		-0.99997976058935945 -0.99988947437959397 0 0 0 0 0 0.99993964235841681 0 0 0 0 -0.99913510211742962 
+		0.9998852581611869 0.89942017607895108 -0.98566222644543666 0.85998600847019946 0 
+		0 0.041016457622330561 0 -0.092238721899252613 -0.090464780527324831 0;
+	setAttr -s 42 ".kox[13:41]"  0.15805111644425474 1 1 1 0.0074650593091738241 
+		0.0063622646633934455 0.01486738123878421 1 1 1 1 1 0.01098688491436503 1 1 1 1 0.041581817069529146 
+		0.015148284880268044 0.4370848001775538 0.16873053771296009 0.51031765069509294 1 
+		1 0.99915847101654276 1 0.99573692217492482 0.99589965532886038 1;
+	setAttr -s 42 ".koy[13:41]"  -0.9874309315545694 0 0 0 -0.99997213605655555 
+		-0.99997976058935967 -0.99988947437959397 0 0 0 0 0 0.99993964235841681 0 0 0 0 -0.99913510222051372 
+		0.99988525814974705 0.89942030077920077 -0.98566221680811905 0.85998598557711459 
+		0 0 0.041016457622330561 0 -0.092238721899252599 -0.090464780527324831 0;
 createNode animCurveTL -n "IK_Global_Hand_LE_CTR_translateZ";
 	rename -uid "78904552-4037-5FC0-13D0-29BC9262E84F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 25 ".ktv[0:24]"  25 6.2954921378322295 38 6.3051411144647558
+	setAttr -s 40 ".ktv[0:39]"  25 6.2954921378322295 38 6.3051411144647558
 		 47 6.154647425195888 56 6.2954921378322295 72 6.3810759753583071 80 2.6238451164530479
 		 87 35.740724123547871 94 54.656518654288547 106 59.136340383922814 125 59.436128192512221
 		 133 60.227450513841838 141 62.291768788572952 161 62.250633540350933 167 63.33943609442268
-		 176 75.847968684935324 200 75.847968684935324 209 36.053024218063413 213 6.9971220062708719
+		 176 75.847968684935324 200 75.847968684935324 206 36.053024218063413 213 6.9971220062708719
 		 218 3.163167775164184 223 12.268241042669739 231 17.223123839018054 245 17.223123839018054
-		 258 22.454939759067965 274 24.062553537318774 286 24.062553537318774;
-	setAttr -s 25 ".kit[8:24]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18;
-	setAttr -s 25 ".kot[8:24]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 18 18 18;
-	setAttr -s 25 ".kix[8:24]"  0.83726984065060728 0.717836281607941 0.22734297705906567 
-		1 1 0.076313489989365602 1 1 0.0078670042668655456 0.018110037668081332 1 0.038496929628029163 
-		1 1 0.173977346864257 1 1;
-	setAttr -s 25 ".kiy[8:24]"  0.54678991755235107 0.69621194532073716 
-		0.97381475177875654 0 0 0.99708387372660023 0 0 -0.99996905464312502 -0.99983599981980087 
-		0 0.99925871845544312 0 0 0.98474965487583388 0 0;
-	setAttr -s 25 ".kox[8:24]"  0.83726985737352733 0.71783628160794088 
-		0.22734297705906564 1 1 0.076313489989365602 1 1 0.0078670042668655456 0.018110037668081332 
-		1 0.038496929628029163 1 1 0.173977346864257 1 1;
-	setAttr -s 25 ".koy[8:24]"  0.54678989194544658 0.69621194532073705 
-		0.97381475177875654 0 0 0.99708387372660034 0 0 -0.99996905464312502 -0.99983599981980076 
-		0 0.99925871845544312 0 0 0.98474965487583399 0 0;
+		 258 22.454939759067965 274 24.062553537318774 286 24.062553537318774 315 24.062553537318774
+		 350 15.980751440896821 359 15.980751440896821 366 13.699146048488327 375 11.048914677325183
+		 380 10.670310195730449 390 10.397810439231158 400 10.502128996559817 414 15.453401231270643
+		 420 17.735235311547335 432 18.740736200613728 443 18.721051254777301 462 18.755388704072509
+		 479 18.794126029603444 500 18.833787112489802;
+	setAttr -s 40 ".kyts[29:39]" yes no no no no no no no no no no;
+	setAttr -s 40 ".kit[8:39]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
+		1 1 18 18 18 18 18;
+	setAttr -s 40 ".kot[8:39]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
+		1 1 18 18 18 18 18;
+	setAttr -s 40 ".kix[8:39]"  0.83726984065060728 0.717836281607941 0.22734297705906567 
+		1 1 0.076313489989365602 1 1 0.0078670042668655474 0.018110037668081332 1 0.038496929628029163 
+		1 1 0.173977346864257 1 1 1 1 1 0.13395780437402588 0.18911778868897847 0.6924971918242887 
+		1 0.79958007738425063 0.089073813466620619 0.22712991252404957 1 1 0.99881545854435017 
+		0.99877639256202988 1;
+	setAttr -s 40 ".kiy[8:39]"  0.54678991755235107 0.69621194532073716 
+		0.97381475177875654 0 0 0.99708387372660023 0 0 -0.99996905464312502 -0.99983599981980076 
+		0 0.99925871845544312 0 0 0.98474965487583388 0 0 0 0 0 -0.99098703656873843 -0.9819544093293695 
+		-0.72142057034400819 0 0.60055948901852818 0.99602502767476353 0.97386446841273444 
+		0 0 0.048658809817332699 0.049454197605239038 0;
+	setAttr -s 40 ".kox[8:39]"  0.83726985737352733 0.71783628160794088 
+		0.22734297705906564 1 1 0.076313489989365602 1 1 0.0078670042668655474 0.018110037668081332 
+		1 0.038496929628029163 1 1 0.173977346864257 1 1 1 1 1 0.13395780437402588 0.18911778868897847 
+		0.69249719182428882 1 0.79958007738425063 0.089073805683217017 0.22712991428167473 
+		1 1 0.99881545854435028 0.99877639256202988 1;
+	setAttr -s 40 ".koy[8:39]"  0.54678989194544658 0.69621194532073705 
+		0.97381475177875654 0 0 0.99708387372660034 0 0 -0.99996905464312513 -0.99983599981980076 
+		0 0.99925871845544312 0 0 0.98474965487583399 0 0 0 0 0 -0.99098703656873843 -0.98195440932936939 
+		-0.72142057034400831 0 0.60055948901852818 0.99602502837082796 0.97386446800281157 
+		0 0 0.048658809817332699 0.049454197605239045 0;
 createNode animCurveTA -n "IK_Global_Hand_RI_CTR_rotateX";
 	rename -uid "A6ECAB38-49A3-14F8-6048-33859CF76DA2";
 	setAttr ".tan" 18;
@@ -2362,64 +2641,74 @@ createNode animCurveTL -n "PoleV_LE_translateX";
 	rename -uid "DB38BB50-4A72-9F7A-633C-F094817D2BB8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  72 60.197878955775906 94 36.079126776559818
+	setAttr -s 13 ".ktv[0:12]"  72 60.197878955775906 94 36.079126776559818
 		 126 36.079126776559818 142 61.975145658986506 164 47.964759923545714 174 2.7580796701669712
-		 210 2.7580796701669712 212 22.838434019120992 222 66.79106858177289 229 116.74854576818448;
+		 202 2.7580796701669712 210 -9.1600131980691586 212 22.838434019120992 222 66.79106858177289
+		 229 116.74854576818448 315 116.74854576818448 350 77.424155445264972;
 createNode animCurveTL -n "PoleV_LE_translateY";
 	rename -uid "CEAF795E-441D-40D9-49CD-F3B0FC80E3C1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  72 12.793207490780972 94 -66.738430043994541
+	setAttr -s 13 ".ktv[0:12]"  72 12.793207490780972 94 -66.738430043994541
 		 126 -66.738430043994541 142 -92.812119931623926 164 -108.52358257687433 174 -90.559765716236171
-		 210 -90.559765716236171 212 -8.7302069473585107 222 51.852384407698807 229 150.3772827900365;
+		 202 -90.559765716236171 210 -51.799217271424276 212 -8.7302069473585107 222 51.852384407698807
+		 229 150.3772827900365 315 150.3772827900365 350 37.107719984831107;
 createNode animCurveTL -n "PoleV_LE_translateZ";
 	rename -uid "533F75D6-4C13-14C4-5C2D-15B48530478D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  72 90.990011792388628 87 140.6702487633321
+	setAttr -s 14 ".ktv[0:13]"  72 90.990011792388628 87 140.6702487633321
 		 94 137.99539336236759 126 137.99539336236759 142 137.07553024602282 164 126.68126706557059
-		 174 125.65509859882305 210 125.65509859882305 212 165.35797884505175 222 177.10660651399812
-		 229 65.317224662926733;
+		 174 125.65509859882305 202 125.65509859882305 210 147.72634078328534 212 165.35797884505175
+		 222 177.10660651399812 229 65.317224662926733 315 65.317224662926733 350 90.848463967693007;
 createNode animCurveTL -n "Shoulder_LE_CTR_translateX";
 	rename -uid "DC49C036-48D2-7795-9CB3-7483D21FC70C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  77 13.468231368894543 94 -8.9715109547051792
-		 128 -8.9715109547051792 142 -1.26989094742469 207 -1.26989094742469 212 5.0092530289151203
-		 215 9.5053918083300744 220 14.664935751700622 231 26.952630096869648 258 26.952630096869648
-		 272 41.665486292343374 280 44.634696857726951 288 48.431123695303071;
+	setAttr -s 19 ".ktv[0:18]"  77 13.468231368894543 94 -8.9715109547051792
+		 128 -8.9715109547051792 142 -1.26989094742469 200 -18.292202150281021 207 -1.26989094742469
+		 212 7.0305174489795323 215 9.5053918083300744 220 14.664935751700622 231 26.952630096869648
+		 258 26.952630096869648 272 41.665486292343374 280 44.634696857726951 288 48.431123695303071
+		 315 48.431123695303071 350 7.6264468867125998 377 18.295810858866901 400 18.295810858866901
+		 412 20.200492431659654;
 createNode animCurveTL -n "Shoulder_LE_CTR_translateY";
 	rename -uid "8C0002BA-4A8A-F518-3E5D-8BA00632416E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  77 -30.720533600526863 94 -45.816128548402475
-		 128 -45.816128548402475 142 -50.177390154879504 207 -50.177390154879504 212 -36.918603920558184
-		 215 -17.891451734758888 220 -14.699381349012249 231 -4.6297764946209661 258 -4.6297764946209661
-		 272 2.4104316595847628 280 1.6119083676985078 288 -7.8054918735459822;
+	setAttr -s 19 ".ktv[0:18]"  77 -30.720533600526863 94 -45.816128548402475
+		 128 -45.816128548402475 142 -50.177390154879504 200 -72.432756658067916 207 -50.177390154879504
+		 212 -34.760233081364618 215 -17.891451734758888 220 -14.699381349012249 231 -4.6297764946209661
+		 258 -4.6297764946209661 272 2.4104316595847628 280 1.6119083676985078 288 -7.8054918735459822
+		 315 -7.8054918735459822 350 -32.114947316057979 377 -47.849848451665892 400 -47.849848451665892
+		 412 -51.251509890906448;
 createNode animCurveTL -n "Shoulder_LE_CTR_translateZ";
 	rename -uid "D2CB8DAC-4316-C876-1BA3-7E9958980DA4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  77 62.534697472764904 87 101.77687792414136
-		 94 102.66159384998569 128 102.66159384998569 142 93.814219660085925 207 93.814219660085925
-		 212 86.313060741915336 215 85.489650923876184 220 67.601969208323055 231 50.679131826570767
-		 258 50.679131826570767 272 52.59679084007891 280 50.704574470010108 288 62.750910978913907
-		 293 89.354656212877217;
+	setAttr -s 21 ".ktv[0:20]"  77 62.534697472764904 87 101.77687792414136
+		 94 102.66159384998569 128 102.66159384998569 142 93.814219660085925 200 70.361487710752755
+		 207 93.814219660085925 212 90.482545549433283 215 85.489650923876184 220 67.601969208323055
+		 231 50.679131826570767 258 50.679131826570767 272 52.59679084007891 280 50.704574470010108
+		 288 62.750910978913907 293 89.354656212877217 315 89.354656212877217 350 147.31002942394593
+		 377 156.50396352766251 400 156.50396352766251 412 160.83817801256725;
 createNode animCurveTA -n "Shoulder_LE_CTR_rotateX";
 	rename -uid "C101564E-435C-5161-B1C3-398E4E1A1C61";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  77 0 94 0 128 0 142 0 207 0 258 0;
+	setAttr -s 8 ".ktv[0:7]"  77 0 94 0 128 0 142 0 207 0 258 0 315 0
+		 400 0;
 createNode animCurveTA -n "Shoulder_LE_CTR_rotateY";
 	rename -uid "16C8CBA4-4472-D780-C74F-52A5A809F64B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  77 0 94 0 128 0 142 0 207 0 258 0;
+	setAttr -s 8 ".ktv[0:7]"  77 0 94 0 128 0 142 0 207 0 258 0 315 0
+		 400 0;
 createNode animCurveTA -n "Shoulder_LE_CTR_rotateZ";
 	rename -uid "6090BC58-4357-7B58-095E-F58FB6099A52";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  77 0 94 0 128 0 142 0 207 0 258 0;
+	setAttr -s 8 ".ktv[0:7]"  77 0 94 0 128 0 142 0 207 0 258 0 315 0
+		 400 0;
 createNode polySphere -n "polySphere1";
 	rename -uid "2EAC124B-4DEE-94C2-886D-1C87EC44DA30";
 	setAttr ".ax" -type "double3" 0 0 1 ;
@@ -2428,1713 +2717,1801 @@ createNode animCurveTA -n "ValveBiped_Bip01_L_Finger0_rotateX";
 	rename -uid "81A1E22C-4147-4D12-6AEE-DA8658EBF128";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  24 -82.192266485929451 40 -90.036668166795465
+	setAttr -s 11 ".ktv[0:10]"  24 -82.192266485929451 40 -90.036668166795465
 		 50 -82.192266485929451 82 -80.502835276302861 128 -80.502835276302861 138 -81.090381842319985
-		 226 -81.090381842319985 231 -82.434688084500138;
+		 226 -81.090381842319985 231 -82.434688084500138 350 -82.434688084500138 361 -76.020424488949033
+		 380 -76.865116492214455;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger0_rotateY";
 	rename -uid "A72D6D21-4089-20DF-47E9-D7A8217267B7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  24 -30.064114344671459 40 -33.750136286106724
+	setAttr -s 11 ".ktv[0:10]"  24 -30.064114344671459 40 -33.750136286106724
 		 50 -30.064114344671459 82 -34.24634908492181 128 -34.24634908492181 138 -28.278753065136453
-		 226 -28.278753065136453 231 -31.631636012987855;
+		 226 -28.278753065136453 231 -31.631636012987855 350 -31.631636012987855 361 -29.566040619972281
+		 380 -23.410889616472851;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger0_rotateZ";
 	rename -uid "C0BBB36C-4508-F312-7FF6-DC84CE54F60E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  24 -26.972074990696985 40 -11.28879174263926
+	setAttr -s 11 ".ktv[0:10]"  24 -26.972074990696985 40 -11.28879174263926
 		 50 -26.972074990696985 82 -31.238807181104956 128 -31.238807181104956 138 -30.108208407241815
-		 226 -30.108208407241815 231 -14.573723739564194;
+		 226 -30.108208407241815 231 -14.573723739564194 350 -14.573723739564194 361 -27.135394779619705
+		 380 -22.870302160153166;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger01_rotateX";
 	rename -uid "701FAB08-4B4A-28AD-E708-49A8CC5B93C1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  50 0 82 0 128 0 138 0 226 0 231 0;
+	setAttr -s 8 ".ktv[0:7]"  50 0 82 0 128 0 138 0 226 0 231 0 350 0
+		 361 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger01_rotateY";
 	rename -uid "607F739B-4E13-CB3A-3398-C9A2FB989AC7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  50 0 82 0 128 0 138 0 226 0 231 0;
+	setAttr -s 8 ".ktv[0:7]"  50 0 82 0 128 0 138 0 226 0 231 0 350 0
+		 361 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger01_rotateZ";
 	rename -uid "C31CFB9E-4087-F7B3-1447-E38D4ACD895E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  50 13.09340353294 82 16.664808281136288
-		 128 16.664808281136288 138 11.533199863696774 226 11.533199863696774 231 11.533199863696774;
+	setAttr -s 8 ".ktv[0:7]"  50 13.09340353294 82 16.664808281136288
+		 128 16.664808281136288 138 11.533199863696774 226 11.533199863696774 231 11.533199863696774
+		 350 11.533199863696774 361 11.533199863696774;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger02_rotateX";
 	rename -uid "E75E6B83-4BA8-56A2-9E99-6E8F46491EDC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  50 0 82 0 128 0 138 0 226 0 231 0;
+	setAttr -s 8 ".ktv[0:7]"  50 0 82 0 128 0 138 0 226 0 231 0 350 0
+		 361 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger02_rotateY";
 	rename -uid "57CDA70E-4843-98CC-5A7E-41BE67D0AFFA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  50 0 82 0 128 0 138 0 226 0 231 0;
+	setAttr -s 8 ".ktv[0:7]"  50 0 82 0 128 0 138 0 226 0 231 0 350 0
+		 361 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger02_rotateZ";
 	rename -uid "ADC2E64A-4DC0-457B-457B-2C98A3D8B998";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  50 20.7903467308 82 -4.3603892715683212
-		 128 -4.3603892715683212 138 18.588002249121931 226 18.588002249121931 231 18.588002249121931;
+	setAttr -s 9 ".ktv[0:8]"  50 20.7903467308 82 -4.3603892715683212
+		 128 -4.3603892715683212 138 18.588002249121931 226 18.588002249121931 231 18.588002249121931
+		 350 18.588002249121931 361 18.588002249121931 380 8.3335484721360142;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger1_rotateX";
 	rename -uid "34261264-4D73-B06B-0D39-4A82F50C3406";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 19.923401624523731 37 20.302768181473287
+	setAttr -s 16 ".ktv[0:15]"  25 19.923401624523731 37 20.302768181473287
 		 44 20.07199263004598 50 20.37163756813456 82 19.807040871934348 127 19.344434797240766
 		 139 20.027317179257313 147 20.440499168381692 163 20.373710616487532 174 20.178420855311828
-		 223 18.668374806363342 226 19.01058184720155 231 17.577290017230542;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 1 0.99973661699518623 1 0.99999173436013078 
-		0.99992913718819265 1 1 1;
-	setAttr -s 13 ".kiy[4:12]"  0 0 0.022949872309457272 0 -0.004065859247142015 
-		-0.011904646239042856 0 0 0;
-	setAttr -s 13 ".kox[4:12]"  1 1 0.99973661699518623 1 0.99999173436013089 
-		0.99992913718819254 1 1 1;
-	setAttr -s 13 ".koy[4:12]"  0 0 0.022949872309457272 0 -0.004065859247142015 
-		-0.011904646239042856 0 0 0;
+		 223 18.668374806363342 226 19.01058184720155 231 17.577290017230542 350 17.577290017230542
+		 361 14.532587838828761 380 14.453843777463122;
+	setAttr -s 16 ".kit[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kot[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kix[4:15]"  1 1 0.99973661699518623 1 0.99999173436013078 
+		0.99992913718819265 1 1 1 1 0.99998643845039226 1;
+	setAttr -s 16 ".kiy[4:15]"  0 0 0.022949872309457272 0 -0.004065859247142015 
+		-0.011904646239042856 0 0 0 0 -0.0052079665225271063 0;
+	setAttr -s 16 ".kox[4:15]"  1 1 0.99973661699518623 1 0.99999173436013089 
+		0.99992913718819254 1 1 1 1 0.99998643845039237 1;
+	setAttr -s 16 ".koy[4:15]"  0 0 0.022949872309457272 0 -0.004065859247142015 
+		-0.011904646239042856 0 0 0 0 -0.0052079665225271072 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger1_rotateY";
 	rename -uid "832F54FE-45FF-7A5E-9920-0B91CC01DE57";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 -4.7049423293237194 37 2.497906227132471
+	setAttr -s 16 ".ktv[0:15]"  25 -4.7049423293237194 37 2.4979062271324715
 		 44 1.9164066393854946 50 1.8209457328960779 82 -5.1905825951268847 127 -6.7619263831925887
 		 139 4.2210142786157991 147 0.61710740010012888 163 1.7965678754232282 174 -3.3895340285207012
-		 223 -8.4999391517386265 226 -7.6784415250321825 231 -10.620078863318096;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 1 1 1 1 0.99742637377407262 1 1 1;
-	setAttr -s 13 ".kiy[4:12]"  0 0 0 0 0 -0.071698179195180414 0 0 0;
-	setAttr -s 13 ".kox[4:12]"  1 1 1 1 1 0.99742637377407251 1 1 1;
-	setAttr -s 13 ".koy[4:12]"  0 0 0 0 0 -0.071698179195180414 0 0 0;
+		 223 -8.4999391517386265 226 -7.6784415250321825 231 -10.620078863318096 350 -10.620078863318096
+		 361 -4.3000873155623411 380 -4.5627366539659837;
+	setAttr -s 16 ".kit[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kot[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kix[4:15]"  1 1 1 1 1 0.99742637377407262 1 1 1 1 1 
+		1;
+	setAttr -s 16 ".kiy[4:15]"  0 0 0 0 0 -0.071698179195180414 0 0 0 0 
+		0 0;
+	setAttr -s 16 ".kox[4:15]"  1 1 1 1 1 0.99742637377407251 1 1 1 1 1 
+		1;
+	setAttr -s 16 ".koy[4:15]"  0 0 0 0 0 -0.071698179195180414 0 0 0 0 
+		0 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger1_rotateZ";
 	rename -uid "E22476F2-43DE-3507-185F-54810BE7429B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 -24.30125368311537 37 -43.771194940585453
+	setAttr -s 16 ".ktv[0:15]"  25 -24.30125368311537 37 -43.77119494058546
 		 44 -43.545355257888836 50 -41.943646075252161 82 -5.5569419427411884 127 -1.1163923657556991
 		 139 -31.07332877768615 147 -21.3126229161346 163 -24.48273166161206 174 -10.517839373571425
-		 223 3.9708751100119573 226 1.5393699456644294 231 10.532382547818242;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 1 1 1 1 0.98083567931644733 1 1 1;
-	setAttr -s 13 ".kiy[4:12]"  0 0 0 0 0 0.19483677830390023 0 0 0;
-	setAttr -s 13 ".kox[4:12]"  1 1 1 1 1 0.98083567931644733 1 1 1;
-	setAttr -s 13 ".koy[4:12]"  0 0 0 0 0 0.1948367783039002 0 0 0;
+		 223 3.9708751100119573 226 1.5393699456644294 231 10.532382547818242 350 10.532382547818242
+		 361 -36.518131639866638 380 -35.499026802052953;
+	setAttr -s 16 ".kit[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kot[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kix[4:15]"  1 1 1 1 1 0.98083567931644733 1 1 1 1 1 
+		1;
+	setAttr -s 16 ".kiy[4:15]"  0 0 0 0 0 0.19483677830390023 0 0 0 0 0 
+		0;
+	setAttr -s 16 ".kox[4:15]"  1 1 1 1 1 0.98083567931644733 1 1 1 1 1 
+		1;
+	setAttr -s 16 ".koy[4:15]"  0 0 0 0 0 0.1948367783039002 0 0 0 0 0 
+		0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger11_rotateX";
 	rename -uid "E8D61195-4811-2956-5B46-6DAED909C691";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 0.026634855688553449 37 -0.057229414351024903
-		 44 -0.054519421643991831 50 -0.049505155589657651 82 0.08346172999627402 127 0.10099709404290588
+	setAttr -s 16 ".ktv[0:15]"  25 0.026634855688553449 37 -0.057229414351024903
+		 44 -0.054519421643991831 50 -0.049505155589657658 82 0.08346172999627402 127 0.10099709404290588
 		 139 -0.025285845830123103 147 0.016999195745770006 163 0.0032370278877538812 174 0.063108232479150692
-		 223 0.12011976615254784 226 0.11111909560678945 231 -0.024534083250667815;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 1 1 1 1 0.99999966707588028 1 0.99999289290167526 
-		1;
-	setAttr -s 13 ".kiy[4:12]"  0 0 0 0 0 0.00081599517692240112 0 -0.0037701652667325217 
-		0;
-	setAttr -s 13 ".kox[4:12]"  1 1 1 1 1 0.99999966707588028 1 0.99999289290167537 
-		1;
-	setAttr -s 13 ".koy[4:12]"  0 0 0 0 0 0.00081599517692240123 0 -0.0037701652667325217 
-		0;
+		 223 0.12011976615254784 226 0.11111909560678945 231 -0.024534083250667815 350 -0.024534083250667815
+		 361 -0.21658830931363068 380 -1.802868875193423;
+	setAttr -s 16 ".kit[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kot[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kix[4:15]"  1 1 1 1 1 0.99999966707588028 1 0.99999289290167526 
+		1 1 0.99975940015712239 1;
+	setAttr -s 16 ".kiy[4:15]"  0 0 0 0 0 0.00081599517692240112 0 -0.0037701652667325217 
+		0 0 -0.021934944665324609 0;
+	setAttr -s 16 ".kox[4:15]"  1 1 1 1 1 0.99999966707588028 1 0.99999289290167537 
+		1 1 0.99975940015712239 1;
+	setAttr -s 16 ".koy[4:15]"  0 0 0 0 0 0.00081599517692240123 0 -0.0037701652667325217 
+		0 0 -0.021934944665324609 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger11_rotateY";
 	rename -uid "A26867F0-4AD9-85A1-4D6D-D6A6527653A3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 0.23189844516348129 37 0.22629872226099165
+	setAttr -s 16 ".ktv[0:15]"  25 0.23189844516348129 37 0.22629872226099165
 		 44 0.22341596159369889 50 0.2281130269231868 82 0.2179919121680991 127 0.21044223292094982
 		 139 0.23204941290495362 147 0.23280319900574942 163 0.23340056178481247 174 0.22473022037512502
-		 223 0.2001439506962743 226 0.20527761679315443 231 0.23213009840484122;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 1 0.99999999299019393 0.99999999972194475 
-		1 0.99999997304739863 1 0.99999859754087583 1;
-	setAttr -s 13 ".kiy[4:12]"  0 0 0.00011840444300191915 2.358199663161328e-05 
-		0 -0.00023217493836237991 0 0.0016747884288055865 0;
-	setAttr -s 13 ".kox[4:12]"  1 1 0.99999999299019393 0.99999999972194475 
-		1 0.99999997304739874 1 0.99999859754087594 1;
-	setAttr -s 13 ".koy[4:12]"  0 0 0.00011840444300191915 2.358199663161328e-05 
-		0 -0.00023217493836237994 0 0.0016747884288055867 0;
+		 223 0.2001439506962743 226 0.20527761679315443 231 0.23213009840484122 350 0.23213009840484122
+		 361 0.087039306565424079 380 -12.737926907489218;
+	setAttr -s 16 ".kit[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kot[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kix[4:15]"  1 1 0.99999999299019393 0.99999999972194475 
+		1 0.99999997304739863 1 0.99999859754087583 1 1 0.99986266077632124 1;
+	setAttr -s 16 ".kiy[4:15]"  0 0 0.00011840444300191915 2.358199663161328e-05 
+		0 -0.00023217493836237991 0 0.0016747884288055865 0 0 -0.016572856883923497 0;
+	setAttr -s 16 ".kox[4:15]"  1 1 0.99999999299019393 0.99999999972194475 
+		1 0.99999997304739874 1 0.99999859754087594 1 1 0.99986266077632135 1;
+	setAttr -s 16 ".koy[4:15]"  0 0 0.00011840444300191915 2.358199663161328e-05 
+		0 -0.00023217493836237994 0 0.0016747884288055867 0 0 -0.016572856883923497 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger11_rotateZ";
 	rename -uid "E736234D-4A78-C692-A3D5-F2859C03907E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 -14.246829825045992 37 -34.991079271898037
-		 44 -34.530402383097666 50 -33.043392094157426 82 0.1513287955158287 127 4.8388367836468804
+	setAttr -s 16 ".ktv[0:15]"  25 -14.246829825045992 37 -34.991079271898037
+		 44 -34.530402383097666 50 -33.043392094157433 82 0.1513287955158287 127 4.8388367836468804
 		 139 -27.017742729562823 147 -16.622569470871834 163 -20.004298486404902 174 -5.1131555130057187
-		 223 10.171990291779805 226 7.6283820963189477 231 -26.832155463932455;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 1 1 1 1 0.97852138535156896 1 0.68435165108596696 
-		1;
-	setAttr -s 13 ".kiy[4:12]"  0 0 0 0 0 0.20614533322305995 0 -0.72915212243804872 
-		0;
-	setAttr -s 13 ".kox[4:12]"  1 1 1 1 1 0.97852138535156896 1 0.68435165108596685 
-		1;
-	setAttr -s 13 ".koy[4:12]"  0 0 0 0 0 0.20614533322305992 0 -0.72915212243804861 
-		0;
+		 223 10.171990291779805 226 7.6283820963189477 231 -26.832155463932455 350 -26.832155463932455
+		 361 -88.90550746934079 380 -69.318879752793308;
+	setAttr -s 16 ".kit[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kot[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kix[4:15]"  1 1 1 1 1 0.97852138535156896 1 0.68435165108596696 
+		1 1 1 1;
+	setAttr -s 16 ".kiy[4:15]"  0 0 0 0 0 0.20614533322305995 0 -0.72915212243804872 
+		0 0 0 0;
+	setAttr -s 16 ".kox[4:15]"  1 1 1 1 1 0.97852138535156896 1 0.68435165108596685 
+		1 1 1 1;
+	setAttr -s 16 ".koy[4:15]"  0 0 0 0 0 0.20614533322305992 0 -0.72915212243804861 
+		0 0 0 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger12_rotateX";
 	rename -uid "0E385C27-4BDC-4158-3361-569BC5B69AFC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 0.016971983581614773 37 -0.036467133233658119
+	setAttr -s 16 ".ktv[0:15]"  25 0.016971983581614773 37 -0.036467133233658119
 		 44 -0.03191610727324691 50 -0.031545159693628151 82 0.020652021095531735 127 0.032620366168791062
 		 139 -0.048885687865638745 147 -0.022736366679574984 163 -0.031367483278267175 174 0.0070497769023055495
-		 223 0.045967435286029118 226 0.039644261651226101 231 0.072112497120546779;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 1 1 1 1 0.99999985425425231 1 1 1;
-	setAttr -s 13 ".kiy[4:12]"  0 0 0 0 0 0.00053989950359539449 0 0 0;
-	setAttr -s 13 ".kox[4:12]"  1 1 1 1 1 0.99999985425425242 1 1 1;
-	setAttr -s 13 ".koy[4:12]"  0 0 0 0 0 0.00053989950359539449 0 0 0;
+		 223 0.045967435286029118 226 0.039644261651226101 231 0.072112497120546779 350 0.072112497120546779
+		 361 -0.14694079742373048 380 -0.14363102616861717;
+	setAttr -s 16 ".kit[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kot[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kix[4:15]"  1 1 1 1 1 0.99999985425425231 1 1 1 1 1 
+		1;
+	setAttr -s 16 ".kiy[4:15]"  0 0 0 0 0 0.00053989950359539449 0 0 0 
+		0 0 0;
+	setAttr -s 16 ".kox[4:15]"  1 1 1 1 1 0.99999985425425242 1 1 1 1 1 
+		1;
+	setAttr -s 16 ".koy[4:15]"  0 0 0 0 0 0.00053989950359539449 0 0 0 
+		0 0 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger12_rotateY";
 	rename -uid "F587FB9E-4842-7970-6744-3D9FB613B3F9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 0.14776837911705079 37 0.14420018188775116
+	setAttr -s 16 ".ktv[0:15]"  25 0.14776837911705079 37 0.14420018188775116
 		 44 0.14284840413346192 50 0.14535627433887013 82 0.14729913923452279 127 0.1451187632297917
 		 139 0.14047681575764245 147 0.14699183725386583 163 0.14539471984806265 174 0.14857268326293552
-		 223 0.14145861812370897 226 0.1433592593899829 231 0.13008973114706937;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 0.99999999874321166 1 1 1 1 1 1 1;
-	setAttr -s 13 ".kiy[4:12]"  0 -5.0135581961271782e-05 0 0 0 0 0 0 0;
-	setAttr -s 13 ".kox[4:12]"  1 0.99999999874321177 1 1 1 1 1 1 1;
-	setAttr -s 13 ".koy[4:12]"  0 -5.0135581961271782e-05 0 0 0 0 0 0 0;
+		 223 0.14145861812370897 226 0.1433592593899829 231 0.1300897311470694 350 0.1300897311470694
+		 361 0.02306392580713186 380 0.038648064706188832;
+	setAttr -s 16 ".kit[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kot[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kix[4:15]"  1 0.99999999874321166 1 1 1 1 1 1 1 1 1 
+		1;
+	setAttr -s 16 ".kiy[4:15]"  0 -5.0135581961271782e-05 0 0 0 0 0 0 0 
+		0 0 0;
+	setAttr -s 16 ".kox[4:15]"  1 0.99999999874321177 1 1 1 1 1 1 1 1 1 
+		1;
+	setAttr -s 16 ".koy[4:15]"  0 -5.0135581961271782e-05 0 0 0 0 0 0 0 
+		0 0 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger12_rotateZ";
 	rename -uid "0B708A46-46B1-0579-572C-38B5854F65FA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 -7.4471132613586182 37 -28.191263564282377
+	setAttr -s 16 ".ktv[0:15]"  25 -7.4471132613586182 37 -28.191263564282377
 		 44 -26.60510923343265 50 -26.243584981363391 82 -6.0180171626894436 127 -1.3305211149919247
 		 139 -33.186965186133861 147 -22.791846903560128 163 -26.173558611181051 174 -11.282483869226121
-		 223 4.0026235047834433 226 1.4590189035208805 231 15.001768262653414;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 1 1 1 1 0.97852153233265737 1 1 1;
-	setAttr -s 13 ".kiy[4:12]"  0 0 0 0 0 0.20614463553861448 0 0 0;
-	setAttr -s 13 ".kox[4:12]"  1 1 1 1 1 0.97852153233265748 1 1 1;
-	setAttr -s 13 ".koy[4:12]"  0 0 0 0 0 0.20614463553861448 0 0 0;
+		 223 4.0026235047834433 226 1.4590189035208805 231 15.001768262653414 350 15.001768262653414
+		 361 -95.0787519634397 380 -88.938797085578244;
+	setAttr -s 16 ".kit[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kot[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kix[4:15]"  1 1 1 1 1 0.97852153233265737 1 1 1 1 1 
+		1;
+	setAttr -s 16 ".kiy[4:15]"  0 0 0 0 0 0.20614463553861448 0 0 0 0 0 
+		0;
+	setAttr -s 16 ".kox[4:15]"  1 1 1 1 1 0.97852153233265748 1 1 1 1 1 
+		1;
+	setAttr -s 16 ".koy[4:15]"  0 0 0 0 0 0.20614463553861448 0 0 0 0 0 
+		0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger2_rotateX";
 	rename -uid "57A67117-4DBE-4F50-F556-ED92A0C551DA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 5.0320307208351709 37 4.4664677824410566
+	setAttr -s 16 ".ktv[0:15]"  25 5.0320307208351709 37 4.4664677824410566
 		 44 4.4474539062511127 50 4.5458731609227154 82 5.0192156776900898 127 4.9397638541851601
 		 139 4.818746635999867 147 5.028311203856517 163 4.9779498954565771 174 5.0685900716001902
-		 223 4.8093852208362611 226 4.8768209029340399 231 4.5999089458988669;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 0.9999989148458559 1 1 1 1 1 1 1;
-	setAttr -s 13 ".kiy[4:12]"  0 -0.0014731962227478763 0 0 0 0 0 0 0;
-	setAttr -s 13 ".kox[4:12]"  1 0.99999891484585601 1 1 1 1 1 1 1;
-	setAttr -s 13 ".koy[4:12]"  0 -0.0014731962227478765 0 0 0 0 0 0 0;
+		 223 4.8093852208362611 226 4.8768209029340399 231 4.5999089458988669 350 4.5999089458988669
+		 361 1.2559712307276703 380 0.12750247848628407;
+	setAttr -s 16 ".kit[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kot[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kix[4:15]"  1 0.9999989148458559 1 1 1 1 1 1 1 1 0.99805589669359351 
+		1;
+	setAttr -s 16 ".kiy[4:15]"  0 -0.0014731962227478763 0 0 0 0 0 0 0 
+		0 -0.062325172082770872 0;
+	setAttr -s 16 ".kox[4:15]"  1 0.99999891484585601 1 1 1 1 1 1 1 1 0.99805589669359351 
+		1;
+	setAttr -s 16 ".koy[4:15]"  0 -0.0014731962227478765 0 0 0 0 0 0 0 
+		0 -0.062325172082770879 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger2_rotateY";
 	rename -uid "0419B433-4CE4-AF7E-066D-6C884B00F029";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 0.68173518680008616 37 2.4181432889549339
-		 44 2.3593210666959101 50 2.2651068595926191 82 -0.7706454661958605 127 -1.1777402306685039
+	setAttr -s 16 ".ktv[0:15]"  25 0.68173518680008616 37 2.4181432889549339
+		 44 2.3593210666959106 50 2.2651068595926191 82 -0.7706454661958605 127 -1.1777402306685039
 		 139 1.6033232635489114 147 0.70871508496142643 163 1.0037188418416008 174 -0.30747666071311774
-		 223 -1.6312471089231366 226 -1.4164625449639114 231 -2.1530682984232148;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 1 1 1 1 0.99983084511978537 1 1 1;
-	setAttr -s 13 ".kiy[4:12]"  0 0 0 0 0 -0.018392420913400286 0 0 0;
-	setAttr -s 13 ".kox[4:12]"  1 1 1 1 1 0.99983084511978537 1 1 1;
-	setAttr -s 13 ".koy[4:12]"  0 0 0 0 0 -0.018392420913400282 0 0 0;
+		 223 -1.6312471089231366 226 -1.4164625449639117 231 -2.1530682984232148 350 -2.1530682984232148
+		 361 -9.2295680342824333 380 -9.3130342981774419;
+	setAttr -s 16 ".kit[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kot[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kix[4:15]"  1 1 1 1 1 0.99983084511978537 1 1 1 1 0.99998476317243401 
+		1;
+	setAttr -s 16 ".kiy[4:15]"  0 0 0 0 0 -0.018392420913400286 0 0 0 0 
+		-0.005520273813050528 0;
+	setAttr -s 16 ".kox[4:15]"  1 1 1 1 1 0.99983084511978537 1 1 1 1 0.99998476317243401 
+		1;
+	setAttr -s 16 ".koy[4:15]"  0 0 0 0 0 -0.018392420913400282 0 0 0 0 
+		-0.005520273813050528 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger2_rotateZ";
 	rename -uid "1F39D374-4B6B-AB6B-B6F4-059DF200E385";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 -27.154098625595449 37 -47.833823234813181
+	setAttr -s 16 ".ktv[0:15]"  25 -27.154098625595449 37 -47.833823234813181
 		 44 -47.458098724846465 50 -45.890548761492894 82 -10.751765038946761 127 -6.0813094415412108
 		 139 -37.819383187231253 147 -27.4606429795525 163 -30.829832130687954 174 -15.996046400396105
-		 223 -0.76588544516249235 226 -3.3012966439711566 231 5.5718183614011183;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 1 1 1 1 0.97867594201801489 1 1 1;
-	setAttr -s 13 ".kiy[4:12]"  0 0 0 0 0 0.20541032231889197 0 0 0;
-	setAttr -s 13 ".kox[4:12]"  1 1 1 1 1 0.97867594201801489 1 1 1;
-	setAttr -s 13 ".koy[4:12]"  0 0 0 0 0 0.205410322318892 0 0 0;
+		 223 -0.76588544516249235 226 -3.3012966439711566 231 5.5718183614011183 350 5.5718183614011183
+		 361 -42.1328995906538 380 -35.137020562495657;
+	setAttr -s 16 ".kit[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kot[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kix[4:15]"  1 1 1 1 1 0.97867594201801489 1 1 1 1 1 
+		1;
+	setAttr -s 16 ".kiy[4:15]"  0 0 0 0 0 0.20541032231889197 0 0 0 0 0 
+		0;
+	setAttr -s 16 ".kox[4:15]"  1 1 1 1 1 0.97867594201801489 1 1 1 1 1 
+		1;
+	setAttr -s 16 ".koy[4:15]"  0 0 0 0 0 0.205410322318892 0 0 0 0 0 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger21_rotateX";
 	rename -uid "7C5F2952-4923-25BB-FAD5-2EA43EDD2BF8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 0.036062477270702366 37 -0.077486209438510159
+	setAttr -s 16 ".ktv[0:15]"  25 0.036062477270702366 37 -0.077486209438510159
 		 44 -0.067816057800971746 50 -0.067027894053525494 82 0.043881906965537502 127 0.069312516244875846
 		 139 -0.10387340269549421 147 -0.048310772613950441 163 -0.066650363311170413 174 0.014979536110609386
-		 223 0.09767264400931687 226 0.084237038226874103 231 0.014979536110609386;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 1 1 1 1 0.99999934197704765 1 0.9999906265434243 
-		1;
-	setAttr -s 13 ".kiy[4:12]"  0 0 0 0 0 0.0011471902509304873 0 -0.0043297604194164193 
-		0;
-	setAttr -s 13 ".kox[4:12]"  1 1 1 1 1 0.99999934197704765 1 0.99999062654342441 
-		1;
-	setAttr -s 13 ".koy[4:12]"  0 0 0 0 0 0.0011471902509304873 0 -0.0043297604194164202 
-		0;
+		 223 0.09767264400931687 226 0.084237038226874117 231 0.014979536110609386 350 0.014979536110609386
+		 361 -0.2434790444619796 380 -0.16381486606807757;
+	setAttr -s 16 ".kit[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kot[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kix[4:15]"  1 1 1 1 1 0.99999934197704765 1 0.9999906265434243 
+		1 1 1 1;
+	setAttr -s 16 ".kiy[4:15]"  0 0 0 0 0 0.0011471902509304873 0 -0.0043297604194164193 
+		0 0 0 0;
+	setAttr -s 16 ".kox[4:15]"  1 1 1 1 1 0.99999934197704765 1 0.99999062654342441 
+		1 1 1 1;
+	setAttr -s 16 ".koy[4:15]"  0 0 0 0 0 0.0011471902509304873 0 -0.0043297604194164202 
+		0 0 0 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger21_rotateY";
 	rename -uid "48AF5561-4F8C-2D63-8F75-48BD470B6EC4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 0.31397932870296752 37 0.30639754026814697
+	setAttr -s 16 ".ktv[0:15]"  25 0.31397932870296752 37 0.30639754026814697
 		 44 0.3035252545355544 50 0.3088540319254805 82 0.31298227664835676 127 0.30834936285772563
 		 139 0.29848604979683246 147 0.31232931413634663 163 0.30893572182948437 174 0.31568833343998909
-		 223 0.30057220468278018 226 0.30461072920512128 231 0.31568833343998909;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 0.99999999432576314 1 1 1 1 1 0.99999968678091977 
-		1;
-	setAttr -s 13 ".kiy[4:12]"  0 -0.00010652921525873243 0 0 0 0 0 0.00079147840299986511 
-		0;
-	setAttr -s 13 ".kox[4:12]"  1 0.99999999432576314 1 1 1 1 1 0.99999968678091966 
-		1;
-	setAttr -s 13 ".koy[4:12]"  0 -0.00010652921525873243 0 0 0 0 0 0.00079147840299986501 
-		0;
+		 223 0.30057220468278018 226 0.30461072920512128 231 0.31568833343998909 350 0.31568833343998909
+		 361 0.20149865361784927 380 0.27027466918275689;
+	setAttr -s 16 ".kit[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kot[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kix[4:15]"  1 0.99999999432576314 1 1 1 1 1 0.99999968678091977 
+		1 1 1 1;
+	setAttr -s 16 ".kiy[4:15]"  0 -0.00010652921525873243 0 0 0 0 0 0.00079147840299986511 
+		0 0 0 0;
+	setAttr -s 16 ".kox[4:15]"  1 0.99999999432576314 1 1 1 1 1 0.99999968678091966 
+		1 1 1 1;
+	setAttr -s 16 ".koy[4:15]"  0 -0.00010652921525873243 0 0 0 0 0 0.00079147840299986501 
+		0 0 0 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger21_rotateZ";
 	rename -uid "D7322CB8-4EB6-85B0-4061-83A04B2A0B49";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 -14.445543975830818 37 -35.189932499190768
+	setAttr -s 16 ".ktv[0:15]"  25 -14.445543975830818 37 -35.189932499190768
 		 44 -33.60375525336341 50 -33.242233264876162 82 -13.016431494714759 127 -8.3288835546503002
 		 139 -40.185683465485376 147 -29.79045705379464 163 -33.172206139515659 174 -18.28095938198306
-		 223 -2.9956846850825309 226 -5.5393144109473083 231 -18.28095938198306;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 1 1 1 1 0.97852106472092804 1 0.7807411661123409 
-		1;
-	setAttr -s 13 ".kiy[4:12]"  0 0 0 0 0 0.20614685517228118 0 -0.62485456830973252 
-		0;
-	setAttr -s 13 ".kox[4:12]"  1 1 1 1 1 0.97852106472092792 1 0.7807411661123409 
-		1;
-	setAttr -s 13 ".koy[4:12]"  0 0 0 0 0 0.20614685517228115 0 -0.62485456830973252 
-		0;
+		 223 -2.9956846850825309 226 -5.5393144109473083 231 -18.28095938198306 350 -18.28095938198306
+		 361 -71.387355953833719 380 -52.218075113856791;
+	setAttr -s 16 ".kit[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kot[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kix[4:15]"  1 1 1 1 1 0.97852106472092804 1 0.7807411661123409 
+		1 1 1 1;
+	setAttr -s 16 ".kiy[4:15]"  0 0 0 0 0 0.20614685517228118 0 -0.62485456830973252 
+		0 0 0 0;
+	setAttr -s 16 ".kox[4:15]"  1 1 1 1 1 0.97852106472092792 1 0.7807411661123409 
+		1 1 1 1;
+	setAttr -s 16 ".koy[4:15]"  0 0 0 0 0 0.20614685517228115 0 -0.62485456830973252 
+		0 0 0 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger22_rotateX";
 	rename -uid "4D2CDD4C-4884-A7DF-9D48-A4A885C330BC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 0.020162421069756555 37 -0.043322317626422711
+	setAttr -s 16 ".ktv[0:15]"  25 0.020162421069756555 37 -0.043322317626422711
 		 44 -0.03791577652107285 50 -0.037475099514213545 82 0.024534241437335104 127 0.038752425941599736
 		 139 -0.058075341151176144 147 -0.027010407593392106 163 -0.037264023049143079 174 0.0083750123303798565
-		 223 0.054608508819168074 226 0.047096690243513567 231 0.1136513154397909;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 1 1 1 1 0.99999979430868335 1 1 1;
-	setAttr -s 13 ".kiy[4:12]"  0 0 0 0 0 0.00064139113736956445 0 0 0;
-	setAttr -s 13 ".kox[4:12]"  1 1 1 1 1 0.99999979430868324 1 1 1;
-	setAttr -s 13 ".koy[4:12]"  0 0 0 0 0 0.00064139113736956456 0 0 0;
+		 223 0.054608508819168074 226 0.047096690243513567 231 0.1136513154397909 350 0.1136513154397909
+		 361 -0.17405619094629443 380 -0.13533741989237053;
+	setAttr -s 16 ".kit[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kot[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kix[4:15]"  1 1 1 1 1 0.99999979430868335 1 1 1 1 1 
+		1;
+	setAttr -s 16 ".kiy[4:15]"  0 0 0 0 0 0.00064139113736956445 0 0 0 
+		0 0 0;
+	setAttr -s 16 ".kox[4:15]"  1 1 1 1 1 0.99999979430868324 1 1 1 1 1 
+		1;
+	setAttr -s 16 ".koy[4:15]"  0 0 0 0 0 0.00064139113736956456 0 0 0 
+		0 0 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger22_rotateY";
 	rename -uid "32A82DCE-4DB7-E513-61D2-DBBC3142FD1B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 0.17554610110011148 37 0.1713071450664122
+	setAttr -s 16 ".ktv[0:15]"  25 0.17554610110011148 37 0.1713071450664122
 		 44 0.16970125688729379 50 0.1726805626911429 82 0.17498865229332974 127 0.17239840364263334
 		 139 0.16688385137791836 147 0.17462358289580149 163 0.17272623528457601 174 0.17650160042657076
-		 223 0.16805021534844219 226 0.1703081438554809 231 0.13530099065118772;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 0.9999999982262916 1 1 1 1 1 1 1;
-	setAttr -s 13 ".kiy[4:12]"  0 -5.9560194080706576e-05 0 0 0 0 0 0 0;
-	setAttr -s 13 ".kox[4:12]"  1 0.99999999822629171 1 1 1 1 1 1 1;
-	setAttr -s 13 ".koy[4:12]"  0 -5.9560194080706583e-05 0 0 0 0 0 0 0;
+		 223 0.16805021534844219 226 0.1703081438554809 231 0.13530099065118772 350 0.13530099065118772
+		 361 0.030453256130150347 380 0.11360793257452763;
+	setAttr -s 16 ".kit[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kot[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kix[4:15]"  1 0.9999999982262916 1 1 1 1 1 1 1 1 1 
+		1;
+	setAttr -s 16 ".kiy[4:15]"  0 -5.9560194080706576e-05 0 0 0 0 0 0 0 
+		0 0 0;
+	setAttr -s 16 ".kox[4:15]"  1 0.99999999822629171 1 1 1 1 1 1 1 1 1 
+		1;
+	setAttr -s 16 ".koy[4:15]"  0 -5.9560194080706583e-05 0 0 0 0 0 0 0 
+		0 0 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger22_rotateZ";
 	rename -uid "71F2562E-4780-2E69-DA63-9C85E8E81BFE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 -5.846775828527119 37 -26.59095400760128
+	setAttr -s 16 ".ktv[0:15]"  25 -5.846775828527119 37 -26.59095400760128
 		 44 -25.004796995287762 50 -24.643273008088084 82 -4.4176778128117968 127 0.26982430724576884
 		 139 -31.586661403668849 147 -21.191530467990678 163 -24.57324654953597 174 -9.6821516786123905
-		 223 5.6029752752514153 226 3.0593677339438496 231 27.631139142150278;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 1 1 1 1 0.97852147761374797 1 1 1;
-	setAttr -s 13 ".kiy[4:12]"  0 0 0 0 0 0.20614489527661675 0 0 0;
-	setAttr -s 13 ".kox[4:12]"  1 1 1 1 1 0.97852147761374808 1 1 1;
-	setAttr -s 13 ".koy[4:12]"  0 0 0 0 0 0.20614489527661678 0 0 0;
+		 223 5.6029752752514153 226 3.0593677339438496 231 27.631139142150278 350 27.631139142150278
+		 361 -92.474692451612952 380 -62.387363877675391;
+	setAttr -s 16 ".kit[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kot[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kix[4:15]"  1 1 1 1 1 0.97852147761374797 1 1 1 1 1 
+		1;
+	setAttr -s 16 ".kiy[4:15]"  0 0 0 0 0 0.20614489527661675 0 0 0 0 0 
+		0;
+	setAttr -s 16 ".kox[4:15]"  1 1 1 1 1 0.97852147761374808 1 1 1 1 1 
+		1;
+	setAttr -s 16 ".koy[4:15]"  0 0 0 0 0 0.20614489527661678 0 0 0 0 0 
+		0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger3_rotateX";
 	rename -uid "9419FE8F-4864-6CD9-36E4-5A8D9E957967";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 -8.1657421815703675 37 -9.4517727792755295
+	setAttr -s 16 ".ktv[0:15]"  25 -8.1657421815703675 37 -9.4517727792755295
 		 44 -9.2965622399558594 50 -9.3811688319702835 82 -7.0665253059098498 127 -6.5060198521754273
 		 139 -9.2803530575198803 147 -8.6574334586618793 163 -8.8921785959616138 174 -7.638592555034907
-		 223 -5.8144107793811575 226 -4.515952359072986 231 -2.7286934232762285;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 1 1 1 1 0.99976923705043397 0.99968378796463331 
-		0.98719802600585682 1;
-	setAttr -s 13 ".kiy[4:12]"  0 0 0 0 0 0.02148191443035305 0.025146054972543418 
-		0.15949939639427985 0;
-	setAttr -s 13 ".kox[4:12]"  1 1 1 1 1 0.99976923705043408 0.99968378796463342 
-		0.98719802600585682 1;
-	setAttr -s 13 ".koy[4:12]"  0 0 0 0 0 0.02148191443035305 0.025146054972543422 
-		0.15949939639427982 0;
+		 223 -5.8144107793811575 226 -4.515952359072986 231 -2.7286934232762285 350 -2.7286934232762285
+		 361 -4.2883269210892871 380 -5.4984287744610993;
+	setAttr -s 16 ".kit[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kot[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kix[4:15]"  1 1 1 1 1 0.99976923705043397 0.99968378796463331 
+		0.98719802600585682 1 1 0.99925304497726353 1;
+	setAttr -s 16 ".kiy[4:15]"  0 0 0 0 0 0.02148191443035305 0.025146054972543418 
+		0.15949939639427985 0 0 -0.03864391418667356 0;
+	setAttr -s 16 ".kox[4:15]"  1 1 1 1 1 0.99976923705043408 0.99968378796463342 
+		0.98719802600585682 1 1 0.99925304497726353 1;
+	setAttr -s 16 ".koy[4:15]"  0 0 0 0 0 0.02148191443035305 0.025146054972543422 
+		0.15949939639427982 0 0 -0.03864391418667356 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger3_rotateY";
 	rename -uid "1C660994-4206-674C-7D38-539C4E60E96C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 5.1560790553867264 37 1.9448720053849076
+	setAttr -s 16 ".ktv[0:15]"  25 5.1560790553867264 37 1.9448720053849076
 		 44 2.0171610896717569 50 2.2635598178596825 82 6.5854911760953811 127 7.1397038414397462
 		 139 2.6496639645197031 147 4.2746145588114963 163 3.7585843253085804 174 5.9113011957435058
-		 223 7.7124159106735801 226 8.5347206875850574 231 9.2576081648573414;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 1 1 1 1 0.99961925608823265 0.99977678129474101 
-		0.99674308396417011 1;
-	setAttr -s 13 ".kiy[4:12]"  0 0 0 0 0 0.027592442037782463 0.021127886404647054 
-		0.080642572935114884 0;
-	setAttr -s 13 ".kox[4:12]"  1 1 1 1 1 0.99961925608823254 0.9997767812947409 
-		0.99674308396417011 1;
-	setAttr -s 13 ".koy[4:12]"  0 0 0 0 0 0.027592442037782459 0.02112788640464705 
-		0.080642572935114884 0;
+		 223 7.7124159106735801 226 8.5347206875850574 231 9.2576081648573414 350 9.2576081648573414
+		 361 -11.163496196098924 380 -10.625199548030034;
+	setAttr -s 16 ".kit[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kot[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kix[4:15]"  1 1 1 1 1 0.99961925608823265 0.99977678129474101 
+		0.99674308396417011 1 1 1 1;
+	setAttr -s 16 ".kiy[4:15]"  0 0 0 0 0 0.027592442037782463 0.021127886404647054 
+		0.080642572935114884 0 0 0 0;
+	setAttr -s 16 ".kox[4:15]"  1 1 1 1 1 0.99961925608823254 0.9997767812947409 
+		0.99674308396417011 1 1 1 1;
+	setAttr -s 16 ".koy[4:15]"  0 0 0 0 0 0.027592442037782459 0.02112788640464705 
+		0.080642572935114884 0 0 0 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger3_rotateZ";
 	rename -uid "53A02048-421D-E70A-15F1-2AB2F19C45C5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 -39.96324158532547 37 -60.499831377913644
+	setAttr -s 16 ".ktv[0:15]"  25 -39.96324158532547 37 -60.499831377913644
 		 44 -59.893921594187333 50 -58.577109083359289 82 -29.248509493906933 127 -24.56028044509814
 		 139 -56.225396110005505 147 -45.938927320480211 163 -49.289267617914241 174 -34.500865472472242
-		 223 -19.213086451697091 226 -10.043727090182387 231 1.4752527588243978;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 1 1 1 1 0.97865913463260346 0.98114055197881667 
-		0.67831202470352359 1;
-	setAttr -s 13 ".kiy[4:12]"  0 0 0 0 0 0.20549038469029127 0.19329567316084134 
-		0.73477397690895829 0;
-	setAttr -s 13 ".kox[4:12]"  1 1 1 1 1 0.97865913463260346 0.98114055197881667 
-		0.67831202470352359 1;
-	setAttr -s 13 ".koy[4:12]"  0 0 0 0 0 0.20549038469029127 0.19329567316084134 
-		0.73477397690895829 0;
+		 223 -19.213086451697091 226 -10.043727090182387 231 1.4752527588243978 350 1.4752527588243978
+		 361 -48.807099961928905 380 -42.410879937499402;
+	setAttr -s 16 ".kit[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kot[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kix[4:15]"  1 1 1 1 1 0.97865913463260346 0.98114055197881667 
+		0.67831202470352359 1 1 1 1;
+	setAttr -s 16 ".kiy[4:15]"  0 0 0 0 0 0.20549038469029127 0.19329567316084134 
+		0.73477397690895829 0 0 0 0;
+	setAttr -s 16 ".kox[4:15]"  1 1 1 1 1 0.97865913463260346 0.98114055197881667 
+		0.67831202470352359 1 1 1 1;
+	setAttr -s 16 ".koy[4:15]"  0 0 0 0 0 0.20549038469029127 0.19329567316084134 
+		0.73477397690895829 0 0 0 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger31_rotateX";
 	rename -uid "9FAB8C1E-41BD-CB43-EC0E-03BE739F7FE3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 0 50 0 82 0 127 0 226 0 231 0;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0 50 0 82 0 127 0 226 0 231 0 350 0 361 0;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger31_rotateY";
 	rename -uid "B6EC7020-435C-AB19-4EE7-A2829989509D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 0 50 0 82 0 127 0 226 0 231 0;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0 50 0 82 0 127 0 226 0 231 0 350 0 361 0;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger31_rotateZ";
 	rename -uid "27EE8B63-44E9-C788-0C53-F5BBD23200CC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 -7.6457223206035998 37 -28.389804848080587
+	setAttr -s 15 ".ktv[0:14]"  25 -7.6457223206035998 37 -28.389804848080587
 		 44 -26.803657036680569 50 -26.442132140644389 82 -6.2166308828599881 127 -1.5291495989306534
 		 139 -33.385492431032191 147 -22.990404912045797 163 -26.372105985316125 174 -11.481080183038035
-		 223 3.8039795863424151 226 1.2603821332359073 231 -11.481080183038035;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 1 1 1 1 0.97852166537081708 1 0.7807454524292784 
-		1;
-	setAttr -s 13 ".kiy[4:12]"  0 0 0 0 0 0.20614400403582603 0 -0.62484921261933368 
-		0;
-	setAttr -s 13 ".kox[4:12]"  1 1 1 1 1 0.9785216653708172 1 0.7807454524292784 
-		1;
-	setAttr -s 13 ".koy[4:12]"  0 0 0 0 0 0.20614400403582608 0 -0.62484921261933379 
-		0;
+		 223 3.8039795863424151 226 1.2603821332359073 231 -11.481080183038035 350 -11.481080183038035
+		 361 -74.954622335752887;
+	setAttr -s 15 ".kit[4:14]"  1 18 18 18 18 18 18 18 
+		18 18 18;
+	setAttr -s 15 ".kot[4:14]"  1 18 18 18 18 18 18 18 
+		18 18 18;
+	setAttr -s 15 ".kix[4:14]"  1 1 1 1 1 0.97852166537081708 1 0.7807454524292784 
+		1 1 1;
+	setAttr -s 15 ".kiy[4:14]"  0 0 0 0 0 0.20614400403582603 0 -0.62484921261933368 
+		0 0 0;
+	setAttr -s 15 ".kox[4:14]"  1 1 1 1 1 0.9785216653708172 1 0.7807454524292784 
+		1 1 1;
+	setAttr -s 15 ".koy[4:14]"  0 0 0 0 0 0.20614400403582608 0 -0.62484921261933379 
+		0 0 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger32_rotateX";
 	rename -uid "62820BAD-4034-A327-307A-73A3A4B87351";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 0 50 0 82 0 127 0 226 0 231 0;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0 50 0 82 0 127 0 226 0 231 0 350 0 361 0;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger32_rotateY";
 	rename -uid "8CA132D7-4B1E-8735-D40C-1D9FD46E1598";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 0 50 0 82 0 127 0 226 0 231 0;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0 50 0 82 0 127 0 226 0 231 0 350 0 361 0;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger32_rotateZ";
 	rename -uid "00799407-4AE2-84B4-591D-7090E19CC7CA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 -18.131136539503402 37 -38.875219066980392
+	setAttr -s 15 ".ktv[0:14]"  25 -18.131136539503402 37 -38.875219066980392
 		 44 -37.289071255580367 50 -36.927546359544195 82 -16.70204510175979 127 -12.014563817830465
 		 139 -43.870906649931975 147 -33.475819130945588 163 -36.857520204215909 174 -21.966494401937862
-		 223 -6.6814346325574148 226 -9.2250320856639281 231 5.9658554157924311;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 1 1 1 1 0.9785216653708172 1 1 1;
-	setAttr -s 13 ".kiy[4:12]"  0 0 0 0 0 0.20614400403582578 0 0 0;
-	setAttr -s 13 ".kox[4:12]"  1 1 1 1 1 0.9785216653708172 1 1 1;
-	setAttr -s 13 ".koy[4:12]"  0 0 0 0 0 0.20614400403582578 0 0 0;
+		 223 -6.6814346325574148 226 -9.2250320856639281 231 5.9658554157924311 350 5.9658554157924311
+		 361 -103.70869822680636;
+	setAttr -s 15 ".kit[4:14]"  1 18 18 18 18 18 18 18 
+		18 18 18;
+	setAttr -s 15 ".kot[4:14]"  1 18 18 18 18 18 18 18 
+		18 18 18;
+	setAttr -s 15 ".kix[4:14]"  1 1 1 1 1 0.9785216653708172 1 1 1 1 1;
+	setAttr -s 15 ".kiy[4:14]"  0 0 0 0 0 0.20614400403582578 0 0 0 0 0;
+	setAttr -s 15 ".kox[4:14]"  1 1 1 1 1 0.9785216653708172 1 1 1 1 1;
+	setAttr -s 15 ".koy[4:14]"  0 0 0 0 0 0.20614400403582578 0 0 0 0 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger4_rotateX";
 	rename -uid "5BC0DA53-4626-228E-A4B7-EDA2FB13B402";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 -25.770886495471974 37 -28.019225716454688
-		 44 -27.658127716400394 50 -27.941817130838881 82 -22.996436074377055 127 -21.62955347732877
+	setAttr -s 15 ".ktv[0:14]"  25 -25.770886495471974 37 -28.019225716454688
+		 44 -27.658127716400394 50 -27.941817130838885 82 -22.996436074377055 127 -21.62955347732877
 		 139 -27.717613445802296 147 -26.554785734072407 163 -27.020022889786514 174 -24.338008801205397
-		 223 -19.879683810019994 226 -14.992658024358947 231 -17.540521825831902;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 1 1 1 1 0.99875985083751861 0.99717843128648354 
-		1 1;
-	setAttr -s 13 ".kiy[4:12]"  0 0 0 0 0 0.049787150501084197 0.075067810525070999 
-		0 0;
-	setAttr -s 13 ".kox[4:12]"  1 1 1 1 1 0.99875985083751873 0.99717843128648354 
-		1 1;
-	setAttr -s 13 ".koy[4:12]"  0 0 0 0 0 0.049787150501084211 0.075067810525070999 
-		0 0;
+		 223 -19.879683810019994 226 -14.992658024358947 231 -17.540521825831902 350 -17.540521825831902
+		 361 -12.808478370451962;
+	setAttr -s 15 ".kit[4:14]"  1 18 18 18 18 18 18 18 
+		18 18 18;
+	setAttr -s 15 ".kot[4:14]"  1 18 18 18 18 18 18 18 
+		18 18 18;
+	setAttr -s 15 ".kix[4:14]"  1 1 1 1 1 0.99875985083751861 0.99717843128648354 
+		1 1 1 1;
+	setAttr -s 15 ".kiy[4:14]"  0 0 0 0 0 0.049787150501084197 0.075067810525070999 
+		0 0 0 0;
+	setAttr -s 15 ".kox[4:14]"  1 1 1 1 1 0.99875985083751873 0.99717843128648354 
+		1 1 1 1;
+	setAttr -s 15 ".koy[4:14]"  0 0 0 0 0 0.049787150501084211 0.075067810525070999 
+		0 0 0 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger4_rotateY";
 	rename -uid "2225398F-49A0-0BDD-0455-FD9FCD26CB49";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 11.587508438580224 37 2.1196731828635094
+	setAttr -s 15 ".ktv[0:14]"  25 11.587508438580224 37 2.1196731828635094
 		 44 2.3585963341031539 50 3.0335342822777012 82 16.595185807938826 127 18.375839687010949
 		 139 4.7689783615931773 147 9.5208207972290246 163 7.9963861197914836 174 14.480517280244033
-		 223 20.267136034264613 226 24.03810314689764 231 22.300829951663257;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 1 1 1 1 0.996350741910773 0.99704939218602273 
-		1 1;
-	setAttr -s 13 ".kiy[4:12]"  0 0 0 0 0 0.085353377753035448 0.076762683261353645 
-		0 0;
-	setAttr -s 13 ".kox[4:12]"  1 1 1 1 1 0.99635074191077289 0.99704939218602262 
-		1 1;
-	setAttr -s 13 ".koy[4:12]"  0 0 0 0 0 0.085353377753035434 0.076762683261353631 
-		0 0;
+		 223 20.267136034264613 226 24.03810314689764 231 22.300829951663257 350 22.300829951663257
+		 361 -10.211375674665449;
+	setAttr -s 15 ".kit[4:14]"  1 18 18 18 18 18 18 18 
+		18 18 18;
+	setAttr -s 15 ".kot[4:14]"  1 18 18 18 18 18 18 18 
+		18 18 18;
+	setAttr -s 15 ".kix[4:14]"  1 1 1 1 1 0.996350741910773 0.99704939218602273 
+		1 1 1 1;
+	setAttr -s 15 ".kiy[4:14]"  0 0 0 0 0 0.085353377753035448 0.076762683261353645 
+		0 0 0 0;
+	setAttr -s 15 ".kox[4:14]"  1 1 1 1 1 0.99635074191077289 0.99704939218602262 
+		1 1 1 1;
+	setAttr -s 15 ".koy[4:14]"  0 0 0 0 0 0.085353377753035434 0.076762683261353631 
+		0 0 0 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger4_rotateZ";
 	rename -uid "8BD13AFF-4B5D-FFAF-E774-9FAD1C51B4D8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 -44.465062433492861 37 -63.078683063004448
+	setAttr -s 15 ".ktv[0:14]"  25 -44.465062433492861 37 -63.078683063004448
 		 44 -62.545148615074687 50 -61.356956829443227 82 -33.115455714503788 127 -28.568946911257953
 		 139 -58.062926240696484 147 -48.742190257429861 163 -51.796520658570799 174 -38.119853555881072
-		 223 -23.284286656429586 226 -10.377942440456192 231 -16.847049854306299;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 1 1 1 1 0.98075889078241263 0.97592823783285321 
-		1 1;
-	setAttr -s 13 ".kiy[4:12]"  0 0 0 0 0 0.19522294473563234 0.21809189485274744 
-		0 0;
-	setAttr -s 13 ".kox[4:12]"  1 1 1 1 1 0.98075889078241263 0.97592823783285332 
-		1 1;
-	setAttr -s 13 ".koy[4:12]"  0 0 0 0 0 0.19522294473563234 0.21809189485274746 
-		0 0;
+		 223 -23.284286656429586 226 -10.377942440456192 231 -16.847049854306299 350 -16.847049854306299
+		 361 -40.336673774654315;
+	setAttr -s 15 ".kit[4:14]"  1 18 18 18 18 18 18 18 
+		18 18 18;
+	setAttr -s 15 ".kot[4:14]"  1 18 18 18 18 18 18 18 
+		18 18 18;
+	setAttr -s 15 ".kix[4:14]"  1 1 1 1 1 0.98075889078241263 0.97592823783285321 
+		1 1 1 1;
+	setAttr -s 15 ".kiy[4:14]"  0 0 0 0 0 0.19522294473563234 0.21809189485274744 
+		0 0 0 0;
+	setAttr -s 15 ".kox[4:14]"  1 1 1 1 1 0.98075889078241263 0.97592823783285332 
+		1 1 1 1;
+	setAttr -s 15 ".koy[4:14]"  0 0 0 0 0 0.19522294473563234 0.21809189485274746 
+		0 0 0 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger41_rotateX";
 	rename -uid "F912E404-4605-F9A8-D913-169DDF1ADB44";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 0 50 0 82 0 127 0 226 0 231 0;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0 50 0 82 0 127 0 226 0 231 0 350 0 361 0;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger41_rotateY";
 	rename -uid "FB693ACF-4782-44A8-8EC3-6F89041D8C73";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 0 50 0 82 0 127 0 226 0 231 0;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0 50 0 82 0 127 0 226 0 231 0 350 0 361 0;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger41_rotateZ";
 	rename -uid "25BD889C-40BC-0493-F89D-39B022AA3AAF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 -18.642100305543551 37 -39.386182833020534
-		 44 -38.562885089249804 50 -37.438510125584372 82 -12.535578974671326 127 -7.8480976907419917
+	setAttr -s 15 ".ktv[0:14]"  25 -18.642100305543551 37 -39.386182833020534
+		 44 -38.562885089249811 50 -37.438510125584372 82 -12.535578974671326 127 -7.8480976907419917
 		 139 -39.704440522843534 147 -29.309353003857137 163 -32.69105407712744 174 -17.800028274849378
-		 223 -2.5149685054689161 226 -5.0585659585754357 231 25.56340178189496;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 1 1 1 1 0.97852166537081708 1 1 1;
-	setAttr -s 13 ".kiy[4:12]"  0 0 0 0 0 0.20614400403582597 0 0 0;
-	setAttr -s 13 ".kox[4:12]"  1 1 1 1 1 0.9785216653708172 1 1 1;
-	setAttr -s 13 ".koy[4:12]"  0 0 0 0 0 0.206144004035826 0 0 0;
+		 223 -2.5149685054689161 226 -5.0585659585754357 231 25.563401781894964 350 25.563401781894964
+		 361 -88.370614120547714;
+	setAttr -s 15 ".kit[4:14]"  1 18 18 18 18 18 18 18 
+		18 18 18;
+	setAttr -s 15 ".kot[4:14]"  1 18 18 18 18 18 18 18 
+		18 18 18;
+	setAttr -s 15 ".kix[4:14]"  1 1 1 1 1 0.97852166537081708 1 1 1 1 1;
+	setAttr -s 15 ".kiy[4:14]"  0 0 0 0 0 0.20614400403582597 0 0 0 0 0;
+	setAttr -s 15 ".kox[4:14]"  1 1 1 1 1 0.9785216653708172 1 1 1 1 1;
+	setAttr -s 15 ".koy[4:14]"  0 0 0 0 0 0.206144004035826 0 0 0 0 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger42_rotateX";
 	rename -uid "4106ADC3-47DF-626C-4568-7BA976CA02C6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 0 50 0 82 0 127 0 226 0 231 0;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0 50 0 82 0 127 0 226 0 231 0 350 0 361 0;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger42_rotateY";
 	rename -uid "EAF87646-4DA0-7874-99B2-33B2E87703CA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 0 50 0 82 0 127 0 226 0 231 0;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0 50 0 82 0 127 0 226 0 231 0 350 0 361 0;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTA -n "ValveBiped_Bip01_L_Finger42_rotateZ";
 	rename -uid "0D5BCF1F-4EBA-804F-49D2-68AFDE8F422E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  25 -7.4453016821635014 37 -28.189384209640473
+	setAttr -s 15 ".ktv[0:14]"  25 -7.4453016821635014 37 -28.189384209640473
 		 44 -26.603236398240444 50 -26.241711502204268 82 -6.0162102444198888 127 -1.3287289604905539
 		 139 -33.185071792592062 147 -22.789984273605704 163 -26.171685346876011 174 -11.280659544597937
-		 223 4.004400224782513 226 1.4608027716760006 231 6.8224293979050996;
-	setAttr -s 13 ".kit[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kot[4:12]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 13 ".kix[4:12]"  1 1 1 1 1 0.97852166537081708 1 1 1;
-	setAttr -s 13 ".kiy[4:12]"  0 0 0 0 0 0.20614400403582597 0 0 0;
-	setAttr -s 13 ".kox[4:12]"  1 1 1 1 1 0.9785216653708172 1 1 1;
-	setAttr -s 13 ".koy[4:12]"  0 0 0 0 0 0.206144004035826 0 0 0;
+		 223 4.004400224782513 226 1.4608027716760006 231 6.8224293979050996 350 6.8224293979050996
+		 361 -79.360679699102732;
+	setAttr -s 15 ".kit[4:14]"  1 18 18 18 18 18 18 18 
+		18 18 18;
+	setAttr -s 15 ".kot[4:14]"  1 18 18 18 18 18 18 18 
+		18 18 18;
+	setAttr -s 15 ".kix[4:14]"  1 1 1 1 1 0.97852166537081708 1 1 1 1 1;
+	setAttr -s 15 ".kiy[4:14]"  0 0 0 0 0 0.20614400403582597 0 0 0 0 0;
+	setAttr -s 15 ".kox[4:14]"  1 1 1 1 1 0.9785216653708172 1 1 1 1 1;
+	setAttr -s 15 ".koy[4:14]"  0 0 0 0 0 0.206144004035826 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger0_visibility";
 	rename -uid "A5ABE9D5-401A-E9B4-3ABF-D0ADC2CC3447";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  24 1 50 1 82 1 128 1 138 1 226 1 231 1;
-	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  24 1 50 1 82 1 128 1 138 1 226 1 231 1 350 1
+		 361 1;
+	setAttr -s 9 ".kot[0:8]"  5 5 5 5 5 5 5 5 
+		5;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger0_translateX";
 	rename -uid "C49CC608-411E-F536-9F42-CE837F378B7A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  24 0.806047 50 0.806047 82 0.806047 128 0.806047
-		 138 0.806047 226 0.806047 231 0.806047;
+	setAttr -s 9 ".ktv[0:8]"  24 0.806047 50 0.806047 82 0.806047 128 0.806047
+		 138 0.806047 226 0.806047 231 0.806047 350 0.806047 361 0.806047;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger0_translateY";
 	rename -uid "5909CF0B-4A08-919A-6F0F-588F12A208C8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  24 -0.348922 50 -0.348922 82 -0.348922 128 -0.348922
-		 138 -0.348922 226 -0.348922 231 -0.348922;
+	setAttr -s 9 ".ktv[0:8]"  24 -0.348922 50 -0.348922 82 -0.348922 128 -0.348922
+		 138 -0.348922 226 -0.348922 231 -0.348922 350 -0.348922 361 -0.348922;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger0_translateZ";
 	rename -uid "EA0E5F40-4212-022B-804B-0BA9CCE66268";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  24 1.321258 50 1.321258 82 1.321258 128 1.321258
-		 138 1.321258 226 1.321258 231 1.321258;
+	setAttr -s 9 ".ktv[0:8]"  24 1.321258 50 1.321258 82 1.321258 128 1.321258
+		 138 1.321258 226 1.321258 231 1.321258 350 1.321258 361 1.321258;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger0_scaleX";
 	rename -uid "3B15D611-4099-D38F-D977-729500BA2FEB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  24 2.54 50 2.54 82 2.54 128 2.54 138 2.54
-		 226 2.54 231 2.54;
+	setAttr -s 9 ".ktv[0:8]"  24 2.54 50 2.54 82 2.54 128 2.54 138 2.54
+		 226 2.54 231 2.54 350 2.54 361 2.54;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger0_scaleY";
 	rename -uid "20D8DBCA-4AED-C957-F8F8-67BA792BCFE1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  24 2.54 50 2.54 82 2.54 128 2.54 138 2.54
-		 226 2.54 231 2.54;
+	setAttr -s 9 ".ktv[0:8]"  24 2.54 50 2.54 82 2.54 128 2.54 138 2.54
+		 226 2.54 231 2.54 350 2.54 361 2.54;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger0_scaleZ";
 	rename -uid "93FC5819-43F4-6DDE-E1F5-1B89A43D57C3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  24 2.54 50 2.54 82 2.54 128 2.54 138 2.54
-		 226 2.54 231 2.54;
+	setAttr -s 9 ".ktv[0:8]"  24 2.54 50 2.54 82 2.54 128 2.54 138 2.54
+		 226 2.54 231 2.54 350 2.54 361 2.54;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger01_visibility";
 	rename -uid "A132545F-444E-1768-487B-E6B52271B89A";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  50 1 82 1 128 1 138 1 226 1 231 1;
-	setAttr -s 6 ".kot[0:5]"  5 5 5 5 5 5;
+	setAttr -s 8 ".ktv[0:7]"  50 1 82 1 128 1 138 1 226 1 231 1 350 1
+		 361 1;
+	setAttr -s 8 ".kot[0:7]"  5 5 5 5 5 5 5 5;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger01_translateX";
 	rename -uid "54D00E69-488A-98F7-8B03-1490C1342401";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  50 1.789784 82 1.789784 128 1.789784 138 1.789784
-		 226 1.789784 231 1.789784;
+	setAttr -s 8 ".ktv[0:7]"  50 1.789784 82 1.789784 128 1.789784 138 1.789784
+		 226 1.789784 231 1.789784 350 1.789784 361 1.789784;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger01_translateY";
 	rename -uid "D047BA59-4078-3C59-92A3-01B8B25D3225";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  50 0 82 0 128 0 138 0 226 0 231 0;
+	setAttr -s 8 ".ktv[0:7]"  50 0 82 0 128 0 138 0 226 0 231 0 350 0
+		 361 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger01_translateZ";
 	rename -uid "87C8B712-4D03-1F6E-45A0-DE8E288175A2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  50 0 82 0 128 0 138 0 226 0 231 0;
+	setAttr -s 8 ".ktv[0:7]"  50 0 82 0 128 0 138 0 226 0 231 0 350 0
+		 361 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger01_scaleX";
 	rename -uid "CC5A5469-43B7-0D6F-86A5-1191049B2AFA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  50 2.54 82 2.54 128 2.54 138 2.54 226 2.54
-		 231 2.54;
+	setAttr -s 8 ".ktv[0:7]"  50 2.54 82 2.54 128 2.54 138 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger01_scaleY";
 	rename -uid "C41D490C-4DBE-BB5A-9158-E3ADC54AEA68";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  50 2.54 82 2.54 128 2.54 138 2.54 226 2.54
-		 231 2.54;
+	setAttr -s 8 ".ktv[0:7]"  50 2.54 82 2.54 128 2.54 138 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger01_scaleZ";
 	rename -uid "6CE0C4F1-4F54-7C68-1DD5-6D8661893008";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  50 2.54 82 2.54 128 2.54 138 2.54 226 2.54
-		 231 2.54;
+	setAttr -s 8 ".ktv[0:7]"  50 2.54 82 2.54 128 2.54 138 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger02_visibility";
 	rename -uid "7624345C-4973-2C97-C1FC-0F8AC1F5C1CD";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  50 1 82 1 128 1 138 1 226 1 231 1;
-	setAttr -s 6 ".kot[0:5]"  5 5 5 5 5 5;
+	setAttr -s 8 ".ktv[0:7]"  50 1 82 1 128 1 138 1 226 1 231 1 350 1
+		 361 1;
+	setAttr -s 8 ".kot[0:7]"  5 5 5 5 5 5 5 5;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger02_translateX";
 	rename -uid "88D2EB60-4406-468C-CFAF-1D820A7C8358";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  50 1.206998 82 1.206998 128 1.206998 138 1.206998
-		 226 1.206998 231 1.206998;
+	setAttr -s 8 ".ktv[0:7]"  50 1.206998 82 1.206998 128 1.206998 138 1.206998
+		 226 1.206998 231 1.206998 350 1.206998 361 1.206998;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger02_translateY";
 	rename -uid "DA8BFFA9-45D4-19AE-56BC-368371C5149F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  50 0 82 0 128 0 138 0 226 0 231 0;
+	setAttr -s 8 ".ktv[0:7]"  50 0 82 0 128 0 138 0 226 0 231 0 350 0
+		 361 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger02_translateZ";
 	rename -uid "FF64AD6D-4C9F-19AB-65FD-77B33F38FE92";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  50 0 82 0 128 0 138 0 226 0 231 0;
+	setAttr -s 8 ".ktv[0:7]"  50 0 82 0 128 0 138 0 226 0 231 0 350 0
+		 361 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger02_scaleX";
 	rename -uid "EDEAA5F9-4F65-8EEC-B83E-C48B4BA69B62";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  50 2.54 82 2.54 128 2.54 138 2.54 226 2.54
-		 231 2.54;
+	setAttr -s 8 ".ktv[0:7]"  50 2.54 82 2.54 128 2.54 138 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger02_scaleY";
 	rename -uid "8D6F43B1-489B-F08F-0DF7-C485760E1EAB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  50 2.54 82 2.54 128 2.54 138 2.54 226 2.54
-		 231 2.54;
+	setAttr -s 8 ".ktv[0:7]"  50 2.54 82 2.54 128 2.54 138 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger02_scaleZ";
 	rename -uid "315ABE89-493F-70C6-C694-94B326C0D3B1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  50 2.54 82 2.54 128 2.54 138 2.54 226 2.54
-		 231 2.54;
+	setAttr -s 8 ".ktv[0:7]"  50 2.54 82 2.54 128 2.54 138 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger1_visibility";
 	rename -uid "9D4FDCB0-4A78-CA51-205C-DDBA4D9AECCB";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 1 50 1 82 1 127 1 226 1 231 1;
-	setAttr -s 6 ".kit[0:5]"  9 9 1 9 9 9;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 1 50 1 82 1 127 1 226 1 231 1 350 1 361 1;
+	setAttr -s 8 ".kit[0:7]"  9 9 1 9 9 9 9 9;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger1_translateX";
 	rename -uid "D963F10C-49E9-0727-DB61-C18C5C492AFC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 3.859859 50 3.859859 82 3.859859 127 3.859859
-		 226 3.859859 231 3.859859;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 3.859859 50 3.859859 82 3.859859 127 3.859859
+		 226 3.859859 231 3.859859 350 3.859859 361 3.859859;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger1_translateY";
 	rename -uid "B4B4FF85-4B3E-2599-F7A7-E88420C755D1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 -0.137948 50 -0.137948 82 -0.137948 127 -0.137948
-		 226 -0.137948 231 -0.137948;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 -0.137948 50 -0.137948 82 -0.137948 127 -0.137948
+		 226 -0.137948 231 -0.137948 350 -0.137948 361 -0.137948;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger1_translateZ";
 	rename -uid "11255674-44FC-0E9F-1156-9387C266B7E3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 1.332466 50 1.332466 82 1.332466 127 1.332466
-		 226 1.332466 231 1.332466;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 1.332466 50 1.332466 82 1.332466 127 1.332466
+		 226 1.332466 231 1.332466 350 1.332466 361 1.332466;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger1_scaleX";
 	rename -uid "84666CBB-4F82-C379-72C3-6D97A13ECB3F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger1_scaleY";
 	rename -uid "8A7FA05D-461F-1117-C28F-72ADCC161D3D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger1_scaleZ";
 	rename -uid "E6407817-4270-318E-7EC2-F5845581A276";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger11_visibility";
 	rename -uid "C3A8F2F0-464D-9EAC-0B39-5884D81979C2";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 1 50 1 82 1 127 1 226 1 231 1;
-	setAttr -s 6 ".kit[0:5]"  9 9 1 9 9 9;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 1 50 1 82 1 127 1 226 1 231 1 350 1 361 1;
+	setAttr -s 8 ".kit[0:7]"  9 9 1 9 9 9 9 9;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger11_translateX";
 	rename -uid "E80E033D-4F61-0605-D039-8ABDABD16D8F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 1.719429 50 1.719429 82 1.719429 127 1.719429
-		 226 1.719429 231 1.719429;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 1.719429 50 1.719429 82 1.719429 127 1.719429
+		 226 1.719429 231 1.719429 350 1.719429 361 1.719429;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger11_translateY";
 	rename -uid "B09F3207-4099-28E0-D566-09A466B8D98E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 0 50 0 82 0 127 0 226 0 231 0;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0 50 0 82 0 127 0 226 0 231 0 350 0 361 0;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger11_translateZ";
 	rename -uid "8BE8B14A-4861-3FDC-8DD4-39B363417965";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 0 50 0 82 0 127 0 226 0 231 0;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0 50 0 82 0 127 0 226 0 231 0 350 0 361 0;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger11_scaleX";
 	rename -uid "2ABE3D78-4F77-355B-909F-32A1728AF54B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger11_scaleY";
 	rename -uid "883977D1-4FE0-6F4C-5687-33931D19156D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger11_scaleZ";
 	rename -uid "E758B696-4162-D550-1688-F08360B90460";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger12_visibility";
 	rename -uid "1DAD5DF0-4D39-2B7C-9550-7B85B10AF3A7";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 1 50 1 82 1 127 1 226 1 231 1;
-	setAttr -s 6 ".kit[0:5]"  9 9 1 9 9 9;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 1 50 1 82 1 127 1 226 1 231 1 350 1 361 1;
+	setAttr -s 8 ".kit[0:7]"  9 9 1 9 9 9 9 9;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger12_translateX";
 	rename -uid "30FC91A5-48EB-BAAF-F31E-75865EB2967B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 1.099666 50 1.099666 82 1.099666 127 1.099666
-		 226 1.099666 231 1.099666;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 1.099666 50 1.099666 82 1.099666 127 1.099666
+		 226 1.099666 231 1.099666 350 1.099666 361 1.099666;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger12_translateY";
 	rename -uid "288E6242-4BA7-D12F-6F20-09B086BBDAB9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 0 50 0 82 0 127 0 226 0 231 0;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0 50 0 82 0 127 0 226 0 231 0 350 0 361 0;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger12_translateZ";
 	rename -uid "544842AA-4D89-A15D-C836-C2AFB0F23D6E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 0 50 0 82 0 127 0 226 0 231 0;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0 50 0 82 0 127 0 226 0 231 0 350 0 361 0;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger12_scaleX";
 	rename -uid "2D812022-45D3-5DF6-4A79-DAAF7F1F19CE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger12_scaleY";
 	rename -uid "4DE7215D-401C-4AF9-D4B3-5594D634D02F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger12_scaleZ";
 	rename -uid "B6641A58-405B-F9A1-585E-20BC1B1D5996";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger2_visibility";
 	rename -uid "02DFEC4F-4DDC-E866-17ED-F0AD6B1337A1";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 1 50 1 82 1 127 1 226 1 231 1;
-	setAttr -s 6 ".kit[0:5]"  9 9 1 9 9 9;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 1 50 1 82 1 127 1 226 1 231 1 350 1 361 1;
+	setAttr -s 8 ".kit[0:7]"  9 9 1 9 9 9 9 9;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger2_translateX";
 	rename -uid "667B1787-4BED-80AB-5649-76A3E00B9734";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 3.883688 50 3.883688 82 3.883688 127 3.883688
-		 226 3.883688 231 3.883688;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 3.883688 50 3.883688 82 3.883688 127 3.883688
+		 226 3.883688 231 3.883688 350 3.883688 361 3.883688;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger2_translateY";
 	rename -uid "69BDA1BB-4A85-A8CC-6820-8980A2AFFBC6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 -0.046771 50 -0.046771 82 -0.046771 127 -0.046771
-		 226 -0.046771 231 -0.046771;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 -0.046771 50 -0.046771 82 -0.046771 127 -0.046771
+		 226 -0.046771 231 -0.046771 350 -0.046771 361 -0.046771;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger2_translateZ";
 	rename -uid "F3A5DDC3-4B4D-2254-A11D-9785DEF5ADF3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 0.431443 50 0.431443 82 0.431443 127 0.431443
-		 226 0.431443 231 0.431443;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0.431443 50 0.431443 82 0.431443 127 0.431443
+		 226 0.431443 231 0.431443 350 0.431443 361 0.431443;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger2_scaleX";
 	rename -uid "14224D4E-4337-4D23-02BD-B7871B5167B8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger2_scaleY";
 	rename -uid "9A222F82-4756-A39F-B274-9BA5A8EDB95A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger2_scaleZ";
 	rename -uid "3E3A54C1-42FE-8442-1478-CFA25BCBFB78";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger21_visibility";
 	rename -uid "318340C2-4980-41C7-F427-7B990BEF7880";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 1 50 1 82 1 127 1 226 1 231 1;
-	setAttr -s 6 ".kit[0:5]"  9 9 1 9 9 9;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 1 50 1 82 1 127 1 226 1 231 1 350 1 361 1;
+	setAttr -s 8 ".kit[0:7]"  9 9 1 9 9 9 9 9;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger21_translateX";
 	rename -uid "17ED719F-464C-7C19-99B5-549F546CA684";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 1.719575 50 1.719575 82 1.719575 127 1.719575
-		 226 1.719575 231 1.719575;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 1.719575 50 1.719575 82 1.719575 127 1.719575
+		 226 1.719575 231 1.719575 350 1.719575 361 1.719575;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger21_translateY";
 	rename -uid "D552866D-4E86-1A3D-AD5C-7CBD8AF536B3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 0 50 0 82 0 127 0 226 0 231 0;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0 50 0 82 0 127 0 226 0 231 0 350 0 361 0;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger21_translateZ";
 	rename -uid "FAFD28D5-4CAC-E86B-BDEE-E680A5119F2F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 0 50 0 82 0 127 0 226 0 231 0;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0 50 0 82 0 127 0 226 0 231 0 350 0 361 0;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger21_scaleX";
 	rename -uid "9E9F3957-447C-CA33-6EC7-8290AC4D509F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger21_scaleY";
 	rename -uid "25D15D55-42ED-0601-BCD4-458D2B949593";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger21_scaleZ";
 	rename -uid "F24EE500-4640-1FEE-3386-08BF643FB152";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger22_visibility";
 	rename -uid "0A26C9A2-4EF1-D743-E7B9-0D868D1C9B05";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 1 50 1 82 1 127 1 226 1 231 1;
-	setAttr -s 6 ".kit[0:5]"  9 9 1 9 9 9;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 1 50 1 82 1 127 1 226 1 231 1 350 1 361 1;
+	setAttr -s 8 ".kit[0:7]"  9 9 1 9 9 9 9 9;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger22_translateX";
 	rename -uid "F3019731-4E54-1741-F5C2-0599556D711E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 1.209182 50 1.209182 82 1.209182 127 1.209182
-		 226 1.209182 231 1.209182;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 1.209182 50 1.209182 82 1.209182 127 1.209182
+		 226 1.209182 231 1.209182 350 1.209182 361 1.209182;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger22_translateY";
 	rename -uid "8DE20BCE-4CC2-6D25-9FB7-B4B51CAE1737";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 0 50 0 82 0 127 0 226 0 231 0;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0 50 0 82 0 127 0 226 0 231 0 350 0 361 0;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger22_translateZ";
 	rename -uid "047EF9ED-43EE-27A2-06D7-18B54A748815";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 0 50 0 82 0 127 0 226 0 231 0;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0 50 0 82 0 127 0 226 0 231 0 350 0 361 0;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger22_scaleX";
 	rename -uid "FF948CFF-4BD6-9238-6CB3-EA89F2ED74E5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger22_scaleY";
 	rename -uid "ADE56119-45F3-4667-8B1B-DF88B3DE982A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger22_scaleZ";
 	rename -uid "E4D47020-4106-6EEA-C447-5BAA99127277";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger3_visibility";
 	rename -uid "581C4904-4163-F9A8-A94B-82AB6275CF36";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 1 50 1 82 1 127 1 226 1 231 1;
-	setAttr -s 6 ".kit[0:5]"  9 9 1 9 9 9;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 1 50 1 82 1 127 1 226 1 231 1 350 1 361 1;
+	setAttr -s 8 ".kit[0:7]"  9 9 1 9 9 9 9 9;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger3_translateX";
 	rename -uid "C988354F-45C5-8A18-B5E5-84A6405A034D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 3.942325 50 3.942325 82 3.942325 127 3.942325
-		 226 3.942325 231 3.942325;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 3.942325 50 3.942325 82 3.942325 127 3.942325
+		 226 3.942325 231 3.942325 350 3.942325 361 3.942325;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger3_translateY";
 	rename -uid "756C4116-43A1-1D89-8657-18A992CFAADC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 0.046771 50 0.046771 82 0.046771 127 0.046771
-		 226 0.046771 231 0.046771;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0.046771 50 0.046771 82 0.046771 127 0.046771
+		 226 0.046771 231 0.046771 350 0.046771 361 0.046771;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger3_translateZ";
 	rename -uid "AB8B18AF-4BDD-1AF2-7B4B-F3883BDEC1FA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 -0.431443 50 -0.431443 82 -0.431443 127 -0.431443
-		 226 -0.431443 231 -0.431443;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 -0.431443 50 -0.431443 82 -0.431443 127 -0.431443
+		 226 -0.431443 231 -0.431443 350 -0.431443 361 -0.431443;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger3_scaleX";
 	rename -uid "05591F89-4456-7998-9FC2-6BA177733C58";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger3_scaleY";
 	rename -uid "30F85B41-453E-AC1D-0E20-6B8E5F80D369";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger3_scaleZ";
 	rename -uid "204B2D74-43E8-345D-71DA-EDAE196366C8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger31_visibility";
 	rename -uid "D4DC42C8-4FAE-CE1D-4935-A4A044A9BB1D";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 1 50 1 82 1 127 1 226 1 231 1;
-	setAttr -s 6 ".kit[0:5]"  9 9 1 9 9 9;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 1 50 1 82 1 127 1 226 1 231 1 350 1 361 1;
+	setAttr -s 8 ".kit[0:7]"  9 9 1 9 9 9 9 9;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger31_translateX";
 	rename -uid "B4B163B4-43A7-025C-E49F-0CB8E0F54C7A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 1.539093 50 1.539093 82 1.539093 127 1.539093
-		 226 1.539093 231 1.539093;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 1.539093 50 1.539093 82 1.539093 127 1.539093
+		 226 1.539093 231 1.539093 350 1.539093 361 1.539093;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger31_translateY";
 	rename -uid "FF1E4561-4B17-E892-8C26-C78184C8C1B1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 0 50 0 82 0 127 0 226 0 231 0;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0 50 0 82 0 127 0 226 0 231 0 350 0 361 0;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger31_translateZ";
 	rename -uid "DE2DC09B-437A-E99A-6AF1-ADBF08077D03";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 0 50 0 82 0 127 0 226 0 231 0;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0 50 0 82 0 127 0 226 0 231 0 350 0 361 0;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger31_scaleX";
 	rename -uid "13095912-47A4-23B3-8ADA-058ABF3764B8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger31_scaleY";
 	rename -uid "5C39BA19-4A83-795F-6665-1CB7CE6B0277";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger31_scaleZ";
 	rename -uid "E081FF27-47DD-C429-6F76-6CA060599C9E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger32_visibility";
 	rename -uid "49DB6B5D-4A48-32E9-FED6-DEB3C3994B9D";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 1 50 1 82 1 127 1 226 1 231 1;
-	setAttr -s 6 ".kit[0:5]"  9 9 1 9 9 9;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 1 50 1 82 1 127 1 226 1 231 1 350 1 361 1;
+	setAttr -s 8 ".kit[0:7]"  9 9 1 9 9 9 9 9;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger32_translateX";
 	rename -uid "ED75C5DB-4526-9ECC-E688-1E8FA1D2B9DC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 1.196322 50 1.196322 82 1.196322 127 1.196322
-		 226 1.196322 231 1.196322;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 1.196322 50 1.196322 82 1.196322 127 1.196322
+		 226 1.196322 231 1.196322 350 1.196322 361 1.196322;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger32_translateY";
 	rename -uid "1C4F2027-4D95-80A5-CD8C-D2A7F5C4EF1A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 0 50 0 82 0 127 0 226 0 231 0;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0 50 0 82 0 127 0 226 0 231 0 350 0 361 0;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger32_translateZ";
 	rename -uid "089D073A-4D11-34F2-C651-88AB0BD12300";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 0 50 0 82 0 127 0 226 0 231 0;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0 50 0 82 0 127 0 226 0 231 0 350 0 361 0;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger32_scaleX";
 	rename -uid "EDA5F42A-4287-58D7-8472-9AB72F26A270";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger32_scaleY";
 	rename -uid "C0226599-41A2-ACBA-6F0C-3AA3317E909C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger32_scaleZ";
 	rename -uid "09BCBF3C-431E-2837-D50C-309D80F6F877";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger4_visibility";
 	rename -uid "101075EE-403E-10B2-DA06-FE8D3848B462";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 1 50 1 82 1 127 1 226 1 231 1;
-	setAttr -s 6 ".kit[0:5]"  9 9 1 9 9 9;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 1 50 1 82 1 127 1 226 1 231 1 350 1 361 1;
+	setAttr -s 8 ".kit[0:7]"  9 9 1 9 9 9 9 9;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger4_translateX";
 	rename -uid "46F3646E-49D4-0DEC-4666-D596AE3B60BE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 3.859703 50 3.859703 82 3.859703 127 3.859703
-		 226 3.859703 231 3.859703;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 3.859703 50 3.859703 82 3.859703 127 3.859703
+		 226 3.859703 231 3.859703 350 3.859703 361 3.859703;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger4_translateY";
 	rename -uid "BC6AC9AE-4077-3688-7AEC-4D905ED5F0C4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 -0.142405 50 -0.142405 82 -0.142405 127 -0.142405
-		 226 -0.142405 231 -0.142405;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 -0.142405 50 -0.142405 82 -0.142405 127 -0.142405
+		 226 -0.142405 231 -0.142405 350 -0.142405 361 -0.142405;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger4_translateZ";
 	rename -uid "4ED25FDE-4A7B-E9F6-8A1B-778C330C1C58";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 -1.191974 50 -1.191974 82 -1.191974 127 -1.191974
-		 226 -1.191974 231 -1.191974;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 -1.191974 50 -1.191974 82 -1.191974 127 -1.191974
+		 226 -1.191974 231 -1.191974 350 -1.191974 361 -1.191974;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger4_scaleX";
 	rename -uid "4D58D6A6-4EA4-5167-67CE-8BBA4A150FA3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger4_scaleY";
 	rename -uid "3FE8707E-4C24-8CE0-56AA-7BB58B603F31";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger4_scaleZ";
 	rename -uid "2B6F5283-421A-64F7-D806-4997D926EAB2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger41_visibility";
 	rename -uid "4B9D72EB-42C4-FBB5-E8A1-52874A96155B";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 1 50 1 82 1 127 1 226 1 231 1;
-	setAttr -s 6 ".kit[0:5]"  9 9 1 9 9 9;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 1 50 1 82 1 127 1 226 1 231 1 350 1 361 1;
+	setAttr -s 8 ".kit[0:7]"  9 9 1 9 9 9 9 9;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger41_translateX";
 	rename -uid "31ADCCE0-411A-D79D-6D2D-089991B6FAD6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 1.312562 50 1.312562 82 1.312562 127 1.312562
-		 226 1.312562 231 1.312562;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 1.312562 50 1.312562 82 1.312562 127 1.312562
+		 226 1.312562 231 1.312562 350 1.312562 361 1.312562;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger41_translateY";
 	rename -uid "FE8EFEF1-41D5-0760-F36C-8DB028D3B6D1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 0 50 0 82 0 127 0 226 0 231 0;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0 50 0 82 0 127 0 226 0 231 0 350 0 361 0;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger41_translateZ";
 	rename -uid "CC15D8A1-4DE7-88D4-FC52-5085F09DCD05";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 0 50 0 82 0 127 0 226 0 231 0;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0 50 0 82 0 127 0 226 0 231 0 350 0 361 0;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger41_scaleX";
 	rename -uid "D451AF03-46FE-E197-8145-9380B59D4697";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger41_scaleY";
 	rename -uid "2E89E1E1-4D2D-E2F3-C739-AB8255EC7860";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger41_scaleZ";
 	rename -uid "DDF7CCD1-4DF4-AB2E-FBB4-2BB8AA115034";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger42_visibility";
 	rename -uid "34B76AEF-4E9F-58A0-36C8-A5820E561AF3";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 1 50 1 82 1 127 1 226 1 231 1;
-	setAttr -s 6 ".kit[0:5]"  9 9 1 9 9 9;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 1 50 1 82 1 127 1 226 1 231 1 350 1 361 1;
+	setAttr -s 8 ".kit[0:7]"  9 9 1 9 9 9 9 9;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger42_translateX";
 	rename -uid "A7F6A930-4842-AA19-0EA0-8785C52EB51C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 0.729363 50 0.729363 82 0.729363 127 0.729363
-		 226 0.729363 231 0.729363;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0.729363 50 0.729363 82 0.729363 127 0.729363
+		 226 0.729363 231 0.729363 350 0.729363 361 0.729363;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger42_translateY";
 	rename -uid "29E69EFA-49DB-8784-4023-149C0FF52FF4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 0 50 0 82 0 127 0 226 0 231 0;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0 50 0 82 0 127 0 226 0 231 0 350 0 361 0;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTL -n "ValveBiped_Bip01_L_Finger42_translateZ";
 	rename -uid "6169C237-43E3-73FD-6440-CABFE0DD7CBC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 0 50 0 82 0 127 0 226 0 231 0;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0 50 0 82 0 127 0 226 0 231 0 350 0 361 0;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger42_scaleX";
 	rename -uid "74F60576-46AD-2097-31A3-66B89F5AF682";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger42_scaleY";
 	rename -uid "D4E42F50-42A6-5F8E-2C33-55934F639BE2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "ValveBiped_Bip01_L_Finger42_scaleZ";
 	rename -uid "D1CB0004-4F8B-6372-418E-7AA0A6110437";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
-		 231 2.54;
-	setAttr -s 6 ".kit[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kot[2:5]"  1 18 18 18;
-	setAttr -s 6 ".kix[2:5]"  1 1 1 1;
-	setAttr -s 6 ".kiy[2:5]"  0 0 0 0;
-	setAttr -s 6 ".kox[2:5]"  1 1 1 1;
-	setAttr -s 6 ".koy[2:5]"  0 0 0 0;
+	setAttr -s 8 ".ktv[0:7]"  25 2.54 50 2.54 82 2.54 127 2.54 226 2.54
+		 231 2.54 350 2.54 361 2.54;
+	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
+	setAttr -s 8 ".kox[2:7]"  1 1 1 1 1 1;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode polyCube -n "polyCube1";
 	rename -uid "2595E497-4D72-D6D4-8E52-708274E94BFD";
 	setAttr ".ax" -type "double3" 0 0 1 ;
@@ -4616,14 +4993,14 @@ createNode animCurveTA -n "ValveBiped_Bip01_R_Finger3_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 8 ".ktv[0:7]"  20 -4.5373101139800003 33 -1.4124117317476321
-		 48 -0.67535568055430706 63 -4.1232977776487933 232 -4.5373101139800003 245.8 -0.33844409149300497
+		 48 -0.67535568055430717 63 -4.1232977776487933 232 -4.5373101139800003 245.8 -0.33844409149300497
 		 266.8 -7.8059108127124057 279 -8.9677376639241135;
 createNode animCurveTA -n "ValveBiped_Bip01_R_Finger3_rotateZ";
 	rename -uid "F7A2E40E-4898-C7DF-E2EA-F1A861BC422C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 8 ".ktv[0:7]"  20 -46.4213274349 33 -65.756869451516394
-		 48 -70.079645565833232 63 -49.048603419350215 232 -46.4213274349 245.8 -71.654022379954114
+		 48 -70.079645565833232 63 -49.048603419350222 232 -46.4213274349 245.8 -71.654022379954114
 		 266.8 -6.6779572111441592 279 -6.8467243138476697;
 createNode animCurveTU -n "ValveBiped_Bip01_R_Finger3_scaleX";
 	rename -uid "543E4FC1-4C12-B7BD-0A3A-24AB9999E981";
@@ -4838,7 +5215,7 @@ createNode animCurveTA -n "ValveBiped_Bip01_R_Finger2_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 8 ".ktv[0:7]"  20 -4.9219939809 33 -4.1338296558915379
-		 48 -3.8833015818614527 63 -4.8343338350871665 232 -4.9219939809 245.8 -3.4384351503315531
+		 48 -3.8833015818614527 63 -4.8343338350871665 232 -4.9219939809 245.8 -3.4384351503315536
 		 266.8 -4.7962820000467579 279 -5.1434280768477096;
 createNode animCurveTA -n "ValveBiped_Bip01_R_Finger2_rotateY";
 	rename -uid "C700DEB2-46D4-0644-5B56-B491D2A4155C";
@@ -4880,7 +5257,7 @@ createNode animCurveTA -n "ValveBiped_Bip01_R_Finger21_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 8 ".ktv[0:7]"  20 0.31709065262786296 33 0.40890556922773047
-		 48 0.42291784890247419 63 0.33124399938554178 232 0.31709065262786296 245.8 0.39341717179315089
+		 48 0.42291784890247419 63 0.33124399938554178 232 0.31709065262786296 245.8 0.39341717179315094
 		 266.8 -0.057200585540771898 279 -0.07172173388745734;
 createNode animCurveTA -n "ValveBiped_Bip01_R_Finger21_rotateY";
 	rename -uid "35740224-46A0-81D0-9E9C-EEA82D056AFF";
@@ -4888,7 +5265,7 @@ createNode animCurveTA -n "ValveBiped_Bip01_R_Finger21_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 8 ".ktv[0:7]"  20 -0.3289237058473059 33 -0.20379676709794761
 		 48 -0.17173698657515557 63 -0.3130081092118186 232 -0.3289237058473059 245.8 -0.16306912349382624
-		 266.8 -0.36542064198961277 279 -0.45121201326272853;
+		 266.8 -0.36542064198961283 279 -0.45121201326272853;
 createNode animCurveTA -n "ValveBiped_Bip01_R_Finger21_rotateZ";
 	rename -uid "2D032F1A-4D52-A93F-FDC7-1383005E6636";
 	setAttr ".tan" 18;
@@ -4970,7 +5347,7 @@ createNode animCurveTA -n "ValveBiped_Bip01_R_Finger1_rotateY";
 	rename -uid "82890273-4AC4-D833-E559-1D85408D91D4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  20 2.2097263472600002 33 -4.5746860645796712
+	setAttr -s 8 ".ktv[0:7]"  20 2.2097263472600002 33 -4.5746860645796721
 		 48 -6.0525076669095652 63 1.2789098766542379 232 2.2097263472600002 245.8 -7.3606339975377599
 		 266.8 11.012377829670832 279 11.065204405295953;
 createNode animCurveTA -n "ValveBiped_Bip01_R_Finger1_rotateZ";
@@ -4978,7 +5355,7 @@ createNode animCurveTA -n "ValveBiped_Bip01_R_Finger1_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 8 ".ktv[0:7]"  20 -30.481412255779997 33 -48.839779223290208
-		 48 -52.986652146289785 63 -32.969477595947865 232 -30.481412255779997 245.8 -57.009184018198951
+		 48 -52.986652146289792 63 -32.969477595947865 232 -30.481412255779997 245.8 -57.009184018198951
 		 266.8 -1.4302966820844214 279 -4.7452559514296269;
 createNode animCurveTU -n "ValveBiped_Bip01_R_Finger1_scaleX";
 	rename -uid "CD0582E9-4178-58A4-D254-3C95EF69BBCC";
@@ -5020,7 +5397,7 @@ createNode animCurveTA -n "ValveBiped_Bip01_R_Finger11_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 8 ".ktv[0:7]"  20 -48.638655064686297 33 -68.196834936845079
-		 48 -72.581595088852836 63 -51.291774412833412 232 -48.638655064686297 245.8 -82.437905915740515
+		 48 -72.581595088852836 63 -51.291774412833419 232 -48.638655064686297 245.8 -82.437905915740515
 		 266.8 -39.084577961805181 279 -48.638655064686297;
 createNode animCurveTU -n "ValveBiped_Bip01_R_Finger11_scaleX";
 	rename -uid "F1FB006F-44F2-B75E-22AE-1AB87DD1EDC3";
@@ -5049,7 +5426,7 @@ createNode animCurveTA -n "ValveBiped_Bip01_R_Finger12_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 8 ".ktv[0:7]"  20 0 33 0.080769326596536725 48 0.097847345589462426
 		 63 0.01121442941496153 232 0 245.8 0.11413852063696527 266.8 -0.10666679974672157
-		 279 -0.10124924607746798;
+		 279 -0.10124924607746799;
 createNode animCurveTA -n "ValveBiped_Bip01_R_Finger12_rotateY";
 	rename -uid "71F1C53F-4C2D-A50C-837D-FBB96EE80A72";
 	setAttr ".tan" 18;
@@ -5243,7 +5620,7 @@ createNode animCurveTA -n "VB_Hip_RI_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 4 ".ktv[0:3]"  234 -67.500468833726785 246 -74.667594455999961
-		 256 -76.261422436354934 265 -44.93662758915751;
+		 256 -76.261422436354948 265 -44.936627589157517;
 createNode animCurveTA -n "VB_Hip_RI_rotateZ";
 	rename -uid "7063231D-411F-FF34-9D52-E686A9B8CE33";
 	setAttr ".tan" 18;
@@ -5388,13 +5765,116 @@ createNode animCurveTU -n "VB_Spine1_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  261 1 275 1;
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "8D243B81-448B-FDA5-9894-6AB660C2AB4E";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -326.78570130041726 -159.52380318490313 ;
+	setAttr ".tgi[0].vh" -type "double2" 173.21427883136869 266.6666560702858 ;
+createNode animCurveTA -n "j_cg_pic_rotateX";
+	rename -uid "599447AB-4970-FC59-B636-D48339077CB3";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  0 -89.999990961767452 345 -89.999990961767452
+		 353 -18.566220446525481 359 -14.505952901056624 366 -9.270287861235964 375 2.3168084129786721
+		 380 4.7440797222443081;
+	setAttr -s 7 ".kit[1:6]"  2 18 18 18 18 18;
+	setAttr -s 7 ".kot[1:6]"  2 18 18 18 18 18;
+	setAttr ".roti" 4;
+createNode animCurveTA -n "j_cg_pic_rotateY";
+	rename -uid "1A6E2B1C-4CF3-C017-E3D4-8D9B097E122C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  0 73.722149217752275 345 73.722149217752275
+		 353 177.19932810563944 359 177.19932871103921 366 176.29622996209193 375 174.57101534955694
+		 380 174.25617591183286;
+	setAttr -s 7 ".kit[1:6]"  2 18 18 18 18 18;
+	setAttr -s 7 ".kot[1:6]"  2 18 18 18 18 18;
+	setAttr ".roti" 4;
+createNode animCurveTA -n "j_cg_pic_rotateZ";
+	rename -uid "1E2C61D0-43DC-0969-7D70-6282FECC0CED";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  0 -89.999994068091269 345 -89.999994068091269
+		 353 -44.738715723428918 359 -44.738715634975144 366 -55.198532170779067 375 -77.979972970513259
+		 380 -82.69067346611277;
+	setAttr -s 7 ".kit[1:6]"  2 18 18 18 18 18;
+	setAttr -s 7 ".kot[1:6]"  2 18 18 18 18 18;
+	setAttr ".roti" 4;
+createNode animCurveTU -n "j_cg_pic_visibility";
+	rename -uid "9CFD0064-4153-ACF7-D956-D88B7350AD2C";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  345 1 353 1 359 1 380 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+createNode animCurveTL -n "j_cg_pic_translateX";
+	rename -uid "7CDC4706-4F3B-91BF-5630-57AC7E193300";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  345 0.30032597938160421 353 136.57455626404604
+		 359 137.0867395098845 366 135.27437686283105 375 168.27590115804102 380 173.11029574450492;
+createNode animCurveTL -n "j_cg_pic_translateY";
+	rename -uid "E59DDA55-4EE3-A58B-C638-C689024614F2";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  0 -67.836539520372526 345 -67.836539520372526
+		 353 39.913858876002138 359 39.991641655460462 366 42.774838223028866 375 46.816664176118522
+		 380 46.891003668012914;
+	setAttr -s 7 ".kit[1:6]"  1 18 18 18 18 18;
+	setAttr -s 7 ".kot[1:6]"  1 18 18 18 18 18;
+	setAttr -s 7 ".kix[1:6]"  1 0.73103338160426701 0.7310333816042669 
+		0.09721708584961751 0.68263822476642633 1;
+	setAttr -s 7 ".kiy[1:6]"  0 0.68234169957597512 0.68234169957597501 
+		0.99526320047458194 0.73075649438629131 0;
+	setAttr -s 7 ".kox[1:6]"  1 0.7310333816042669 0.7310333816042669 
+		0.09721708584961751 0.68263822476642633 1;
+	setAttr -s 7 ".koy[1:6]"  0 0.68234169957597501 0.68234169957597501 
+		0.99526320047458194 0.73075649438629131 0;
+createNode animCurveTL -n "j_cg_pic_translateZ";
+	rename -uid "9FAC3EEA-4133-64DA-5880-228D035DD3BF";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  0 39.73529095864636 345 39.73529095864636
+		 353 7.3510310665130962 359 7.3963828048778648 366 8.3076164903535918 375 8.2799111552477953
+		 380 8.0998086139196577;
+	setAttr -s 7 ".kit[1:6]"  1 18 18 18 18 18;
+	setAttr -s 7 ".kot[1:6]"  1 18 18 18 18 18;
+	setAttr -s 7 ".kix[1:6]"  1 1 0.8783507052273124 1 0.97630672989753364 
+		1;
+	setAttr -s 7 ".kiy[1:6]"  0 0 0.47801677651174851 0 -0.21639124094284445 
+		0;
+	setAttr -s 7 ".kox[1:6]"  1 1 0.8783507052273124 1 0.97630672989753375 
+		1;
+	setAttr -s 7 ".koy[1:6]"  0 0 0.47801677651174845 0 -0.21639124094284448 
+		0;
+createNode animCurveTU -n "j_cg_pic_scaleX";
+	rename -uid "EDCBCF8A-4077-D47B-1FB3-D3A058F6E648";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  345 1 353 1 359 1 380 1;
+createNode animCurveTU -n "j_cg_pic_scaleY";
+	rename -uid "AE4B700D-4231-8562-9278-DD9F7D629752";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  345 1 353 1 359 1 380 1;
+createNode animCurveTU -n "j_cg_pic_scaleZ";
+	rename -uid "05F281EF-4B9C-CAD5-A26B-CF8FB1BFC27F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  345 1 353 1 359 1 380 1;
+createNode pairBlend -n "pairBlend1";
+	rename -uid "4BB55BE7-453C-6179-FD32-39AE6B0572AE";
+createNode animCurveTU -n "j_cg_pic_blendParent1";
+	rename -uid "42656369-4AB2-D4E8-8795-5983A5FC2B94";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  345 0 353 1;
 select -ne :time1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 350;
-	setAttr ".unw" 350;
+	setAttr ".o" 238;
+	setAttr ".unw" 238;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -5406,7 +5886,7 @@ select -ne :renderPartition;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 4 ".st";
+	setAttr -s 5 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -5419,7 +5899,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 6 ".s";
+	setAttr -s 7 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -5429,14 +5909,14 @@ select -ne :postProcessList1;
 select -ne :defaultRenderUtilityList1;
 	setAttr -k on ".cch";
 	setAttr -k on ".nds";
-	setAttr -s 5 ".u";
+	setAttr -s 6 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 5 ".r";
 select -ne :defaultTextureList1;
 	setAttr -k on ".cch";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 3 ".tx";
+	setAttr -s 4 ".tx";
 select -ne :initialShadingGroup;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -5583,7 +6063,6 @@ select -ne :hardwareRenderGlobals;
 	setAttr -cb on ".hwdp";
 	setAttr -cb on ".hwql";
 select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "TAG_CAMERA_translateX.o" "FirstPersonView_RigRN.phl[1]";
 connectAttr "TAG_CAMERA_translateY.o" "FirstPersonView_RigRN.phl[2]";
 connectAttr "TAG_CAMERA_translateZ.o" "FirstPersonView_RigRN.phl[3]";
@@ -5600,19 +6079,19 @@ connectAttr "ValveBiped_Bip01_R_Finger4_scaleY.o" "FirstPersonView_RigRN.phl[12]
 		;
 connectAttr "ValveBiped_Bip01_R_Finger4_scaleZ.o" "FirstPersonView_RigRN.phl[13]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger4_translateX.o" "FirstPersonView_RigRN.phl[14]"
+connectAttr "ValveBiped_Bip01_R_Finger4_rotateX.o" "FirstPersonView_RigRN.phl[14]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger4_translateY.o" "FirstPersonView_RigRN.phl[15]"
+connectAttr "ValveBiped_Bip01_R_Finger4_rotateY.o" "FirstPersonView_RigRN.phl[15]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger4_translateZ.o" "FirstPersonView_RigRN.phl[16]"
+connectAttr "ValveBiped_Bip01_R_Finger4_rotateZ.o" "FirstPersonView_RigRN.phl[16]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger4_visibility.o" "FirstPersonView_RigRN.phl[17]"
+connectAttr "ValveBiped_Bip01_R_Finger4_translateX.o" "FirstPersonView_RigRN.phl[17]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger4_rotateX.o" "FirstPersonView_RigRN.phl[18]"
+connectAttr "ValveBiped_Bip01_R_Finger4_translateY.o" "FirstPersonView_RigRN.phl[18]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger4_rotateY.o" "FirstPersonView_RigRN.phl[19]"
+connectAttr "ValveBiped_Bip01_R_Finger4_translateZ.o" "FirstPersonView_RigRN.phl[19]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger4_rotateZ.o" "FirstPersonView_RigRN.phl[20]"
+connectAttr "ValveBiped_Bip01_R_Finger4_visibility.o" "FirstPersonView_RigRN.phl[20]"
 		;
 connectAttr "ValveBiped_Bip01_R_Finger41_scaleX.o" "FirstPersonView_RigRN.phl[21]"
 		;
@@ -5634,19 +6113,19 @@ connectAttr "ValveBiped_Bip01_R_Finger41_translateZ.o" "FirstPersonView_RigRN.ph
 		;
 connectAttr "ValveBiped_Bip01_R_Finger41_visibility.o" "FirstPersonView_RigRN.phl[30]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger42_translateX.o" "FirstPersonView_RigRN.phl[31]"
+connectAttr "ValveBiped_Bip01_R_Finger42_rotateX.o" "FirstPersonView_RigRN.phl[31]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger42_translateY.o" "FirstPersonView_RigRN.phl[32]"
+connectAttr "ValveBiped_Bip01_R_Finger42_rotateY.o" "FirstPersonView_RigRN.phl[32]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger42_translateZ.o" "FirstPersonView_RigRN.phl[33]"
+connectAttr "ValveBiped_Bip01_R_Finger42_rotateZ.o" "FirstPersonView_RigRN.phl[33]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger42_visibility.o" "FirstPersonView_RigRN.phl[34]"
+connectAttr "ValveBiped_Bip01_R_Finger42_translateX.o" "FirstPersonView_RigRN.phl[34]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger42_rotateX.o" "FirstPersonView_RigRN.phl[35]"
+connectAttr "ValveBiped_Bip01_R_Finger42_translateY.o" "FirstPersonView_RigRN.phl[35]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger42_rotateY.o" "FirstPersonView_RigRN.phl[36]"
+connectAttr "ValveBiped_Bip01_R_Finger42_translateZ.o" "FirstPersonView_RigRN.phl[36]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger42_rotateZ.o" "FirstPersonView_RigRN.phl[37]"
+connectAttr "ValveBiped_Bip01_R_Finger42_visibility.o" "FirstPersonView_RigRN.phl[37]"
 		;
 connectAttr "ValveBiped_Bip01_R_Finger42_scaleX.o" "FirstPersonView_RigRN.phl[38]"
 		;
@@ -5660,19 +6139,19 @@ connectAttr "ValveBiped_Bip01_R_Finger3_scaleY.o" "FirstPersonView_RigRN.phl[42]
 		;
 connectAttr "ValveBiped_Bip01_R_Finger3_scaleZ.o" "FirstPersonView_RigRN.phl[43]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger3_translateX.o" "FirstPersonView_RigRN.phl[44]"
+connectAttr "ValveBiped_Bip01_R_Finger3_rotateX.o" "FirstPersonView_RigRN.phl[44]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger3_translateY.o" "FirstPersonView_RigRN.phl[45]"
+connectAttr "ValveBiped_Bip01_R_Finger3_rotateY.o" "FirstPersonView_RigRN.phl[45]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger3_translateZ.o" "FirstPersonView_RigRN.phl[46]"
+connectAttr "ValveBiped_Bip01_R_Finger3_rotateZ.o" "FirstPersonView_RigRN.phl[46]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger3_visibility.o" "FirstPersonView_RigRN.phl[47]"
+connectAttr "ValveBiped_Bip01_R_Finger3_translateX.o" "FirstPersonView_RigRN.phl[47]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger3_rotateX.o" "FirstPersonView_RigRN.phl[48]"
+connectAttr "ValveBiped_Bip01_R_Finger3_translateY.o" "FirstPersonView_RigRN.phl[48]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger3_rotateY.o" "FirstPersonView_RigRN.phl[49]"
+connectAttr "ValveBiped_Bip01_R_Finger3_translateZ.o" "FirstPersonView_RigRN.phl[49]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger3_rotateZ.o" "FirstPersonView_RigRN.phl[50]"
+connectAttr "ValveBiped_Bip01_R_Finger3_visibility.o" "FirstPersonView_RigRN.phl[50]"
 		;
 connectAttr "ValveBiped_Bip01_R_Finger31_scaleX.o" "FirstPersonView_RigRN.phl[51]"
 		;
@@ -5694,19 +6173,19 @@ connectAttr "ValveBiped_Bip01_R_Finger31_translateZ.o" "FirstPersonView_RigRN.ph
 		;
 connectAttr "ValveBiped_Bip01_R_Finger31_visibility.o" "FirstPersonView_RigRN.phl[60]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger32_translateX.o" "FirstPersonView_RigRN.phl[61]"
+connectAttr "ValveBiped_Bip01_R_Finger32_rotateX.o" "FirstPersonView_RigRN.phl[61]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger32_translateY.o" "FirstPersonView_RigRN.phl[62]"
+connectAttr "ValveBiped_Bip01_R_Finger32_rotateY.o" "FirstPersonView_RigRN.phl[62]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger32_translateZ.o" "FirstPersonView_RigRN.phl[63]"
+connectAttr "ValveBiped_Bip01_R_Finger32_rotateZ.o" "FirstPersonView_RigRN.phl[63]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger32_visibility.o" "FirstPersonView_RigRN.phl[64]"
+connectAttr "ValveBiped_Bip01_R_Finger32_translateX.o" "FirstPersonView_RigRN.phl[64]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger32_rotateX.o" "FirstPersonView_RigRN.phl[65]"
+connectAttr "ValveBiped_Bip01_R_Finger32_translateY.o" "FirstPersonView_RigRN.phl[65]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger32_rotateY.o" "FirstPersonView_RigRN.phl[66]"
+connectAttr "ValveBiped_Bip01_R_Finger32_translateZ.o" "FirstPersonView_RigRN.phl[66]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger32_rotateZ.o" "FirstPersonView_RigRN.phl[67]"
+connectAttr "ValveBiped_Bip01_R_Finger32_visibility.o" "FirstPersonView_RigRN.phl[67]"
 		;
 connectAttr "ValveBiped_Bip01_R_Finger32_scaleX.o" "FirstPersonView_RigRN.phl[68]"
 		;
@@ -5720,19 +6199,19 @@ connectAttr "ValveBiped_Bip01_R_Finger2_scaleY.o" "FirstPersonView_RigRN.phl[72]
 		;
 connectAttr "ValveBiped_Bip01_R_Finger2_scaleZ.o" "FirstPersonView_RigRN.phl[73]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger2_translateX.o" "FirstPersonView_RigRN.phl[74]"
+connectAttr "ValveBiped_Bip01_R_Finger2_rotateX.o" "FirstPersonView_RigRN.phl[74]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger2_translateY.o" "FirstPersonView_RigRN.phl[75]"
+connectAttr "ValveBiped_Bip01_R_Finger2_rotateY.o" "FirstPersonView_RigRN.phl[75]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger2_translateZ.o" "FirstPersonView_RigRN.phl[76]"
+connectAttr "ValveBiped_Bip01_R_Finger2_rotateZ.o" "FirstPersonView_RigRN.phl[76]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger2_visibility.o" "FirstPersonView_RigRN.phl[77]"
+connectAttr "ValveBiped_Bip01_R_Finger2_translateX.o" "FirstPersonView_RigRN.phl[77]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger2_rotateX.o" "FirstPersonView_RigRN.phl[78]"
+connectAttr "ValveBiped_Bip01_R_Finger2_translateY.o" "FirstPersonView_RigRN.phl[78]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger2_rotateY.o" "FirstPersonView_RigRN.phl[79]"
+connectAttr "ValveBiped_Bip01_R_Finger2_translateZ.o" "FirstPersonView_RigRN.phl[79]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger2_rotateZ.o" "FirstPersonView_RigRN.phl[80]"
+connectAttr "ValveBiped_Bip01_R_Finger2_visibility.o" "FirstPersonView_RigRN.phl[80]"
 		;
 connectAttr "ValveBiped_Bip01_R_Finger21_scaleX.o" "FirstPersonView_RigRN.phl[81]"
 		;
@@ -5754,19 +6233,19 @@ connectAttr "ValveBiped_Bip01_R_Finger21_translateZ.o" "FirstPersonView_RigRN.ph
 		;
 connectAttr "ValveBiped_Bip01_R_Finger21_visibility.o" "FirstPersonView_RigRN.phl[90]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger22_translateX.o" "FirstPersonView_RigRN.phl[91]"
+connectAttr "ValveBiped_Bip01_R_Finger22_rotateX.o" "FirstPersonView_RigRN.phl[91]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger22_translateY.o" "FirstPersonView_RigRN.phl[92]"
+connectAttr "ValveBiped_Bip01_R_Finger22_rotateY.o" "FirstPersonView_RigRN.phl[92]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger22_translateZ.o" "FirstPersonView_RigRN.phl[93]"
+connectAttr "ValveBiped_Bip01_R_Finger22_rotateZ.o" "FirstPersonView_RigRN.phl[93]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger22_visibility.o" "FirstPersonView_RigRN.phl[94]"
+connectAttr "ValveBiped_Bip01_R_Finger22_translateX.o" "FirstPersonView_RigRN.phl[94]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger22_rotateX.o" "FirstPersonView_RigRN.phl[95]"
+connectAttr "ValveBiped_Bip01_R_Finger22_translateY.o" "FirstPersonView_RigRN.phl[95]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger22_rotateY.o" "FirstPersonView_RigRN.phl[96]"
+connectAttr "ValveBiped_Bip01_R_Finger22_translateZ.o" "FirstPersonView_RigRN.phl[96]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger22_rotateZ.o" "FirstPersonView_RigRN.phl[97]"
+connectAttr "ValveBiped_Bip01_R_Finger22_visibility.o" "FirstPersonView_RigRN.phl[97]"
 		;
 connectAttr "ValveBiped_Bip01_R_Finger22_scaleX.o" "FirstPersonView_RigRN.phl[98]"
 		;
@@ -5780,19 +6259,19 @@ connectAttr "ValveBiped_Bip01_R_Finger1_scaleY.o" "FirstPersonView_RigRN.phl[102
 		;
 connectAttr "ValveBiped_Bip01_R_Finger1_scaleZ.o" "FirstPersonView_RigRN.phl[103]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger1_translateX.o" "FirstPersonView_RigRN.phl[104]"
+connectAttr "ValveBiped_Bip01_R_Finger1_rotateX.o" "FirstPersonView_RigRN.phl[104]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger1_translateY.o" "FirstPersonView_RigRN.phl[105]"
+connectAttr "ValveBiped_Bip01_R_Finger1_rotateY.o" "FirstPersonView_RigRN.phl[105]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger1_translateZ.o" "FirstPersonView_RigRN.phl[106]"
+connectAttr "ValveBiped_Bip01_R_Finger1_rotateZ.o" "FirstPersonView_RigRN.phl[106]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger1_visibility.o" "FirstPersonView_RigRN.phl[107]"
+connectAttr "ValveBiped_Bip01_R_Finger1_translateX.o" "FirstPersonView_RigRN.phl[107]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger1_rotateX.o" "FirstPersonView_RigRN.phl[108]"
+connectAttr "ValveBiped_Bip01_R_Finger1_translateY.o" "FirstPersonView_RigRN.phl[108]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger1_rotateY.o" "FirstPersonView_RigRN.phl[109]"
+connectAttr "ValveBiped_Bip01_R_Finger1_translateZ.o" "FirstPersonView_RigRN.phl[109]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger1_rotateZ.o" "FirstPersonView_RigRN.phl[110]"
+connectAttr "ValveBiped_Bip01_R_Finger1_visibility.o" "FirstPersonView_RigRN.phl[110]"
 		;
 connectAttr "ValveBiped_Bip01_R_Finger11_scaleX.o" "FirstPersonView_RigRN.phl[111]"
 		;
@@ -5814,19 +6293,19 @@ connectAttr "ValveBiped_Bip01_R_Finger11_translateZ.o" "FirstPersonView_RigRN.ph
 		;
 connectAttr "ValveBiped_Bip01_R_Finger11_visibility.o" "FirstPersonView_RigRN.phl[120]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger12_translateX.o" "FirstPersonView_RigRN.phl[121]"
+connectAttr "ValveBiped_Bip01_R_Finger12_rotateX.o" "FirstPersonView_RigRN.phl[121]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger12_translateY.o" "FirstPersonView_RigRN.phl[122]"
+connectAttr "ValveBiped_Bip01_R_Finger12_rotateY.o" "FirstPersonView_RigRN.phl[122]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger12_translateZ.o" "FirstPersonView_RigRN.phl[123]"
+connectAttr "ValveBiped_Bip01_R_Finger12_rotateZ.o" "FirstPersonView_RigRN.phl[123]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger12_visibility.o" "FirstPersonView_RigRN.phl[124]"
+connectAttr "ValveBiped_Bip01_R_Finger12_translateX.o" "FirstPersonView_RigRN.phl[124]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger12_rotateX.o" "FirstPersonView_RigRN.phl[125]"
+connectAttr "ValveBiped_Bip01_R_Finger12_translateY.o" "FirstPersonView_RigRN.phl[125]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger12_rotateY.o" "FirstPersonView_RigRN.phl[126]"
+connectAttr "ValveBiped_Bip01_R_Finger12_translateZ.o" "FirstPersonView_RigRN.phl[126]"
 		;
-connectAttr "ValveBiped_Bip01_R_Finger12_rotateZ.o" "FirstPersonView_RigRN.phl[127]"
+connectAttr "ValveBiped_Bip01_R_Finger12_visibility.o" "FirstPersonView_RigRN.phl[127]"
 		;
 connectAttr "ValveBiped_Bip01_R_Finger12_scaleX.o" "FirstPersonView_RigRN.phl[128]"
 		;
@@ -6254,45 +6733,79 @@ connectAttr "VB_Knee_RI_visibility.o" "FirstPersonView_RigRN.phl[367]";
 connectAttr "VB_Knee_RI_translateX.o" "FirstPersonView_RigRN.phl[368]";
 connectAttr "VB_Knee_RI_translateY.o" "FirstPersonView_RigRN.phl[369]";
 connectAttr "VB_Knee_RI_translateZ.o" "FirstPersonView_RigRN.phl[370]";
-connectAttr "Shoulder_LE_CTR_translateX.o" "FirstPersonView_RigRN.phl[371]";
-connectAttr "Shoulder_LE_CTR_translateY.o" "FirstPersonView_RigRN.phl[372]";
-connectAttr "Shoulder_LE_CTR_translateZ.o" "FirstPersonView_RigRN.phl[373]";
-connectAttr "Shoulder_LE_CTR_rotateX.o" "FirstPersonView_RigRN.phl[374]";
-connectAttr "Shoulder_LE_CTR_rotateY.o" "FirstPersonView_RigRN.phl[375]";
-connectAttr "Shoulder_LE_CTR_rotateZ.o" "FirstPersonView_RigRN.phl[376]";
-connectAttr "Shoulder_RI_CTR_translateX.o" "FirstPersonView_RigRN.phl[377]";
-connectAttr "Shoulder_RI_CTR_translateY.o" "FirstPersonView_RigRN.phl[378]";
-connectAttr "Shoulder_RI_CTR_translateZ.o" "FirstPersonView_RigRN.phl[379]";
-connectAttr "Shoulder_RI_CTR_rotateX.o" "FirstPersonView_RigRN.phl[380]";
-connectAttr "Shoulder_RI_CTR_rotateY.o" "FirstPersonView_RigRN.phl[381]";
-connectAttr "Shoulder_RI_CTR_rotateZ.o" "FirstPersonView_RigRN.phl[382]";
-connectAttr "PoleV_RI_translateX.o" "FirstPersonView_RigRN.phl[383]";
-connectAttr "PoleV_RI_translateY.o" "FirstPersonView_RigRN.phl[384]";
-connectAttr "PoleV_RI_translateZ.o" "FirstPersonView_RigRN.phl[385]";
-connectAttr "PoleV_LE_translateX.o" "FirstPersonView_RigRN.phl[386]";
-connectAttr "PoleV_LE_translateY.o" "FirstPersonView_RigRN.phl[387]";
-connectAttr "PoleV_LE_translateZ.o" "FirstPersonView_RigRN.phl[388]";
-connectAttr "IK_Global_Hand_RI_CTR_translateX.o" "FirstPersonView_RigRN.phl[389]"
+connectAttr "pairBlend1.otx" "FirstPersonView_RigRN.phl[371]";
+connectAttr "pairBlend1.oty" "FirstPersonView_RigRN.phl[372]";
+connectAttr "pairBlend1.otz" "FirstPersonView_RigRN.phl[373]";
+connectAttr "pairBlend1.orx" "FirstPersonView_RigRN.phl[374]";
+connectAttr "pairBlend1.ory" "FirstPersonView_RigRN.phl[375]";
+connectAttr "pairBlend1.orz" "FirstPersonView_RigRN.phl[376]";
+connectAttr "j_cg_pic_visibility.o" "FirstPersonView_RigRN.phl[377]";
+connectAttr "j_cg_pic_scaleX.o" "FirstPersonView_RigRN.phl[378]";
+connectAttr "j_cg_pic_scaleY.o" "FirstPersonView_RigRN.phl[379]";
+connectAttr "j_cg_pic_scaleZ.o" "FirstPersonView_RigRN.phl[380]";
+connectAttr "FirstPersonView_RigRN.phl[381]" "pairBlend1.w";
+connectAttr "j_cg_pic_blendParent1.o" "FirstPersonView_RigRN.phl[382]";
+connectAttr "FirstPersonView_RigRN.phl[383]" "j_cg_pic_parentConstraint1.cro";
+connectAttr "FirstPersonView_RigRN.phl[384]" "pairBlend1.ro";
+connectAttr "FirstPersonView_RigRN.phl[385]" "j_cg_pic_parentConstraint1.cpim";
+connectAttr "FirstPersonView_RigRN.phl[386]" "j_cg_pic_parentConstraint1.crp";
+connectAttr "FirstPersonView_RigRN.phl[387]" "j_cg_pic_parentConstraint1.crt";
+connectAttr "FirstPersonView_RigRN.phl[388]" "j_cg_pic_parentConstraint1.cjo";
+connectAttr "Shoulder_LE_CTR_translateX.o" "FirstPersonView_RigRN.phl[389]";
+connectAttr "Shoulder_LE_CTR_translateY.o" "FirstPersonView_RigRN.phl[390]";
+connectAttr "Shoulder_LE_CTR_translateZ.o" "FirstPersonView_RigRN.phl[391]";
+connectAttr "Shoulder_LE_CTR_rotateX.o" "FirstPersonView_RigRN.phl[392]";
+connectAttr "Shoulder_LE_CTR_rotateY.o" "FirstPersonView_RigRN.phl[393]";
+connectAttr "Shoulder_LE_CTR_rotateZ.o" "FirstPersonView_RigRN.phl[394]";
+connectAttr "Shoulder_RI_CTR_translateX.o" "FirstPersonView_RigRN.phl[395]";
+connectAttr "Shoulder_RI_CTR_translateY.o" "FirstPersonView_RigRN.phl[396]";
+connectAttr "Shoulder_RI_CTR_translateZ.o" "FirstPersonView_RigRN.phl[397]";
+connectAttr "Shoulder_RI_CTR_rotateX.o" "FirstPersonView_RigRN.phl[398]";
+connectAttr "Shoulder_RI_CTR_rotateY.o" "FirstPersonView_RigRN.phl[399]";
+connectAttr "Shoulder_RI_CTR_rotateZ.o" "FirstPersonView_RigRN.phl[400]";
+connectAttr "PoleV_RI_translateX.o" "FirstPersonView_RigRN.phl[401]";
+connectAttr "PoleV_RI_translateY.o" "FirstPersonView_RigRN.phl[402]";
+connectAttr "PoleV_RI_translateZ.o" "FirstPersonView_RigRN.phl[403]";
+connectAttr "PoleV_LE_translateX.o" "FirstPersonView_RigRN.phl[404]";
+connectAttr "PoleV_LE_translateY.o" "FirstPersonView_RigRN.phl[405]";
+connectAttr "PoleV_LE_translateZ.o" "FirstPersonView_RigRN.phl[406]";
+connectAttr "IK_Global_Hand_RI_CTR_translateX.o" "FirstPersonView_RigRN.phl[407]"
 		;
-connectAttr "IK_Global_Hand_RI_CTR_translateY.o" "FirstPersonView_RigRN.phl[390]"
+connectAttr "IK_Global_Hand_RI_CTR_translateY.o" "FirstPersonView_RigRN.phl[408]"
 		;
-connectAttr "IK_Global_Hand_RI_CTR_translateZ.o" "FirstPersonView_RigRN.phl[391]"
+connectAttr "IK_Global_Hand_RI_CTR_translateZ.o" "FirstPersonView_RigRN.phl[409]"
 		;
-connectAttr "IK_Global_Hand_RI_CTR_rotateX.o" "FirstPersonView_RigRN.phl[392]";
-connectAttr "IK_Global_Hand_RI_CTR_rotateY.o" "FirstPersonView_RigRN.phl[393]";
-connectAttr "IK_Global_Hand_RI_CTR_rotateZ.o" "FirstPersonView_RigRN.phl[394]";
-connectAttr "IK_Global_Hand_LE_CTR_translateX.o" "FirstPersonView_RigRN.phl[395]"
+connectAttr "IK_Global_Hand_RI_CTR_rotateX.o" "FirstPersonView_RigRN.phl[410]";
+connectAttr "IK_Global_Hand_RI_CTR_rotateY.o" "FirstPersonView_RigRN.phl[411]";
+connectAttr "IK_Global_Hand_RI_CTR_rotateZ.o" "FirstPersonView_RigRN.phl[412]";
+connectAttr "FirstPersonView_RigRN.phl[413]" "j_cg_pic_parentConstraint1.tg[0].ts"
 		;
-connectAttr "IK_Global_Hand_LE_CTR_translateY.o" "FirstPersonView_RigRN.phl[396]"
+connectAttr "FirstPersonView_RigRN.phl[414]" "j_cg_pic_parentConstraint1.tg[0].tt"
 		;
-connectAttr "IK_Global_Hand_LE_CTR_translateZ.o" "FirstPersonView_RigRN.phl[397]"
+connectAttr "IK_Global_Hand_LE_CTR_translateX.o" "FirstPersonView_RigRN.phl[415]"
 		;
-connectAttr "IK_Global_Hand_LE_CTR_rotateX.o" "FirstPersonView_RigRN.phl[398]";
-connectAttr "IK_Global_Hand_LE_CTR_rotateY.o" "FirstPersonView_RigRN.phl[399]";
-connectAttr "IK_Global_Hand_LE_CTR_rotateZ.o" "FirstPersonView_RigRN.phl[400]";
+connectAttr "IK_Global_Hand_LE_CTR_translateY.o" "FirstPersonView_RigRN.phl[416]"
+		;
+connectAttr "IK_Global_Hand_LE_CTR_translateZ.o" "FirstPersonView_RigRN.phl[417]"
+		;
+connectAttr "FirstPersonView_RigRN.phl[418]" "j_cg_pic_parentConstraint1.tg[0].trp"
+		;
+connectAttr "FirstPersonView_RigRN.phl[419]" "j_cg_pic_parentConstraint1.tg[0].trt"
+		;
+connectAttr "FirstPersonView_RigRN.phl[420]" "j_cg_pic_parentConstraint1.tg[0].tr"
+		;
+connectAttr "IK_Global_Hand_LE_CTR_rotateX.o" "FirstPersonView_RigRN.phl[421]";
+connectAttr "IK_Global_Hand_LE_CTR_rotateY.o" "FirstPersonView_RigRN.phl[422]";
+connectAttr "IK_Global_Hand_LE_CTR_rotateZ.o" "FirstPersonView_RigRN.phl[423]";
+connectAttr "FirstPersonView_RigRN.phl[424]" "j_cg_pic_parentConstraint1.tg[0].tro"
+		;
+connectAttr "FirstPersonView_RigRN.phl[425]" "j_cg_pic_parentConstraint1.tg[0].tpm"
+		;
 connectAttr "polyPlane1.out" "pPlaneShape1.i";
 connectAttr "polySphere1.out" "pSphereShape1.i";
 connectAttr "polyCube1.out" "pCubeShape1.i";
+connectAttr "j_cg_pic_parentConstraint1.w0" "j_cg_pic_parentConstraint1.tg[0].tw"
+		;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -6300,6 +6813,19 @@ relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":default
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "sharedReferenceNode.sr" "FirstPersonView_RigRN.sr";
+connectAttr "FirstPersonView_RigRNfosterParent1.msg" "FirstPersonView_RigRN.fp";
+connectAttr "j_cg_pic_translateX.o" "pairBlend1.itx1";
+connectAttr "j_cg_pic_translateY.o" "pairBlend1.ity1";
+connectAttr "j_cg_pic_translateZ.o" "pairBlend1.itz1";
+connectAttr "j_cg_pic_rotateX.o" "pairBlend1.irx1";
+connectAttr "j_cg_pic_rotateY.o" "pairBlend1.iry1";
+connectAttr "j_cg_pic_rotateZ.o" "pairBlend1.irz1";
+connectAttr "j_cg_pic_parentConstraint1.ctx" "pairBlend1.itx2";
+connectAttr "j_cg_pic_parentConstraint1.cty" "pairBlend1.ity2";
+connectAttr "j_cg_pic_parentConstraint1.ctz" "pairBlend1.itz2";
+connectAttr "j_cg_pic_parentConstraint1.crx" "pairBlend1.irx2";
+connectAttr "j_cg_pic_parentConstraint1.cry" "pairBlend1.iry2";
+connectAttr "j_cg_pic_parentConstraint1.crz" "pairBlend1.irz2";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pSphereShape1.iog" ":initialShadingGroup.dsm" -na;

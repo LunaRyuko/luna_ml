@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "Models/colette/cg_pic"
+    "$halflambert" "1"
+}

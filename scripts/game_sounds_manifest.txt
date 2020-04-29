@@ -122,5 +122,8 @@ game_sounds_manifest
 	// 1upD's Halloween NPCs
 	"precache_file"		"scripts/npc_sounds_shadow_walker.txt"
 	"precache_file"		"scripts/npc_sounds_lost_soul.txt"
+
+	
+	"precache_file"		"scripts/tt08_luna_01_level_sounds.txt"
 	
 }
